@@ -15,18 +15,12 @@ body{
    	background-size: cover;
 }
 
-/*div, nav, section{
-	width: auto;
-}*/
-
 h1{
 	font: bold 4em 'Helvetica Neue', 'gyro';
-	/*color:#002635;*/
 	color:white;
 	text-align:center;
 	margin:0;
 	width:100%;
-	/*display:inline-block;*/
 }
 
 h2{
@@ -38,11 +32,6 @@ h2{
 	padding:0 10px 0 10px;
 	/*width:100%;*/
 }
-
-/*h2 a {
-	color:#002635;
-	text-decoration:none;
-}*/
 
 a{
 	text-decoration: none;

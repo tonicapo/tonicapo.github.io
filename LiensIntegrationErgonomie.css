@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'gyre';
+	src:url('fonts/texgyreheros-regular.otf');
+}
+
 /*************************************************
 Styles généraux :
 *************************************************/
@@ -6,7 +11,7 @@ body{
 	padding:40px;
    	margin: 0 0 10px 0;
    	height: 100%;
-   	background: url('./icons/benches.jpg') no-repeat center fixed; 
+   	background: url('./images/benches.jpg') no-repeat center fixed; 
    	background-size: cover;
 }
 
@@ -15,7 +20,7 @@ body{
 }*/
 
 h1{
-	font: bold 4em 'Helvetica Neue';
+	font: bold 4em 'Helvetica Neue', 'gyro';
 	/*color:#002635;*/
 	color:white;
 	text-align:center;
@@ -26,7 +31,7 @@ h1{
 
 h2{
 
-	font:  bold 1.8em 'Helvetica Neue';
+	font:  bold 1.8em 'Helvetica Neue', 'gyro';
 	color:#002635;
 	text-align:left;
 	margin:0;

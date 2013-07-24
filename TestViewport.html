@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" media="screen" href="./TestViewport.css" />
+	<link rel="stylesheet" media="screen" href="TestViewport.css" />
 </head>
 <body>
 	<nav class="menuhaut">
@@ -49,7 +49,7 @@
 					<div class="texte">
 						<h1 id="viewport">Viewport : </h1>
 						<p class="comment">Commande Javascript : <em>window.innerWidth</em> et <em>window.innerHeight</em></p>
-						<p>Espace utilisé pour l'affichage du contenu. Ces valeurs peuvent dépendre du support physique utilisé, du navigateur, etc.</p>
+						<p>Espace utilisé pour l'affichage du contenu. Ces valeurs peuvent dépendre du périphérique utilisé, du navigateur, etc.</p>
 					</div>
 					<br class="clear" /> <!-- Placé pour que la div englobe effectivement le contenu-->
 				</div>
@@ -62,9 +62,9 @@
 					</div>
 
 					<div class="texte">
-						<h1>Densité de pixels </h1>
+						<h1 id="pixeldensity">Densité de pixels : </h1>
 						<p class="comment">Commande Javascript : <em>window.devicePixelRatio</em></p>
-						<p id="pixeldensity">Pixel ratio : </p>
+						<p> Densité de pixels du périphérique.</p>
 					</div>
 					<br class="clear" /> 
 				</div>
@@ -83,6 +83,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="./TestViewport.js"></script>
+	<script src="TestViewport.js"></script>
 </body>
 </html>

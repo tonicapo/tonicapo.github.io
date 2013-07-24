@@ -1,84 +1,114 @@
 <!doctype html>
-<html>
+<html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" media="screen" href="TestViewPort.css" />
+	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
 	<nav class="menuhaut">
-		<div class="menucache">
-			<div><img class="logo-menu" src="../SiteAccueil/images/logo2.svg"></div>
-		</div>	
+		<ul class="menucache">
+			<li><a href="index.html"><img class="logo-menu" src="./images/logo2.svg"></a></li>
+			<li><a href="./LiensIntegrationErgonomie.html"><span class="ico-small" aria-hidden="true" data-icon="&#xe008;"></span> Liens utiles</a></li>
+			<li><a href="./testViewport.html"><span class="ico-small" aria-hidden="true" data-icon="&#xe001;"></span> Viewport</a></li>
+			<li><span class="ico-small" aria-hidden="true" data-icon="&#xe000;"></span> Stages</li>
+			<li><a href="./Photos.html"><span class="ico-small" aria-hidden="true" data-icon="&#xe05f;"></span> Photos </a></li>
+			<li><span class="ico-small" aria-hidden="true" data-icon="&#xe063;"></span> Recherche</li>
+		</ul>	
 	</nav>
-	<div>
-		<div  id="cell">
-			<div id="bloc">
+	<div id="wrap">
+		<div id="vertical-align">
+			<div>
+				<header>
+					<div>
+						<div><img src="./images/logo2.svg"></div>
+						<div id="title">
+							<h1> Antonio Capobianco </h1>
+							<h3>Intégration web, ergonomie, et parfois un peu plus. </h3>
+							<p data-post="&#xe06e;"> Citation : <span aria-hidden="true" data-icon="&#xe069;" > Il y a un style! Ça peut plaire à certains...</span> </p>
+						</div>
 
-				<div class="paragraphe">
-					<div class="icone">
-						<img src="browser1.svg" style=""></img>
+					</div>
+				</header>
+				<section>
+					<div class="ligne">
+						<article class="event-catcher">	
+						<a href="./LiensIntegrationErgonomie.html">	
+							<div class="ico-large">
+								<span class="ico-large1" aria-hidden="true" data-icon="&#xe008;"></span><p> &nbsp;</p>
+								<span class="ico-large2" aria-hidden="true" data-icon="&#xe008;"></span><p> &nbsp;</p>
+							</div>
+							<div>
+								<h2 aria-hidden="true" data-post="&#xe066;">Liens utiles </h2>
+								<p>Une page de liens intéressants sur le web en général, l'ergonomie et l'intégration.</p>
+							</div>
+							</a>						
+						</article>
+
+						<article class="event-catcher">
+							<a href="./TestViewport.html">	
+							<div class="ico-large">
+								<span class="ico-large1" aria-hidden="true" data-icon="&#xe001;"></span><p> &nbsp; </p>
+								<span class="ico-large2" aria-hidden="true" data-icon="&#xe001;"></span> <p>&nbsp; </p>
+							</div>
+							<div>
+								<h2 aria-hidden="true" data-post="&#xe066;"> Viewport </h2>
+								<p>Une page pour connaître les propriétés d'affichage de vos divers écrans. Il faut savoir que les propriétés d'affichage ne sont pas forcément celles que l'on croit!</p>
+							</div>
+							</a>
+						</article>
+
+						<article class="event-catcher">
+							<div class="ico-large ">
+								<span class="ico-large1" aria-hidden="true" data-icon="&#xe000;"></span><p> &nbsp; </p>
+								<span class="ico-large2"  aria-hidden="true" data-icon="&#xe000;"></span><p> &nbsp; </p>
+							</div>
+							<div>
+								<h2 aria-hidden="true" data-post="&#xe066;"> Stages </h2>
+								<p>En cours.</p>
+							</div>
+						</article>
 					</div>
 
-					<div class="texte">
-						<h1>Dimensions du navigateur </h1>
-						<p class="comment">Commande Javascript : <em>window.outerWidth</em> et <em>window.outerHeight</em></p>
-						<p id="browser"> Browser : </p>
-					</div>
-					<br class="clear" /> 
-				</div>
 
-				<div class="paragraphe">
-					<div class="icone">
-						<img src="browser2.svg" style=""></img>
+					<div class="ligne">
+						<article class="event-catcher">
+							<a href="./Photos.html">	
+							<div class="ico-large">
+								<span class="ico-large1" aria-hidden="true" data-icon="&#xe05f;"></span><p> &nbsp; </p>
+								<span class="ico-large2" aria-hidden="true" data-icon="&#xe05f;"></span> <p>&nbsp; </p>
+							</div>
+							<div>
+								<h2 aria-hidden="true" data-post="&#xe066;"> Photos </h2>
+								<p>Petit test de réalisation d'un slideshow avec jQuery. Travail toujours en cours.</p>
+							</div>
+							</a>
+						</article>
+						<article class="event-catcher">
+							<div class="ico-large ">
+								<span class="ico-large1" aria-hidden="true" data-icon="&#xe063;"></span><p> &nbsp; </p>
+								<span class=" shadow" aria-hidden="true" data-icon="&#xe063;"></span><p> &nbsp; </p>
+							</div>
+							<div>
+								<h2 aria-hidden="true" data-post="&#xe066;" class="shadowtitle"> Recherche </h2>
+								<p>En cours.</p>
+							</div>
+						</article>
 					</div>
-					<div class="texte">
-						<h1>Dimensions d'affichage </h1>
-						<p class="comment">Commande Javascript : <em>window.innerWidth</em> et <em>window.innerHeight</em></p>
-						<p id="viewport">Viewport : </p>
-					</div>
-					<br class="clear" /> <!-- Placé pour que la div englobe effectivement le contenu-->
-				</div>
+				</section>
 
-				<div class="paragraphe">
-					<div class="icone">
-						<img src="screen.svg" style=""></img>
-					</div>
 
-					<div class="texte">
-						<h1>Dimensions écran </h1>
-						<p class="comment">Commande Javascript : <em>screen.width</em> et <em>screen.height</em></p>
-						<p id="ecran">Screen : </p>
-					</div>
-					<br class="clear" /> 
-				</div>
-
-				<div class="paragraphe">
-					<div class="icone">
-						<img src="eye.svg" style=""></img>
-					</div>
-
-					<div class="texte">
-						<h1>Densité de pixels </h1>
-						<p class="comment">Commande Javascript : <em>window.devicePixelRatio</em></p>
-						<p id="pixeldensity">Pixel ratio : </p>
-					</div>
-					<br class="clear" /> 
-				</div>
-
-				<div class="texte">
-						<h1>window.matchMedia </h1>
-						<p class="comment">Commande Javascript : <em>window.devicePixelRatio</em></p>
-						<p id="matchmedia"> </p>
-					</div>
-					<br class="clear" /> 
-				</div>
-
-				<div class="link">
-					Document de référence <a href="http://www.quirksmode.org/dom/w3c_cssom.html">ici</a>
-				</div>
+					<footer>
+						<p class="legal">
+							&#169; Photos et contenus : Antonio Capobianco. Pictogrammes : The Noun Project et Icomoon.
+						</p>
+<!-- 					<div class="ico">
+						<div class="ico1" aria-hidden="true" data-icon="&#x2f;"></div>
+						<div class="ico2" aria-hidden="true" data-icon="&#x2f;"></div>
+						</div> -->
+				</footer>
 			</div>
 		</div>
 	</div>
-	<script src="TestViewPort.js"></script>
+
 </body>
 </html>

@@ -1,7 +1,12 @@
+@font-face {
+	font-family: 'gyre';
+	src:url('fonts/texgyreheros-regular.otf');
+}
+
 html{
 	height:100%;/* Pour dimensionner en hauteur, il faut dimensionner depuis la balise html*/
 	color:white;
-	font-family: 'Helvetica Neue';
+	font-family: 'Helvetica Neue', 'gyre';
 }
 
 body{
@@ -10,7 +15,7 @@ body{
 	display:table;/*Pour pouvoir appliquer l'alignement avec table-cell dans les éléments enfants*/
 	width:100%;
 	height:100%;
-	background: url("./dark_exa/dark_exa_@2X.png") center fixed;
+	background: url("./images/dark_exa_@2X.png") center fixed;
 	/*L'alignement vertical est fait ici avc table-cell, mais il peut être fait directement en CSS3*/
 	/*La propriété vertical-align: middle; s'applique sur les éléments inline, 
 	et prends comme référend la hauteur de ligne. 
@@ -53,6 +58,7 @@ h1{
 
 p{
 	margin: 0.2rem;
+	font-size: 0.8em;
 }
 
 body > div{/*Pour éviter la déclaration implicite de table-row*/
@@ -69,10 +75,8 @@ body > div{/*Pour éviter la déclaration implicite de table-row*/
 	margin: 0 auto;
 	/*text-align:center;*/
 
-	width:700px;/* Largeur obligatoire pour le centrage horizontal*/
+	width:700px;
 	vertical-align: middle;
-	/*display:inline-block;*/
-
 	text-align:center;
 	line-height:1;
 
@@ -86,33 +90,43 @@ body > div{/*Pour éviter la déclaration implicite de table-row*/
 }
 
 .paragraphe{
+	display: table;
 	box-sizing: border-box;
-	text-align: left;
+
+	text-align: justify;
 	margin: 1rem;
 	min-height: 86px;
-	clear:both;
+	/*clear:both;*/
 }
 
 .icone{
-	margin:10px;
+	display: table-cell;
+	padding-right: 2em;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.icone > div{
 	border-radius:50%;
 	background-color: white;
-	width:3rem;
-	height:3rem;
-	float:left;
+	height:3em;
+	width:3em;
+	line-height: 3em;
 	text-align: center;
-	line-height: 3rem;
 }
 
 img{
+	display: inline-block;
 	vertical-align: middle;
-	height:2rem;
-	width:2rem;
+	height: 2rem;
+	width: 2rem;
+	line-height: 1.2em;
 }
 
 .texte{
 	/*Pour l'alignement du texte, on crée un BFC*/
-	display: inline-block;
+	display: table-cell;
+		vertical-align: middle;
 	overflow: hidden;
 	/*Fin de déclaration pour la création du BFC*/
 

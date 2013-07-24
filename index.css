@@ -1,0 +1,405 @@
+/*******************************/
+/**** Variables **********/
+/*******************************/
+@font-face {
+	font-family: 'gyre';
+	src:url('fonts/texgyreheros-regular.otf');
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('icomoon/fonts/icomoon.eot');
+	src:url('icomoon/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('icomoon/fonts/icomoon.woff') format('woff'),
+		url('icomoon/fonts/icomoon.ttf') format('truetype'),
+		url('icomoon/fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	/*font-size: 1em;*/
+	line-height: 0;
+	/*vertical-align: top;*/
+	-webkit-font-smoothing: antialiased;
+}
+
+[data-post]:after {
+	font-family: 'icomoon';
+	content: attr(data-post);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	/*font-size: 1em;*/
+	line-height: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*******************************/
+/**** Styles généraux **********/
+/*******************************/
+html{
+	height:100%;
+	width: 100%;
+	font-family:"gyre","helvetica neue";
+	color:rgba(204,204,204,1);
+}
+
+body{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background: url('./images/office.jpg') no-repeat center fixed;
+	background-size: cover;
+}
+
+div {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+span{
+	height:100%;
+	line-height: 1;
+}
+
+h1, h2, h3{
+	color:white;
+	margin: 0;
+}
+
+
+h1{
+	font-size: 1.5em;
+	text-align: left;
+}
+
+h2{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+
+h3{
+	font-size: 0.8em;
+}
+
+p{
+	text-align: justify;
+	margin: 0;
+	font-size: 0.8em;
+}
+
+a{
+	text-decoration: none;
+	color:rgba(204,204,204,1);
+}
+
+
+
+ul, li{
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	table-layout: fixed;
+	color: dimgray;
+	padding: 0 1em 0 1em;
+	display: table-cell;
+	vertical-align: middle;
+	height: 2em;
+}
+
+li a{
+	color: dimgray;
+}
+
+li a:hover{
+	color:black;
+}
+
+header{
+	width:100%;
+	display:inline-block;
+	margin: auto;
+	margin-top: 2.5em;
+	text-align: center;
+}
+
+header > div {
+	display:table;
+	width: 100%;
+	vertical-align: middle;
+}
+
+header > div  > div{
+	display:table-cell;
+	vertical-align: middle;
+}
+
+img{
+	width: 10em;
+	height: 10em;
+	background-color :rgba(204,204,204,1);
+	border-radius: 50%;
+	border : 1px solid;
+}
+
+footer{
+/*	position:absolute;
+	bottom: 0;*/
+	height: 2em;
+	width: 100%;
+	/*background-color: rgba(255, 255, 255, 0.95);*/
+}
+
+nav{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0 1em 0 1em;
+	display: table;
+}
+
+nav > div > div{
+	display: table-cell;
+	/*width:33%;*/
+	text-align: center;
+	vertical-align: top;
+}
+
+section{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0 1em 0 1em;
+	display: table;
+	border-collapse: separate;
+	border-spacing: 20px 20px;
+}
+
+article{
+	display: table-cell;
+	width:33%;
+	text-align: center;
+	vertical-align: top;
+	padding: 0 1em 0 1em;
+}
+
+/*******************************/
+/**** Déclarations d'ID ********/
+/*******************************/
+#logo{
+		color:white;
+		font-size: 8em;
+}
+
+
+
+#title{
+	display: table-cell;
+	padding: 1em;
+	text-align: left;
+	vertical-align: middle;
+}
+
+
+#wrap{
+	width: 960px;
+	height: 100%;
+	margin: auto;
+}
+
+#vertical-align{
+	display: table;
+	height: 100%;
+	table-layout: fixed;
+	vertical-align: middle;
+	background-color: rgba(51, 51, 51, 0.9);
+}
+
+#vertical-align > div {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+}
+
+/*******************************/
+/**** Déclarations de classes ********/
+/*******************************/
+.ligne{
+	display:table-row;
+}
+
+.ico-small{
+	height: 1.5rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.ico1{
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	 font-size: 0.333rem;
+}
+
+.ico:hover .ico1{
+	position: absolute;
+	top:5rem;
+	left:0;
+}
+
+.ico2{
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	position: absolute;
+	top:5rem;
+	left:0;
+	font-size: 0.3333rem;
+	background-color: red;
+}
+
+.ico:hover .ico2{
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.event-catcher{
+	padding-top: 0;
+}
+
+.event-catcher:nth-child(4n){
+	/*display:block;*/
+}
+
+.ico-large{
+	display: block;
+	/*height: 2em;*/
+	position: relative;
+	overflow: hidden;
+	color:rgba(204,204,204,1);
+	font-size: 4em;
+
+}
+
+
+
+.ico-large1{
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	text-align: center;
+	vertical-align: top;
+}
+
+.event-catcher:hover .ico-large1{
+	position: absolute;
+	top:100%;
+	left:0;
+	color: rgba(255,215,0,1);
+}
+
+.ico-large2{
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	position: absolute;
+	top:100%;
+	left:0;
+	width: 100%;
+	/*height: 100%;*/
+		text-align: center;
+}
+
+.event-catcher:hover .ico-large2{
+	position: absolute;
+	top:0;
+	left:0;
+	color: rgba(255,215,0,1);
+}
+
+.event-catcher:hover h2{
+	color: rgba(255,215,0,1);
+}
+
+.shadow{
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	position: absolute;
+	top:100%;
+	left:0;
+	width: 100%;
+	/*height: 100%;*/
+	color: rgba(0,255,255,0.5);
+	text-shadow:4px 4px 0 rgba(255,0,180,0.5);
+	text-align: center;
+	vertical-align: top;
+}
+
+.event-catcher:hover .shadow{
+	position: absolute;
+	top:0;
+	left:0;
+	color: rgba(0,255,255,0.5);
+	text-shadow:4px 4px 2px rgba(255,0,180,0.5);
+}
+
+.event-catcher:hover .shadowtitle{
+	color: rgba(0,255,255,0.5);
+	text-shadow:4px 4px 2px rgba(255,0,180,0.5);
+}
+
+.legal{
+	margin: 4em 0 0 0;
+	width:100%;
+	text-align: center;
+}
+/*******************************/
+/**** Menu caché ********/
+/*******************************/
+.menuhaut{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:2em;
+	-moz-box-sizing:border-box;
+}
+
+.menucache{
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	position: absolute;
+	top:-2.2em;
+	left:0;
+	width:100%;
+	height:2.2em;
+	background-color: white;
+}
+
+.menuhaut:hover .menucache{
+	top:0;
+}
+
+.logo-menu{
+	box-sizing: border-box;
+	width:2.4em;
+	height:2.4em;
+}
+

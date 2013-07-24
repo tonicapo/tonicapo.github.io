@@ -13,6 +13,7 @@ ecran.innerText += (' '+screen.width+'px x '+screen.height+'px.');
 var ecran = document.getElementById('matchmedia');
 if (window.matchMedia("(min-width: 640px)").matches) {
 	ecran.innerText += ("device-width > 640px (window.matchMedia OK)");
+	// alert(window.matchMedia().media);
 	} 
 
 

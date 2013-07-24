@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" media="screen" href="TestViewport.css" />
+</head>
+<body>
+	<nav class="menuhaut">
+		<div class="menucache">
+			<div><img class="logo-menu" src="./images/logo2.svg"></div>
+		</div>	
+	</nav>
+	<div>
+		<div  id="cell">
+			<div id="bloc">
+				<div class="paragraphe">
+					<div class="icone">
+						<div><img src="./images/screen.svg" style=""></img></div>
+						<!-- <p>Some text</p> -->
+					</div>
+
+					<div class="texte">
+						<h1 id="ecran">Ecran : </h1>
+						<p class="comment">Commande Javascript : <em>screen.width</em> et <em>screen.height</em></p>
+						<p> Dimensions d'affichage de l'écran.</p>
+						<p> Ces valeurs peuvent différer de la résolution en "pixels physiques".</p>
+						
+						<!-- <p i>Screen : </p> -->
+					</div>
+					<!-- <br class="clear" />  -->
+				</div>
+
+				<div class="paragraphe">
+					<div class="icone">
+						<div><img src="./images/browser1.svg" style=""></img></div>
+					</div>
+					<div class="texte">
+						<h1 id="browser">Navigateur :</h1>
+						<p class="comment">Commande Javascript : <em>window.outerWidth</em> et <em>window.outerHeight</em></p>
+						<p> Dimensions totales du navigateur, incluant les barres d'outils, ascenceurs, etc.</p>
+					</div>
+					<br class="clear" /> 
+				</div>
+
+				<div class="paragraphe">
+					<div class="icone">
+						<div><img src="./images/browser2.svg" style=""></img></div>
+					</div>
+					<div class="texte">
+						<h1 id="viewport">Viewport : </h1>
+						<p class="comment">Commande Javascript : <em>window.innerWidth</em> et <em>window.innerHeight</em></p>
+						<p>Espace utilisé pour l'affichage du contenu. Ces valeurs peuvent dépendre du support physique utilisé, du navigateur, etc.</p>
+					</div>
+					<br class="clear" /> <!-- Placé pour que la div englobe effectivement le contenu-->
+				</div>
+
+
+
+				<div class="paragraphe">
+					<div class="icone">
+						<div><img src="./images/eye.svg" style=""></img></div>
+					</div>
+
+					<div class="texte">
+						<h1>Densité de pixels </h1>
+						<p class="comment">Commande Javascript : <em>window.devicePixelRatio</em></p>
+						<p id="pixeldensity">Pixel ratio : </p>
+					</div>
+					<br class="clear" /> 
+				</div>
+
+				<div class="texte">
+						<h1>window.matchMedia </h1>
+						<p class="comment">Commande Javascript : <em>window.devicePixelRatio</em></p>
+						<p id="matchmedia"> </p>
+					</div>
+					<br class="clear" /> 
+				</div>
+
+				<div class="link">
+					Document de référence <a href="http://www.quirksmode.org/dom/w3c_cssom.html">ici</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="TestViewport.js"></script>
+</body>
+</html>

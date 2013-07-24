@@ -1,0 +1,119 @@
+html{
+	height:100%;
+}
+
+body
+{
+	padding:0;
+	margin:0;
+	height: 100%;
+	overflow: hidden;
+}
+
+h1{
+	font-family: rainmaker;
+	margin:0;
+	padding:20px;
+	font-size: 3em;
+}
+
+ul{
+	font-family: rainmaker;
+	font-size: 2em;
+	list-style: none;
+	text-align:left;
+}
+
+@font-face{
+	font-family: rainmaker;
+    src: url('./fonts/The Rainmaker.otf');
+}
+
+.photo{
+	position:absolute;
+	margin:0;
+	width:100%;
+	height: 100%;
+	/*right:0px;*/
+	/*background:url("") no-repeat center fixed;*/
+	background:url("") no-repeat;
+	background-size:cover;
+}
+
+/*#photo2{
+	position:absolute;
+	margin:0;
+	width:100%;
+	height: 100%;
+	background:url("") no-repeat center fixed;
+	background:url("") no-repeat;
+	background-size:cover;
+}*/
+
+.invisible{
+	position: absolute;
+	left:100px;
+	top:0;
+	background-color: white;
+	width: 400px;
+	height:100%;
+
+	/*Pour éviter le problème d'héritage de l'opacité
+	Plutot que que mettre l'opacité du parent que l'on veur insivisible à 0 avec la syntaxe 
+	opacity:0;
+
+	On utilise le systeme de notation rgba
+	Dans (0,0,255,0.0) la dernière valeur est l'opacité */
+	background-color: rgba(0,0,255,0.0);
+	text-align: center;
+	z-index:1000;
+	overflow:hidden;
+}
+
+.conteneur{
+	position:relative;
+	left:auto;
+	top:0;
+	width: 300px;
+	height:100%;
+	background-color: white;
+	opacity:0.3;
+	margin:0;
+	
+	-webkit-transition-property:opacity;
+	-webkit-transition-duration:1s;
+}
+
+.conteneur:hover{
+	-webkit-transition-property:opacity;
+	-webkit-transition-duration:1s;
+	opacity:0.9;
+}
+
+.description{
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	padding:1em;
+	left:0;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	font-family: 'Helvetica Neue';
+	font-size: 0.7em;
+	text-align: justify;
+	vertical-align: central;
+}
+
+.arrow-right {
+	position:absolute;
+	bottom:20%;
+	right:-25px;
+	width:0px; 
+	height:0px; 
+	border-bottom:25px solid transparent;  /* left arrow slant */
+	border-top:25px solid transparent; /* right arrow slant */
+	border-left:25px solid white; /* bottom, add background color here */
+	font-size:0px;
+	line-height:0px;
+}
+

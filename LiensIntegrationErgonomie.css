@@ -1,0 +1,238 @@
+/*************************************************
+Styles généraux :
+*************************************************/
+
+body{
+	padding:40px;
+   	margin: 0 0 10px 0;
+   	height: 100%;
+   	background: url('./icons/benches.jpg') no-repeat center fixed; 
+   	background-size: cover;
+}
+
+/*div, nav, section{
+	width: auto;
+}*/
+
+h1{
+	font: bold 4em 'Helvetica Neue';
+	/*color:#002635;*/
+	color:white;
+	text-align:center;
+	margin:0;
+	width:100%;
+	/*display:inline-block;*/
+}
+
+h2{
+
+	font:  bold 1.8em 'Helvetica Neue';
+	color:#002635;
+	text-align:left;
+	margin:0;
+	padding:0 10px 0 10px;
+	/*width:100%;*/
+}
+
+/*h2 a {
+	color:#002635;
+	text-decoration:none;
+}*/
+
+a{
+	text-decoration: none;
+	font: bold 1em 'Helvetica Neue';
+	color:#002635;
+}
+
+p{
+	margin:0;
+	padding:2px 10px 2px 10px;
+	font-family: 'Helvetica Neue';
+	font-size: 1em;
+	color:#002635;
+	/*width:100%;*/
+	/*display:inline-block;*/
+
+	/*max-width: 100%;*/
+	/*text-overflow:ellipsis;*/
+}
+
+hr{
+	width:100%;
+	height: 30px;
+	clear:both;
+	visibility: hidden;
+}
+
+img{
+	height: 3em;
+}
+
+
+
+/*************************************************
+Navigation :
+*************************************************/
+nav { 
+	-webkit-transition:all 1s ease-in-out;
+	box-sizing:border-box;
+	position: absolute;
+   	top:0;
+   	left:-40px;
+    padding: 0; 
+    margin: 0; 
+    width:40px;
+    display: table;
+    table-layout: fixed;
+	overflow: hidden;
+
+	border-radius: 6px 0 0 6px;
+}
+
+
+ul{
+	background-color: rgba(248, 248, 248, 0.95);
+	display: block;
+	/*position: absolute;*/
+	/*top:0;*/
+	/*float: left;*/
+	-webkit-margin-before:0;
+	-webkit-margin-after:0;
+	padding:0;
+	list-style: none;
+	/*display:inline-block;*/
+	width: 120px;
+	padding: 9px 10px 9px 20px;
+	/*overflow-x: hidden;*/
+}
+
+li{
+	padding: 2px;
+	margin-bottom: 5px;
+	border-bottom:1px dotted rgba(0, 0, 0, 0.5);
+}
+
+li:nth-last-child(1){
+	border-bottom: none;
+}
+
+nav:hover {
+	width:172px;
+	left:-172px;
+}
+
+.menu-icon{
+	background-color: rgba(248, 248, 248, 0.95);
+	display: table-cell;
+	padding:0;
+	margin: 0;
+	top:0;
+	height:3em;
+	width:2em;
+	left:-2em;
+}
+
+.menu-icon > img {
+	margin: 0 4px 0 4px;
+	vertical-align: top;
+	width:100%;
+	height: 100%;
+}
+/*************************************************
+Contenu :
+*************************************************/
+
+section{
+	width:100%;
+	display: block;
+	margin: 0;
+	color:#002635;
+	float: right;
+}
+
+.wrap{
+	position: relative;
+	width:960px;
+	margin:auto;
+/*	border-left-style: solid;
+	border-left-color: black;
+	border-left-width: 4px;*/
+	/*padding-left: 1em;*/
+}
+
+
+
+
+
+			.global{
+				display: inline-block;
+				table-layout: fixed;
+				box-sizing: border-box;
+
+				-webkit-transition-property:border-color;
+				-webkit-transition-duration:1s;
+				width:100%;
+				margin-bottom:1px;
+				/*border:4px;*/
+				float:right;
+				background-color: rgba(248, 248, 248, 0.95);
+				/*background-color: #EFE7BE;*/
+			}
+			.global div.icon img{
+				width:40px;	
+			}
+
+
+			.global:hover{
+				-webkit-transition-property:border-color;
+				-webkit-transition-duration:1s;
+			}
+
+			.ergonomie div.icon{			
+				border-left: 2px double #D97925;
+			}
+
+			.ergonomie div.icon img{	
+							-webkit-transform: scaleX(-1);
+			}
+
+			.ergonomie:hover div.icon{
+				border-left: 2px double #8C470A;
+			}
+
+			.webdesign div.icon{
+				border-left: 2px double #AB1A25;	
+			}
+
+
+			.webdesign:hover div.icon{
+				border-left: 2px double #5E050C;
+			}
+
+			.integration div.icon{
+				border-left: 2px double #0CA66C;
+			}
+
+
+			.integration:hover div.icon{
+				border-left: 2px double #0F593D;	
+			}
+
+			.icon{
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				box-sizing: border-box;
+				padding: 5px 15px 5px 15px ;
+				width: 4em;
+			}
+
+			.content{
+				display: table-cell;
+				box-sizing: border-box;
+				padding:5px;
+				padding: 5px;
+				text-align: left;
+			}
+

@@ -15,7 +15,7 @@ if(!hasInnerText){
 	ecran.textContent += (' '+screen.width+'px x '+screen.height+'px.');
 
 	var layout = document.getElementById('layout');
-	layout.textContent += document.documentElement.clientWidth;
+	layout.textContent += (' '+document.documentElement.clientWidth+'px x '+document.documentElement.clientHeight+'px.');
 }else{
 	var viewport = document.getElementById("viewport");
 	viewport.innerText += (" "+window.innerWidth+"px x "+window.innerHeight+"px.");

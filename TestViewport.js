@@ -30,7 +30,7 @@ if(!hasInnerText){
 	ecran.innerText += (' '+screen.width+'px x '+screen.height+'px.');
 
 	var layout = document.getElementById('layout');
-	layout.innerText += document.documentElement.clientWidth;
+	layout.innerText += (' '+document.documentElement.clientWidth+'px x '+document.documentElement.clientHeight+'px.');
 }
 // http://toddmotto.com/viewport-dynamic-width-calculation-retina-and-pixel-ratio-javascript-widget/
 // (function() {

@@ -1,22 +1,37 @@
-var viewport = document.getElementById('viewport');
-viewport.innerText += (' '+window.innerWidth+'px x '+window.innerHeight+'px.');
+var hasInnerText =
+(document.getElementsByTagName("body")[0].innerText !== undefined) ? true : false;
 
-var pixeldensity = document.getElementById('pixeldensity');
-pixeldensity.innerText += (' '+window.devicePixelRatio+'.');
+if(!hasInnerText){
+	var viewport = document.getElementById("viewport");
+	viewport.textContent += (" "+window.innerWidth+"px x "+window.innerHeight+"px.");
 
-var pixeldensity = document.getElementById('browser');
-browser.innerText += (' '+window.outerWidth+'px x '+window.outerHeight+'px.');
+	var pixeldensity = document.getElementById('pixeldensity');
+	pixeldensity.textContent += (' '+window.devicePixelRatio+'.');
 
-var ecran = document.getElementById('ecran');
-ecran.innerText += (' '+screen.width+'px x '+screen.height+'px.');
+	var pixeldensity = document.getElementById('browser');
+	browser.textContent += (' '+window.outerWidth+'px x '+window.outerHeight+'px.');
 
-var ecran = document.getElementById('matchmedia');
-if (window.matchMedia("(min-width: 640px)").matches) {
-	ecran.innerText += ("device-width > 640px (window.matchMedia OK)");
-	// alert(window.matchMedia().media);
-	} 
+	var ecran = document.getElementById('ecran');
+	ecran.textContent += (' '+screen.width+'px x '+screen.height+'px.');
 
+	var layout = document.getElementById('layout');
+	layout.textContent += document.documentElement.clientWidth;
+}else{
+	var viewport = document.getElementById("viewport");
+	viewport.innerText += (" "+window.innerWidth+"px x "+window.innerHeight+"px.");
 
+	var pixeldensity = document.getElementById('pixeldensity');
+	pixeldensity.innerText += (' '+window.devicePixelRatio+'.');
+
+	var pixeldensity = document.getElementById('browser');
+	browser.innerText += (' '+window.outerWidth+'px x '+window.outerHeight+'px.');
+
+	var ecran = document.getElementById('ecran');
+	ecran.innerText += (' '+screen.width+'px x '+screen.height+'px.');
+
+	var layout = document.getElementById('layout');
+	layout.innerText += document.documentElement.clientWidth;
+}
 // http://toddmotto.com/viewport-dynamic-width-calculation-retina-and-pixel-ratio-javascript-widget/
 // (function() {
 

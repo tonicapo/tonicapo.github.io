@@ -22,10 +22,9 @@
 					<div class="texte">
 						<h1 id="ecran">Ecran : </h1>
 						<p class="comment">Commande Javascript : <em>screen.width</em> et <em>screen.height</em></p>
-						<p> Dimensions d'affichage de l'écran.</p>
-						<p> Ces valeurs peuvent différer de la résolution en "pixels physiques".</p>
-						
-						<!-- <p i>Screen : </p> -->
+						<p> Doit normalement retourner la résolution d'affichage de l'écran en pixels physiques (et non en dips).</p>
+						<p> Cependant, cela varie en fonction des navigateurs et des périphariques. Avec Chrome 25 sur un galaxy Note, les valeurs retournées sont exprimées en dips.</p>
+
 					</div>
 					<!-- <br class="clear" />  -->
 				</div>
@@ -49,12 +48,24 @@
 					<div class="texte">
 						<h1 id="viewport">Viewport : </h1>
 						<p class="comment">Commande Javascript : <em>window.innerWidth</em> et <em>window.innerHeight</em></p>
-						<p>Espace utilisé pour l'affichage du contenu. Ces valeurs peuvent dépendre du périphérique utilisé, du navigateur, etc.</p>
+						<p>Dimensions du "viewport visuel" (<em>Visual viewport</em>). Il s'agit des dimensions, en pixels CSS, du contenu affiché sur la page. Ces valeurs peuvent dépendre du périphérique utilisé, du navigateur, etc.</p>
 					</div>
 					<br class="clear" /> <!-- Placé pour que la div englobe effectivement le contenu-->
 				</div>
 
+				<div class="paragraphe">
+					<div class="icone">
+						<div><img src="./images/browser2.svg" style=""></img></div>
+					</div>
+					<div class="texte">
+						<h1 id="layout">Layout : </h1>
+						<p class="comment">Commande Javascript : <em>document.documentElement.clientWidth</em> et <em>document.documentElement.clientWidth</em></p>
+						<p>Dimensions de la page à afficher (<em>Layout viewport</em>). Il s'agit des dimensions, en pixels CSS, de la page complète. Cette valeur est constante, quel que soit le niveau de zoom.</p>
+						<p>Le rapport entre les valeurs de Visual viewport et de Layout viewport est égal à 1 lorsque le niveau de zoom est minimum.</p>
 
+					</div>
+					<br class="clear" /> <!-- Placé pour que la div englobe effectivement le contenu-->
+				</div>
 
 				<div class="paragraphe">
 					<div class="icone">
@@ -83,6 +94,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="TestViewport.js"></script>
+	<script src="./TestViewport.js"></script>
 </body>
 </html>

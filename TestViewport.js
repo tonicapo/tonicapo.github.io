@@ -1,37 +1,33 @@
 var hasInnerText =
 (document.getElementsByTagName("body")[0].innerText !== undefined) ? true : false;
 
-if(!hasInnerText){
-	var viewport = document.getElementById("viewport");
-	viewport.textContent += (" "+window.innerWidth+"px x "+window.innerHeight+"px.");
+var viewport = document.getElementById("viewport");
+var pixeldensity = document.getElementById('pixeldensity');
+var browser = document.getElementById('browser');
+var ecran = document.getElementById('ecran');
+var layout = document.getElementById('layout');
 
-	var pixeldensity = document.getElementById('pixeldensity');
-	pixeldensity.textContent += (' '+window.devicePixelRatio+'.');
+function resize(){
+		if(!hasInnerText){
+			viewport.textContent = ("Viewport :  "+window.innerWidth+"px x "+window.innerHeight+"px.");
+			pixeldensity.textContent = ('Densité de pixels :  '+window.devicePixelRatio+'.');
+			browser.textContent = ('Navigateur : '+window.outerWidth+'px x '+window.outerHeight+'px.');
+			ecran.textContent = ('Ecran : '+screen.width+'px x '+screen.height+'px.');
+			layout.textContent = ('Layout : '+document.documentElement.clientWidth+'px x '+document.documentElement.clientHeight+'px.');
+		}else{
+			viewport.innerText = ("Viewport : "+window.innerWidth+"px x "+window.innerHeight+"px.");
+			pixeldensity.innerText = ('Densité de pixels '+window.devicePixelRatio+'.');
+			browser.innerText = ('Navigateur '+window.outerWidth+'px x '+window.outerHeight+'px.');
+			ecran.innerText = ('Ecran : '+screen.width+'px x '+screen.height+'px.');
+			layout.innerText = ('Layout : '+document.documentElement.clientWidth+'px x '+document.documentElement.clientHeight+'px.');
+		}
+};
 
-	var pixeldensity = document.getElementById('browser');
-	browser.textContent += (' '+window.outerWidth+'px x '+window.outerHeight+'px.');
-
-	var ecran = document.getElementById('ecran');
-	ecran.textContent += (' '+screen.width+'px x '+screen.height+'px.');
-
-	var layout = document.getElementById('layout');
-	layout.textContent += (' '+document.documentElement.clientWidth+'px x '+document.documentElement.clientHeight+'px.');
-}else{
-	var viewport = document.getElementById("viewport");
-	viewport.innerText += (" "+window.innerWidth+"px x "+window.innerHeight+"px.");
-
-	var pixeldensity = document.getElementById('pixeldensity');
-	pixeldensity.innerText += (' '+window.devicePixelRatio+'.');
-
-	var pixeldensity = document.getElementById('browser');
-	browser.innerText += (' '+window.outerWidth+'px x '+window.outerHeight+'px.');
-
-	var ecran = document.getElementById('ecran');
-	ecran.innerText += (' '+screen.width+'px x '+screen.height+'px.');
-
-	var layout = document.getElementById('layout');
-	layout.innerText += (' '+document.documentElement.clientWidth+'px x '+document.documentElement.clientHeight+'px.');
+resize();
+window.onresize = function(){
+	resize();
 }
+
 // http://toddmotto.com/viewport-dynamic-width-calculation-retina-and-pixel-ratio-javascript-widget/
 // (function() {
 

@@ -62,40 +62,21 @@ p{
 	font-size: 0.8em;
 }
 
-body > div{/*Pour éviter la déclaration implicite de table-row*/
-	display:table;
-	width:100%;
-	height: 100%;
-	table-layout: fixed;
-}
-
-
-#cell{
+#wrap{
 	display:table-cell;
 	box-sizing: border-box;
 	margin: 0 auto;
-	width:600px;
+	width:100%;
 	vertical-align: middle;
 	text-align:center;
 	line-height:1;
-
 	font-size: 1rem;
 }
 
-#bloc{
+.bloc{
 	box-sizing:border-box;
 	width:500px;
 	margin:auto;
-}
-
-.paragraphe{
-	display: block;
-	box-sizing: border-box;
-
-	text-align: justify;
-	/*margin: 1rem;*/
-	min-height: 86px;
-	/*clear:both;*/
 }
 
 .icone{
@@ -150,9 +131,6 @@ div.arrow-down > img{
 	/*Fin de déclaration pour la création du BFC*/
 
 	text-align: left;
-}
-.clear{
-	clear:both;
 }
 
 .comment{

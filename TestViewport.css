@@ -54,6 +54,7 @@ h1{
 	font-size: 1.5rem;
 	margin: 0.2rem;
 	text-align: left;
+	display: inline-block;
 }
 
 p{
@@ -73,9 +74,7 @@ body > div{/*Pour éviter la déclaration implicite de table-row*/
 	display:table-cell;
 	box-sizing: border-box;
 	margin: 0 auto;
-	/*text-align:center;*/
-
-	width:700px;
+	width:600px;
 	vertical-align: middle;
 	text-align:center;
 	line-height:1;
@@ -90,11 +89,11 @@ body > div{/*Pour éviter la déclaration implicite de table-row*/
 }
 
 .paragraphe{
-	display: table;
+	display: block;
 	box-sizing: border-box;
 
 	text-align: justify;
-	margin: 1rem;
+	/*margin: 1rem;*/
 	min-height: 86px;
 	/*clear:both;*/
 }
@@ -111,7 +110,7 @@ body > div{/*Pour éviter la déclaration implicite de table-row*/
 	background-color: white;
 	height:3em;
 	width:3em;
-	line-height: 3em;
+	line-height: 2.8em;
 	text-align: center;
 }
 
@@ -123,10 +122,30 @@ img{
 	line-height: 1.2em;
 }
 
+.arrow-down{
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
+	display: block;
+	background-color: white;
+	padding:0;
+	margin-top: 0.5em;
+	width: 100%;
+	height: 0.5em;
+	line-height: 0em;
+/*	vertical-align: top;*/
+	text-align: center;
+	opacity: 0.8;
+}
+
+div.arrow-down > img{
+	height: 0.5em;
+	width: 0.5em;
+}
+
 .texte{
 	/*Pour l'alignement du texte, on crée un BFC*/
 	display: table-cell;
-		vertical-align: middle;
+	vertical-align: middle;
 	overflow: hidden;
 	/*Fin de déclaration pour la création du BFC*/
 
@@ -137,15 +156,19 @@ img{
 }
 
 .comment{
-	-webkit-transition-property:all;
-	-webkit-transition-duration:1s;
-	font-size: 0.6rem;
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
+	font-size: 0.8rem;
 	height: 0;
 	opacity:0;
 }
 
-.paragraphe:hover .comment{
-	height:2em;
+.event-catcher:hover .comment{
+	height:6em;
+	opacity:1;
+}
+
+.event-catcher:hover .arrow-down{
 	opacity:1;
 }
 

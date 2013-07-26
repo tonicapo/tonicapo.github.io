@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=320px">
 	<link rel="stylesheet" media="screen" href="TestViewport.css" />
 </head>
 <body>
@@ -12,86 +13,101 @@
 	</nav>
 	<div>
 		<div  id="cell">
-			<div id="bloc">
-				<div class="paragraphe">
+			<section id="bloc">
+				<article>
 					<div class="icone">
-						<div><img src="./images/screen.svg" style=""></img></div>
+						<div><img src="./icons/tablet.svg" style=""></img></div>
 						<!-- <p>Some text</p> -->
 					</div>
 
 					<div class="texte">
-						<h1 id="ecran">Ecran : </h1>
-						<p class="comment">Commande Javascript : <em>screen.width</em> et <em>screen.height</em></p>
-						<p> Doit normalement retourner la résolution d'affichage de l'écran en pixels physiques (et non en dips).</p>
-						<p> Cependant, cela varie en fonction des navigateurs et des périphariques. Avec Chrome 25 sur un galaxy Note, les valeurs retournées sont exprimées en dips.</p>
-
-					</div>
+							<h1 id="ecran"> Ecran : </h1>
+							<p>Résolution physique de l'écran.</p>
+							<p>Commande Javascript : <em>screen.width</em> et <em>screen.height</em></p>
+							<!-- <div class="paragraphe"> -->
+							<div class="event-catcher">
+								
+								<div class="arrow-down"><img src="./icons/arrow-down.svg" style=""></img></div>
+								<div class="comment">	
+									<p>Ces commandes doivent normalement retourner la résolution d'affichage de l'écran en pixels physiques (et non en dips). Cependant, cela varie en fonction des navigateurs et des périphériques. </p>
+									<p>Avec Chrome 25 sur un galaxy Note, les valeurs retournées sont exprimées en dips, mais pas avec Firefox.</p>
+									<p>Pour information : px = dips x (dpi / 160)</p>
+							<!-- </div> -->
+								</div>
+							</div>
+							
 					<!-- <br class="clear" />  -->
-				</div>
-
+					</div>
+				</article>
 				<div class="paragraphe">
 					<div class="icone">
-						<div><img src="./images/browser1.svg" style=""></img></div>
+						<div><img src="./icons/browser1.svg" style=""></img></div>
 					</div>
 					<div class="texte">
 						<h1 id="browser">Navigateur :</h1>
-						<p class="comment">Commande Javascript : <em>window.outerWidth</em> et <em>window.outerHeight</em></p>
-						<p> Dimensions totales du navigateur, incluant les barres d'outils, ascenceurs, etc.</p>
+						<p>Commande Javascript : <em>window.outerWidth</em> et <em>window.outerHeight</em></p>
+						<p>Dimensions totales du navigateur, incluant les barres d'outils, ascenceurs, etc.</p>
 					</div>
 					<br class="clear" /> 
 				</div>
 
 				<div class="paragraphe">
 					<div class="icone">
-						<div><img src="./images/browser2.svg" style=""></img></div>
+						<div><img src="./icons/visual-viewport.svg" style=""></img></div>
 					</div>
 					<div class="texte">
 						<h1 id="viewport">Viewport : </h1>
-						<p class="comment">Commande Javascript : <em>window.innerWidth</em> et <em>window.innerHeight</em></p>
-						<p>Dimensions du "viewport visuel" (<em>Visual viewport</em>). Il s'agit des dimensions, en pixels CSS, du contenu affiché sur la page. Ces valeurs peuvent dépendre du périphérique utilisé, du navigateur, etc.</p>
+						<p>Commande Javascript : <em>window.innerWidth</em> et <em>window.innerHeight</em></p>
+						<p>Dimensions du "viewport visuel" (<em>Visual viewport</em>).</p> 
+						<div class="comment">
+							<p>Il s'agit des dimensions, en pixels CSS, du contenu affiché sur la page. Ces valeurs peuvent dépendre du périphérique utilisé, du navigateur, etc.</p>
+						</div>
 					</div>
 					<br class="clear" /> <!-- Placé pour que la div englobe effectivement le contenu-->
 				</div>
 
 				<div class="paragraphe">
 					<div class="icone">
-						<div><img src="./images/browser2.svg" style=""></img></div>
+						<div><img src="./icons/layout-viewport.svg" style=""></img></div>
 					</div>
 					<div class="texte">
 						<h1 id="layout">Layout : </h1>
-						<p class="comment">Commande Javascript : <em>document.documentElement.clientWidth</em> et <em>document.documentElement.clientWidth</em></p>
+						<p>Commande Javascript : <em>document.documentElement.clientWidth</em> et <em>document.documentElement.clientWidth</em></p>
 						<p>Dimensions de la page à afficher (<em>Layout viewport</em>). Il s'agit des dimensions, en pixels CSS, de la page complète. Cette valeur est constante, quel que soit le niveau de zoom.</p>
-						<p>Le rapport entre les valeurs de Visual viewport et de Layout viewport est égal à 1 lorsque le niveau de zoom est minimum.</p>
-
+						<div class="comment">
+							<p>Le rapport entre les valeurs de Visual viewport et de Layout viewport est égal à 1 lorsque le niveau de zoom est minimum.</p>
+							<p>On peut le forcer Layout Viewport à avoir une largeur égale à celle du Visual viewport en utilisant la balise meta : </p>
+							<p><code> &lt;meta name="viewport" content="width=device-width"&gt;</code> </p>
+						</div>
 					</div>
 					<br class="clear" /> <!-- Placé pour que la div englobe effectivement le contenu-->
 				</div>
 
 				<div class="paragraphe">
 					<div class="icone">
-						<div><img src="./images/eye.svg" style=""></img></div>
+						<div><img src="./icons/eye.svg" style=""></img></div>
 					</div>
 
 					<div class="texte">
 						<h1 id="pixeldensity">Densité de pixels : </h1>
-						<p class="comment">Commande Javascript : <em>window.devicePixelRatio</em></p>
-						<p> Densité de pixels du périphérique.</p>
+						<p>Commande Javascript : <em>window.devicePixelRatio</em></p>
+						<p>Densité de pixels du périphérique.</p>
 					</div>
 					<br class="clear" /> 
 				</div>
 
-				<div class="texte">
+<!-- 				<div class="texte">
 						<h1>window.matchMedia </h1>
 						<p class="comment">Commande Javascript : <em>window.devicePixelRatio</em></p>
 						<p id="matchmedia"> </p>
 					</div>
 					<br class="clear" /> 
-				</div>
+				</div> -->
 
 				<div class="link">
 					Document de référence <a href="http://www.quirksmode.org/dom/w3c_cssom.html">ici</a>
 				</div>
-			</div>
+			</section>
 		</div>
 	</div>
 	<script src="./TestViewport.js"></script>

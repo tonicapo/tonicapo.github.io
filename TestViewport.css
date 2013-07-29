@@ -66,6 +66,10 @@ code{
 	font-size: 1em;
 }
 
+section{
+	/*margin-top: 2em;*/
+}
+
 #wrap{
 	display:table-cell;
 	box-sizing: border-box;
@@ -80,7 +84,7 @@ code{
 .bloc{
 	box-sizing:border-box;
 	width:500px;
-	margin:auto;
+	margin:1em auto;
 }
 
 .icone{

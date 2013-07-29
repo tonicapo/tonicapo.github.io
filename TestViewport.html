@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" media="screen" href="TestViewport.css" />
 </head>
 <body>
@@ -52,8 +52,11 @@
 						<h1 id="viewport">Viewport : </h1>
 						<p>Commande Javascript : <em>window.innerWidth</em> et <em>window.innerHeight</em></p>
 						<p>Dimensions du "viewport visuel" (<em>Visual viewport</em>).</p> 
-						<div class="comment">
+						<div class="event-catcher">				
+							<div class="arrow-down"><img src="./icons/arrow-down.svg" style=""></img></div>
+							<div class="comment">
 							<p>Il s'agit des dimensions, en pixels CSS, du contenu affiché sur la page. Ces valeurs peuvent dépendre du périphérique utilisé, du navigateur, etc.</p>
+							</div>
 						</div>
 					</article>
 				</section>
@@ -66,10 +69,13 @@
 						<h1 id="layout">Layout : </h1>
 						<p>Commande Javascript : <em>document.documentElement.clientWidth</em> et <em>document.documentElement.clientWidth</em></p>
 						<p>Dimensions de la page à afficher (<em>Layout viewport</em>). Il s'agit des dimensions, en pixels CSS, de la page complète. Cette valeur est constante, quel que soit le niveau de zoom.</p>
-						<div class="comment">
-							<p>Le rapport entre les valeurs de Visual viewport et de Layout viewport est égal à 1 lorsque le niveau de zoom est minimum.</p>
-							<p>On peut le forcer Layout Viewport à avoir une largeur égale à celle du Visual viewport en utilisant la balise meta : </p>
-							<p><code> &lt;meta name="viewport" content="width=device-width"&gt;</code> </p>
+						<div class="event-catcher">				
+							<div class="arrow-down"><img src="./icons/arrow-down.svg" style=""></img></div>
+							<div class="comment">
+								<p>Le rapport entre les valeurs de Visual viewport et de Layout viewport est égal à 1 lorsque le niveau de zoom est minimum.</p>
+								<p>On peut le forcer Layout Viewport à avoir une largeur égale à celle du Visual viewport en utilisant la balise meta : </p>
+								<p><code> &lt;meta name="viewport" content="width=device-width"&gt;</code> </p>
+							</div>
 						</div>
 					</article>
 				</section>

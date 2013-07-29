@@ -4,7 +4,7 @@
 }
 
 html{
-	height:100%;/* Pour dimensionner en hauteur, il faut dimensionner depuis la balise html*/
+	height:100%; /*Pour dimensionner en hauteur, il faut dimensionner depuis la balise html*/
 	color:white;
 	font-family: 'Helvetica Neue', 'gyre';
 }
@@ -59,7 +59,11 @@ h1{
 
 p{
 	margin: 0.2rem;
-	font-size: 0.8em;
+	font-size: 0.9em;
+}
+
+code{
+	font-size: 1em;
 }
 
 #wrap{
@@ -69,7 +73,7 @@ p{
 	width:100%;
 	vertical-align: middle;
 	text-align:center;
-	line-height:1;
+	line-height:1.2;
 	font-size: 1rem;
 }
 
@@ -136,13 +140,26 @@ div.arrow-down > img{
 .comment{
 	-webkit-transition:all 1s;
 	-moz-transition:all 1s;
-	font-size: 0.8rem;
+	font-size: 0.9em;
+	height: 0;
+	opacity:0;
+}
+
+.comment2{
+	-webkit-transition:all 1s;
+	-moz-transition:all 1s;
+	font-size: 0.9em;
 	height: 0;
 	opacity:0;
 }
 
 .event-catcher:hover .comment{
-	height:6em;
+	height:7.5em;
+	opacity:1;
+}
+
+.event-catcher:hover .comment2{
+	height:12.5em;
 	opacity:1;
 }
 

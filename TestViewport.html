@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
 	<link rel="stylesheet" media="screen" href="TestViewport.css" />
 </head>
 <body>
@@ -21,12 +21,12 @@
 					<article class="texte">
 							<h1 id="ecran"> Ecran : </h1>
 							<p>Résolution physique de l'écran.</p>
-							<p>Commande Javascript : <em>screen.width</em> et <em>screen.height</em></p>
+							<p><code>Commande Javascript : <em>screen.width</em> et <em>screen.height</em></code></p>
 							<div class="event-catcher">				
 								<div class="arrow-down"><img src="./icons/arrow-down.svg" style=""></img></div>
 								<div class="comment">	
-									<p>Ces commandes doivent normalement retourner la résolution d'affichage de l'écran en pixels physiques (et non en dips). Cependant, cela varie en fonction des navigateurs et des périphériques. </p>
-									<p>Avec Chrome 25 sur un galaxy Note, les valeurs retournées sont exprimées en dips, mais pas avec Firefox.</p>
+									<p>Ces commandes doivent normalement retourner la résolution d'affichage de l'écran en pixels physiques (et non en dips). 
+									<p>Cependant, cela varie en fonction des navigateurs et des périphériques. Avec Chrome 25 sur un galaxy Note, les valeurs retournées sont exprimées en dips, mais pas avec Firefox.</p>
 									<p>Pour information : px = dips x (dpi / 160)</p>
 								</div>
 							</div>
@@ -38,9 +38,10 @@
 						<div><img src="./icons/browser1.svg" style=""></img></div>
 					</div>
 					<article class="texte">
-						<h1 id="browser">Navigateur :</h1>
-						<p>Commande Javascript : <em>window.outerWidth</em> et <em>window.outerHeight</em></p>
+						<h1 id="browser">Navigateur :</h1>	
 						<p>Dimensions totales du navigateur, incluant les barres d'outils, ascenceurs, etc.</p>
+						<p>Commande Javascript : <em>window.outerWidth</em> et <em>window.outerHeight</em></p>
+
 					</article>
 					</section>
 
@@ -50,12 +51,13 @@
 					</div>
 					<article class="texte">
 						<h1 id="viewport">Viewport : </h1>
-						<p>Commande Javascript : <em>window.innerWidth</em> et <em>window.innerHeight</em></p>
 						<p>Dimensions du "viewport visuel" (<em>Visual viewport</em>).</p> 
+						<p><code>Commande Javascript : <em>window.innerWidth</em> et <em>window.innerHeight</em></code></p>
 						<div class="event-catcher">				
 							<div class="arrow-down"><img src="./icons/arrow-down.svg" style=""></img></div>
 							<div class="comment">
-							<p>Il s'agit des dimensions, en pixels CSS, du contenu affiché sur la page. Ces valeurs peuvent dépendre du périphérique utilisé, du navigateur, etc.</p>
+							<p>Il s'agit des dimensions, en pixels CSS, du contenu affiché sur la page. L'utilisateur peut scroller pour modifier la partie de la page affichée, ou zommer pour changer la taille du visual viewport.</p>
+							<p> Les valeurs initiales renvoyées par les commandes javascript peuvent dépendre du périphérique utilisé, du navigateur, etc.</p>
 							</div>
 						</div>
 					</article>
@@ -67,12 +69,13 @@
 					</div>
 					<article class="texte">
 						<h1 id="layout">Layout : </h1>
-						<p>Commande Javascript : <em>document.documentElement.clientWidth</em> et <em>document.documentElement.clientWidth</em></p>
-						<p>Dimensions de la page à afficher (<em>Layout viewport</em>). Il s'agit des dimensions, en pixels CSS, de la page complète. Cette valeur est constante, quel que soit le niveau de zoom.</p>
+						<p>Dimensions du gabarit initial d'affichage (<em>Layout viewport</em>). Cette valeur est constante, quel que soit le niveau de zoom.</p>
+						<p><code>Commande Javascript : <em>document.documentElement.clientWidth</em> et <em>document.documentElement.clientWidth</em></code></p>
 						<div class="event-catcher">				
 							<div class="arrow-down"><img src="./icons/arrow-down.svg" style=""></img></div>
-							<div class="comment">
-								<p>Le rapport entre les valeurs de Visual viewport et de Layout viewport est égal à 1 lorsque le niveau de zoom est minimum.</p>
+							<div class="comment2">
+								<p>Les valeurs CSS, notamment les dimensions en pourcentage, sont calculées par rapport aux dimensions du Layout viewport. Ce comportement à été défini pour faire en sorte que la mise en page du site, par défaut, corresponde à la mise en page définie pour l'affichage sur pc.</p>
+								<p>Ses dimensions initiales diffèrentes en fonction des navigateurs. Safari iPhone utilise une valeur de 980px, Opera 850px, Android Webkit 800px et IE 974px.</p>
 								<p>On peut le forcer Layout Viewport à avoir une largeur égale à celle du Visual viewport en utilisant la balise meta : </p>
 								<p><code> &lt;meta name="viewport" content="width=device-width"&gt;</code> </p>
 							</div>
@@ -87,8 +90,8 @@
 
 					<article class="texte">
 						<h1 id="pixeldensity">Densité de pixels : </h1>
-						<p>Commande Javascript : <em>window.devicePixelRatio</em></p>
-						<p>Densité de pixels du périphérique.</p>
+						<p><code>Commande Javascript : <em>window.devicePixelRatio</em></code></p>
+						<p>Densité de pixels du périphérique. Sur un écran rétina, et de plus en plus de périphériques, la valeur renvoyée est supérieure à 1 (plus de 1 pixel physique par pixel d'affichage).</p>
 					</article>
 				</section>
 

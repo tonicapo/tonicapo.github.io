@@ -9,17 +9,17 @@ var layout = document.getElementById('layout');
 
 function resize(){
 		if(!hasInnerText){
-			viewport.textContent = ("Viewport :  "+window.innerWidth+"px x "+window.innerHeight+"px.");
+			viewport.textContent = ("Visual Viewport :  "+window.innerWidth+"px x "+window.innerHeight+"px.");
 			pixeldensity.textContent = ('Densité de pixels :  '+window.devicePixelRatio+'.');
 			browser.textContent = ('Navigateur : '+window.outerWidth+'px x '+window.outerHeight+'px.');
 			ecran.textContent = ('Ecran : '+screen.width+'px x '+screen.height+'px.');
-			layout.textContent = ('Layout : '+document.documentElement.clientWidth+'px x '+document.documentElement.clientHeight+'px.');
+			layout.textContent = ('Layout Viewport : '+document.documentElement.clientWidth+'px x '+document.documentElement.clientHeight+'px.');
 		}else{
-			viewport.innerText = ("Viewport : "+window.innerWidth+"px x "+window.innerHeight+"px.");
-			pixeldensity.innerText = ('Densité de pixels '+window.devicePixelRatio+'.');
-			browser.innerText = ('Navigateur '+window.outerWidth+'px x '+window.outerHeight+'px.');
+			viewport.innerText = ("Visual Viewport : "+window.innerWidth+"px x "+window.innerHeight+"px.");
+			pixeldensity.innerText = ('Densité de pixels :'+window.devicePixelRatio+'.');
+			browser.innerText = ('Navigateur :'+window.outerWidth+'px x '+window.outerHeight+'px.');
 			ecran.innerText = ('Ecran : '+screen.width+'px x '+screen.height+'px.');
-			layout.innerText = ('Layout : '+document.documentElement.clientWidth+'px x '+document.documentElement.clientHeight+'px.');
+			layout.innerText = ('Layout Viewport : '+document.documentElement.clientWidth+'px x '+document.documentElement.clientHeight+'px.');
 		}
 };
 

@@ -27,8 +27,9 @@
 	text-transform: none;
 	/*font-size: 1em;*/
 	line-height: 0;
-	/*vertical-align: top;*/
+	vertical-align: 0.5em;
 	-webkit-font-smoothing: antialiased;
+	vertical-align: 0;
 }
 
 [data-post]:after {

@@ -50,8 +50,8 @@
 						<div><img src="./icons/visual-viewport.svg" style=""></img></div>
 					</div>
 					<article class="texte">
-						<h1 id="viewport">Viewport : </h1>
-						<p>Dimensions du "viewport visuel" (<em>Visual viewport</em>).</p> 
+						<h1 id="viewport">Visual viewport : </h1>
+						<p>Dimensions de l'écran en pixels css.</p> 
 						<p><code>Commande Javascript : <em>window.innerWidth</em> et <em>window.innerHeight</em></code></p>
 						<div class="event-catcher">				
 							<div class="arrow-down"><img src="./icons/arrow-down.svg" style=""></img></div>
@@ -68,15 +68,15 @@
 						<div><img src="./icons/layout-viewport.svg" style=""></img></div>
 					</div>
 					<article class="texte">
-						<h1 id="layout">Layout : </h1>
-						<p>Dimensions du gabarit initial d'affichage (<em>Layout viewport</em>). Cette valeur est constante, quel que soit le niveau de zoom.</p>
+						<h1 id="layout">Layout viewport : </h1>
+						<p>Dimensions du gabarit de page de nase. Cette valeur est constante, quel que soit le niveau de zoom.</p>
 						<p><code>Commande Javascript : <em>document.documentElement.clientWidth</em> et <em>document.documentElement.clientWidth</em></code></p>
 						<div class="event-catcher">				
 							<div class="arrow-down"><img src="./icons/arrow-down.svg" style=""></img></div>
 							<div class="comment2">
-								<p>Les valeurs CSS, notamment les dimensions en pourcentage, sont calculées par rapport aux dimensions du Layout viewport. Ce comportement à été défini pour faire en sorte que la mise en page du site, par défaut, corresponde à la mise en page définie pour l'affichage sur pc.</p>
-								<p>Ses dimensions initiales diffèrentes en fonction des navigateurs. Safari iPhone utilise une valeur de 980px, Opera 850px, Android Webkit 800px et IE 974px.</p>
-								<p>On peut le forcer Layout Viewport à avoir une largeur égale à celle du Visual viewport en utilisant la balise meta : </p>
+								<p>Les valeurs CSS, notamment les dimensions en pourcentage, sont calculées par rapport aux dimensions du <em>Layout viewport</em>. Ce comportement à été défini pour faire en sorte que la mise en page du site, par défaut, corresponde à la mise en page définie pour l'affichage sur pc.</p>
+								<p>Ses dimensions initiales diffèrent en fonction des navigateurs. Safari iPhone utilise une valeur de 980px, Opera 850px, Android Webkit 980px et IE 974px.</p>
+								<p>On peut le forcer <em>Layout Viewport</em> à avoir une largeur égale à celle du Visual viewport en utilisant la balise meta : </p>
 								<p><code> &lt;meta name="viewport" content="width=device-width"&gt;</code> </p>
 							</div>
 						</div>

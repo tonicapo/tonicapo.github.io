@@ -1,3 +1,6 @@
+/*************************************************
+Fonts :
+*************************************************/
 @font-face {
 	font-family: 'gyre';
 	src:url('fonts/texgyreheros-regular.otf');
@@ -6,18 +9,34 @@
 /*************************************************
 Styles généraux :
 *************************************************/
+html{
+	height:100%;
+	width: 100%;
+	font-family:"helvetica neue", "gyre";
+	/*color:rgba(204,204,204,1);*/
+}
 
 body{
-	padding:40px;
+	padding:0;
    	margin: 0 0 10px 0;
    	height: 100%;
-   	background: url('./images/benches.jpg') no-repeat center fixed; 
+
+   	/*background: url('./images/benches.jpg') no-repeat center fixed; */
+   	background: url('./images/berlin.jpg') no-repeat center fixed; 
    	background-size: cover;
+}
+
+header{
+	padding-top: 3em;
+	width:960px;
+	margin:auto;
+	/*color:rgba(204,204,204,1);*/
+	color: white;
+	background-color: rgba(51, 51, 51, 0.9);
 }
 
 h1{
 	font: bold 4em 'Helvetica Neue', 'gyro';
-	color:white;
 	text-align:center;
 	margin:0;
 	width:100%;
@@ -25,8 +44,10 @@ h1{
 
 h2{
 
-	font:  bold 1.8em 'Helvetica Neue', 'gyro';
-	color:#002635;
+	font:  bold 1em 'Helvetica Neue', 'gyro';
+	text-transform: uppercase;
+	/*color:#002635;*/
+	color:white;
 	text-align:left;
 	margin:0;
 	padding:0 10px 0 10px;
@@ -35,40 +56,37 @@ h2{
 
 a{
 	text-decoration: none;
-	font: bold 1em 'Helvetica Neue';
-	color:#002635;
+	/*font: bold 1em 'Helvetica Neue';*/
+	color:white;
 }
 
 p{
 	margin:0;
 	padding:2px 10px 2px 10px;
 	font-family: 'Helvetica Neue';
-	font-size: 1em;
-	color:#002635;
-	/*width:100%;*/
-	/*display:inline-block;*/
-
-	/*max-width: 100%;*/
-	/*text-overflow:ellipsis;*/
+	font-size: 0.8em;
+	color:rgba(204,204,204,1);
 }
 
 hr{
 	width:100%;
-	height: 30px;
+	height: 25px;
 	clear:both;
 	visibility: hidden;
 }
 
 img{
-	height: 3em;
+	height: 2em;
 }
 
-
+span{
+	font-size: 2em;
+}
 
 /*************************************************
 Navigation :
 *************************************************/
-nav { 
+#sidemenu { 
 	-webkit-transition:all 1s ease-in-out;
 	box-sizing:border-box;
 	position: absolute;
@@ -80,13 +98,17 @@ nav {
     display: table;
     table-layout: fixed;
 	overflow: hidden;
-
-	border-radius: 6px 0 0 6px;
+	background-color: rgba(51, 51, 51, 0.9);
+	/*border-radius: 6px 0 0 6px;*/
 }
 
+#sidemenu:hover {
+	width:172px;
+	left:-172px;
+}
 
 ul{
-	background-color: rgba(248, 248, 248, 0.95);
+	/*background-color: rgba(248, 248, 248, 0.95);*/
 	display: block;
 	/*position: absolute;*/
 	/*top:0;*/
@@ -105,19 +127,14 @@ li{
 	padding: 2px;
 	margin-bottom: 5px;
 	border-bottom:1px dotted rgba(0, 0, 0, 0.5);
+			border-color: white;
 }
 
 li:nth-last-child(1){
 	border-bottom: none;
 }
 
-nav:hover {
-	width:172px;
-	left:-172px;
-}
-
 .menu-icon{
-	background-color: rgba(248, 248, 248, 0.95);
 	display: table-cell;
 	padding:0;
 	margin: 0;
@@ -149,10 +166,8 @@ section{
 	position: relative;
 	width:960px;
 	margin:auto;
-/*	border-left-style: solid;
-	border-left-color: black;
-	border-left-width: 4px;*/
-	/*padding-left: 1em;*/
+	/*background-color: rgba(255,255,255, 0.95);*/
+	/*background-color: rgba(51, 51, 51, 0.95);*/
 }
 
 
@@ -160,21 +175,28 @@ section{
 
 
 			.global{
-				display: inline-block;
+				/*display: inline-block;*/
+				display: table-cell;
 				table-layout: fixed;
+				position: relative;
+				overflow: hidden;
 				box-sizing: border-box;
 
 				-webkit-transition-property:border-color;
 				-webkit-transition-duration:1s;
 				width:100%;
+				padding-top: 1em;
 				margin-bottom:1px;
-				/*border:4px;*/
 				float:right;
-				background-color: rgba(248, 248, 248, 0.95);
-				/*background-color: #EFE7BE;*/
+				/*background-color: rgba(248, 248, 248, 0.7);*/
+				/*background: -webkit-linear-gradient(135deg, transparent 30px, rgba(255,255,255, 0.95) 30px, rgba(255,255,255, 0.95) 50%);*/
+				background: -webkit-linear-gradient(135deg, transparent 30px, rgba(51, 51, 51, 0.9) 30px, rgba(51, 51, 51, 0.9) 50%);
+
 			}
+
 			.global div.icon img{
-				width:40px;	
+				width:30px;	
+				padding-left: 1em;
 			}
 
 
@@ -183,50 +205,76 @@ section{
 				-webkit-transition-duration:1s;
 			}
 
-			.ergonomie div.icon{			
-				border-left: 2px double #D97925;
-			}
-
-			.ergonomie div.icon img{	
-							-webkit-transform: scaleX(-1);
-			}
-
 			.ergonomie:hover div.icon{
-				border-left: 2px double #8C470A;
+				/*border-left: 2px double #8C470A;*/
 			}
 
 			.webdesign div.icon{
-				border-left: 2px double #AB1A25;	
+				/*border-left: 2px double #AB1A25;	*/
 			}
 
 
 			.webdesign:hover div.icon{
-				border-left: 2px double #5E050C;
+				/*border-left: 2px double #5E050C;*/
 			}
 
 			.integration div.icon{
-				border-left: 2px double #0CA66C;
+				/*border-left: 2px double #0CA66C;*/
 			}
 
 
 			.integration:hover div.icon{
-				border-left: 2px double #0F593D;	
+				/*border-left: 2px double #0F593D;	*/
 			}
+
+			.whynot{
+				border-left: 3px solid #FE9A0D;
+			}
+
+			.whynot:hover{
+				border-left: 3px solid #7F500D;
+			}
+
+			.musthave{
+				border-left: 3px solid #B20000;
+				/*border-bottom: 1px solid #B20000;*/
+			}
+
+			.musthave:hover{
+				border-left: 3px solid #7A0000;
+			}
+
+			.cantbebad{
+				border-left: 3px solid #00B233;
+			}
+
+			.cantbebad:hover{
+				border-left: 3px solid #00651D;
+			}
+
+/*Vert : 00B233 et 00651D
+Orange : FE9A0D et 7F500D*/
 
 			.icon{
 				display: table-cell;
-				vertical-align: middle;
+				/*vertical-align: middle;*/
+				/*display: inline-block;*/
 				text-align: center;
 				box-sizing: border-box;
-				padding: 5px 15px 5px 15px ;
-				width: 4em;
+				vertical-align: middle;
+				padding: 0;
+				padding: 5px;
+				/*padding: 5px 15px 5px 15px ;*/
+				/*width: 4em;*/
 			}
 
 			.content{
+				/*display: inline-block;*/
+				line-height: 1.2em;
+				text-align: center;
 				display: table-cell;
 				box-sizing: border-box;
 				padding:5px;
-				padding: 5px;
 				text-align: left;
 			}
 

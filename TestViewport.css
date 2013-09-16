@@ -231,6 +231,5 @@ nav > div > div{
 @media screen and (max-width: 721px){
 	#wrap{
 		display:none;
-		color:red;
 	}
 }

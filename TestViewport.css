@@ -225,7 +225,7 @@ nav > div > div{
 
 
 
-@media all and (max-width: 360px){
+@media all and (min-width: 1440px){
 	.wrap{
 		display:none;
 	}

@@ -228,8 +228,8 @@ nav > div > div{
 
 
 
-@media all and (min-width: 1439px){
-	.wrap{
+@media screen and (max-width: 319px){
+	#wrap{
 		display:none;
 	}
 }

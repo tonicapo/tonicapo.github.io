@@ -1,0 +1,300 @@
+/*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html{
+	font-size:16px;
+	width:100%;
+}
+
+/*FONTS*/
+@font-face {
+  font-family: 'Patua One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Patua One'), local('PatuaOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/patuaone/v3/yAXhog6uK3bd3OwBILv_SLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oxygen Light'), local('Oxygen-Light'), url(http://themes.googleusercontent.com/static/fonts/oxygen/v2/AwBqWF2kjhlybWamaKMPcbO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen'), local('Oxygen-Regular'), url(http://themes.googleusercontent.com/static/fonts/oxygen/v2/eAWT4YudG0otf3rlsJD6zOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oxygen Bold'), local('Oxygen-Bold'), url(http://themes.googleusercontent.com/static/fonts/oxygen/v2/yVHpdQrmTj9Kax1tmFSx2rO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+/*BOX MODEL*/
+div, p, h1, h2, h3, h4, h5, h6, ul, li, footer, header, article, aside, section, img {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+/*MAIN STYLES*/
+body{
+	font-family: 'Oxygen', sans-serif;
+	padding:0;
+}
+img{
+	max-width: 96%;
+	/*margin: 2%;*/
+	border-radius: 16px;
+}
+
+ul{
+	list-style-type: none;
+	margin:1rem 0 1rem 0;
+}
+
+li{
+	display: inline-block;
+}
+
+.cleaner{
+	clear:both;
+}
+
+h1{
+	font-family: 'Patua one';
+	margin:1rem 0 1rem 0;
+}
+
+h1 em{
+	color:#780000 ;
+}
+
+/*HEADER STYLES*/
+header h1{
+	float:left;
+	font-size: 2rem;
+}
+header nav{
+	float:right;
+}
+
+/* CONTENT STYLES */
+section h1, h2{
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+
+article{
+	display:inline-block;
+	vertical-align: top;
+}
+
+article:before, article:after{
+	content:'';
+	content:none;
+}
+
+article p{
+	text-align: left;
+}
+
+/* GRID STYLES */
+.clearfix{
+	display:none;
+}
+
+.main-container{
+	width: 1200px;
+	margin:0 auto;
+	/*background-color: #000000;*/
+}
+
+.row{
+	width:100%;
+}
+
+.row > img{
+	/*padding: 0.5rem;*/
+}
+
+.row:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.column{
+	float:left;
+	text-align: center;
+}
+.span1, .span2, .span3, .span4, .span5, .span6{
+/*		border: 1px solid black;*/
+		padding: 0.5rem;
+}
+/*			.span1{
+				background-color:#FF0000; 
+			}
+
+			.span2{
+				background-color: #FF3300;
+			}
+
+			.span3{
+				background-color: #FF6600;
+			}
+
+			.span4{
+				background-color: #FF9900;
+			}
+
+			.span5{
+				background-color: #FFCC00;
+			}
+
+			.span6{
+				background-color: #FFFF00;
+			}*/
+
+@media (min-width:1200px){
+			.span1{
+				width:16.666667%;
+			}
+
+			.span2{
+				width:33.3333334%;
+			}
+
+			.span3{
+				width:50%;
+			}
+
+			.span4{
+				width:66.66666666667%;
+			}
+
+			.span5{
+				width:83.3333333334%;
+			}
+
+			.span6{
+				width:100%;
+			}
+}
+
+@media (min-width:960px) and (max-width: 1199px){
+
+/*			.span1, .span2, .span3, .span4, .span5, .span6{
+					border: 1px solid black;
+					margin: 0 auto;
+			}*/
+
+			.main-container{
+				width: 960px;
+				margin:0 auto;
+				/*background-color: #000000;*/
+			}
+
+			.span1{
+				width:33.33333334%;
+			}
+
+			.span2{
+				width:66.666666667%;
+			}
+
+			.span3{
+				width:50%;
+			}
+
+			.span4, .span5,.span6{
+				width:100%;
+			}
+
+}
+
+@media (max-width:959px){
+	img{
+		max-width: 100%;
+	}
+
+	.main-container{
+		width:100%;
+	}
+
+	.span1{
+		width:50%;
+	}
+
+	.span2, .span3, .span4, .span5, .span6{
+		width:100%;
+	}
+}
+
+@media (max-width: 480px){
+	img{
+		max-height: 20%;
+	}
+
+	.main-container{
+		width:100%;
+	}
+
+
+	.span1, .span2, .span3, .span4, .span5, .span6{
+		width:100%;
+	}
+}
+}
+
+
+/*NOTES*/
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/*.cf:before,*/
+/*.cf:after {*/
+    /*content: " "; *//* 1 */
+    /*display: table;*/ /* 2 */
+/*}*/
+
+/*.cf:after {
+    clear: both;
+}*/
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/*.cf {
+    *zoom: 1;
+}

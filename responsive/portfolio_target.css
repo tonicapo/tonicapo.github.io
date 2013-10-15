@@ -1,0 +1,338 @@
+/*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html{
+	font-size:16px;
+}
+
+/*FONTS*/
+@font-face {
+  font-family: 'Patua One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Patua One'), local('PatuaOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/patuaone/v3/yAXhog6uK3bd3OwBILv_SLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oxygen Light'), local('Oxygen-Light'), url(http://themes.googleusercontent.com/static/fonts/oxygen/v2/AwBqWF2kjhlybWamaKMPcbO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen'), local('Oxygen-Regular'), url(http://themes.googleusercontent.com/static/fonts/oxygen/v2/eAWT4YudG0otf3rlsJD6zOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oxygen Bold'), local('Oxygen-Bold'), url(http://themes.googleusercontent.com/static/fonts/oxygen/v2/yVHpdQrmTj9Kax1tmFSx2rO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+/*BOX MODEL*/
+div, p, h1, h2, h3, h4, h5, h6, ul, li, footer, header, article, aside, section, img, nav {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+/*MAIN STYLES*/
+body{
+	font-family: 'Oxygen', sans-serif;
+	padding:0;
+}
+img{
+	max-width: 100%;
+	border-radius: 8px;
+}
+
+.cleaner{
+	clear:both;
+}
+
+h1{
+	font-family: 'Patua one';
+	padding:1rem 0 1rem 0;
+}
+
+h1 em{
+	color:#780000 ;
+}
+
+/*HEADER STYLES*/
+header h1{
+	padding-left: 0.5rem;
+	font-size: 2rem;
+}
+header nav{
+	float:right;
+	/*padding: 0 1.328904% 0 0;*/
+}
+
+/*MENU STYLES*/
+header{
+	background-color: #EEEEEE;
+}
+
+header ul{
+	display:table;
+	width:100%;
+	list-style-type: none;
+}
+
+header li{
+	height: 3rem;
+	display: table-cell;
+	display: inline-block;
+	text-transform: uppercase;
+	text-align: right;
+	line-height: 3rem;
+	vertical-align: middle;
+	padding:0 0.5rem 0 0.5rem;
+}
+
+li:hover{
+	border-bottom: 2px solid red;
+	background-color: lightgray;
+	font-weight: bold;
+}
+
+
+/* CONTENT STYLES */
+section h1, h2{
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+
+article{
+	display:inline-block;
+	vertical-align: top;
+	text-align: center;
+}
+
+article:before, article:after{
+	content:"";
+	content:none;
+	display:block;
+}
+
+article p{
+	text-align: left;
+}
+
+/* GRID STYLES */
+.clearfix{
+	display:none;
+}
+
+.main-container{
+	width: 1200px;
+	margin:0 auto;
+	/*background-color: #000000;*/
+}
+
+.row{
+	width:100%;
+}
+
+.row:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.column{
+	float:left;
+	text-align: center;
+}
+@media (min-width:1204px){
+			.span1{
+				width:15.116279%; /*182/1204*/
+				margin: 0.5em 0 0.5em 1.328904%;/*16/1204*/
+			}
+
+			.span2{
+				width:31.561462%;/*380/1204*/
+				margin: 0.5em 0 0.5em 1.328904%;
+			}
+
+			.span3{
+				width:48.006645%;/*578/1204*/
+				margin: 0.5em 0 0.5em 1.328904%;
+			}
+
+			.span4{
+				width:64.451827%;/*776/1204*/
+				margin: 0.5em 0 0.5em 1.328904%;				
+			}
+
+			.span5{
+				width:80.89701%;/*974/1204*/
+				margin: 0.5em 0 0.5em 1.328904%;				
+
+			}
+
+			.span6{
+				width:97.342193%;/*1172/1204*/
+				margin: 0.5em 0 0.5em 1.328904%;				
+			}
+
+}
+
+@media (min-width:958px) and (max-width:1203px){
+			.main-container{
+				width: 958px;
+				margin:0 auto;
+			}
+
+			.span1{
+				width:31.106472%;/*298/958*/
+				margin: 0.5em 0 0.5em 1.670146%;/*16/958*/
+			}
+
+			.span2, .span3{
+				width:47.494781%;/*455/958*/
+				margin: 0.5em 0 0.5em 1.670146%;/*16/958*/
+			}
+
+			.span4, .span5, .span6{
+				width:96.659708%;/*926/958*/
+				margin: 0.5em 0 0.5em 1.670146%;/*16/958*/
+			}
+
+}
+
+@media (min-width:680px) and (max-width:957px){
+	.main-container{
+		width:100%;
+	}
+
+	.span1{
+		width:47.494781%;/*455/958*/
+		margin: 0.5em 0 0.5em 1.670146%;/*16/958*/
+	}
+
+	.span2, .span3, .span4, .span5, .span6{
+		width: 96.659708%;
+		margin: 0.5em 0 0.5em 1.670146%;	}
+}
+
+
+@media (max-width:679px){
+	header h1{
+		font-size: 1.5rem;
+	}
+
+	.main-container{
+		width:100%;
+		min-width: 320px;
+	}
+
+
+
+	.span1, .span2, .span3, .span4, .span5, .span6{
+		width: 96.659708%;
+		margin: 0.5em 0 0.5em 1.670146%;	}
+
+
+		/*************************************************************************/
+		/*MENU MEDIA QUERIE*/
+		/* Gérer l'affichage des 2 versions du bouton de menu */	
+		.nav-open, div:target .nav-close {display: block;}
+		.nav-close, div:target .nav-open {display: none;}
+
+
+		nav{
+			width:100%;
+			padding: 0.5em;
+		}
+
+		nav > a{
+			width:100%;
+			text-transform: uppercase;
+			text-decoration: none;
+			text-align: center;
+			color:black;
+			background-color: darkgray;
+			padding: 0.5em;
+		}
+
+		nav > a.nav-open:after{
+			content:' \25BC Menu \25BC';
+		}
+
+		nav > a.nav-close:after{
+			content:' \25B2 Menu \25B2';
+		}
+
+		nav ul, nav li{
+			display: block;
+		}
+
+		nav ul {
+			max-height:0;
+			overflow: hidden;
+			width:100%;
+			-webkit-transition: max-height .4s;
+			transition: max-height .4s;
+			-webkit-transform: translateZ(0); /* Activer l'accélération matériel */
+			-ms-transform: translateZ(0);
+			transform: translateZ(0);
+		}
+
+		div:target nav ul{
+			max-height: 50em;
+		}
+}
+
+
+/*NOTES*/
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/*.cf:before,*/
+/*.cf:after {*/
+    /*content: " "; *//* 1 */
+    /*display: table;*/ /* 2 */
+/*}*/
+
+/*.cf:after {
+    clear: both;
+}*/
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/*.cf {
+    *zoom: 1;
+}

@@ -289,6 +289,7 @@ article p{
 
 		nav ul, nav li{
 			display: block;
+			visibility: visible;
 		}
 
 		nav ul {

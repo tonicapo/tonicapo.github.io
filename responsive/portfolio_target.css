@@ -261,8 +261,8 @@ article p{
 		/*************************************************************************/
 		/*MENU MEDIA QUERIE*/
 		/* Gérer l'affichage des 2 versions du bouton de menu */	
-		.nav-open, div:target .nav-close {display: block;}
-		.nav-close, div:target .nav-open {display: none;}
+		.nav-open, body:target .nav-close {display: block;}
+		.nav-close, body:target .nav-open {display: none;}
 
 
 		nav{
@@ -271,7 +271,6 @@ article p{
 		}
 
 		nav > a{
-			width:100%;
 			text-transform: uppercase;
 			text-decoration: none;
 			text-align: center;
@@ -303,8 +302,8 @@ article p{
 			transform: translateZ(0);
 		}
 
-		div:target nav ul{
-			max-height: 50em;
+		body:target nav ul{
+			max-height: 25em;
 		}
 }
 

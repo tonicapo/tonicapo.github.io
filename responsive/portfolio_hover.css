@@ -21,7 +21,6 @@ time, mark, audio, video {
 
 html{
 	font-size:16px;
-	width:100%;
 }
 
 /*FONTS*/
@@ -52,7 +51,7 @@ html{
 }
 
 /*BOX MODEL*/
-div, p, h1, h2, h3, h4, h5, h6, ul, li, footer, header, article, aside, section, img {
+div, p, h1, h2, h3, h4, h5, h6, ul, li, footer, header, article, aside, section, img, nav {
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-o-box-sizing:border-box;
@@ -65,18 +64,8 @@ body{
 	padding:0;
 }
 img{
-	max-width: 96%;
-	/*margin: 2%;*/
-	border-radius: 16px;
-}
-
-ul{
-	list-style-type: none;
-	margin:1rem 0 1rem 0;
-}
-
-li{
-	display: inline-block;
+	max-width: 100%;
+	border-radius: 8px;
 }
 
 .cleaner{
@@ -85,7 +74,7 @@ li{
 
 h1{
 	font-family: 'Patua one';
-	margin:1rem 0 1rem 0;
+	padding:1rem 0 1rem 0;
 }
 
 h1 em{
@@ -94,12 +83,42 @@ h1 em{
 
 /*HEADER STYLES*/
 header h1{
-	float:left;
+	padding-left: 0.5rem;
 	font-size: 2rem;
 }
 header nav{
 	float:right;
+	/*padding: 0 1.328904% 0 0;*/
 }
+
+/*MENU STYLES*/
+header{
+	background-color: #EEEEEE;
+}
+
+header ul{
+	display:table;
+	width:100%;
+	list-style-type: none;
+}
+
+header li{
+	height: 3rem;
+	display: table-cell;
+	display: inline-block;
+	text-transform: uppercase;
+	text-align: right;
+	line-height: 3rem;
+	vertical-align: middle;
+	padding:0 0.5rem 0 0.5rem;
+}
+
+header li:hover{
+	border-bottom: 2px solid red;
+	background-color: lightgray;
+	font-weight: bold;
+}
+
 
 /* CONTENT STYLES */
 section h1, h2{
@@ -111,11 +130,13 @@ section h1, h2{
 article{
 	display:inline-block;
 	vertical-align: top;
+	text-align: center;
 }
 
 article:before, article:after{
-	content:'';
+	content:"";
 	content:none;
+	display:block;
 }
 
 article p{
@@ -137,10 +158,6 @@ article p{
 	width:100%;
 }
 
-.row > img{
-	/*padding: 0.5rem;*/
-}
-
 .row:after{
 	content:"";
 	display:block;
@@ -151,150 +168,140 @@ article p{
 	float:left;
 	text-align: center;
 }
-.span1, .span2, .span3, .span4, .span5, .span6{
-/*		border: 1px solid black;*/
-		padding: 0.5rem;
-}
-/*			.span1{
-				background-color:#FF0000; 
-			}
-
-			.span2{
-				background-color: #FF3300;
-			}
-
-			.span3{
-				background-color: #FF6600;
-			}
-
-			.span4{
-				background-color: #FF9900;
-			}
-
-			.span5{
-				background-color: #FFCC00;
-			}
-
-			.span6{
-				background-color: #FFFF00;
-			}*/
-
-@media (min-width:1200px){
+@media (min-width:1204px){
 			.span1{
-				width:16.666667%;
+				width:15.116279%; /*182/1204*/
+				margin: 0.5em 0 0.5em 1.328904%;/*16/1204*/
 			}
 
 			.span2{
-				width:33.3333334%;
+				width:31.561462%;/*380/1204*/
+				margin: 0.5em 0 0.5em 1.328904%;
 			}
 
 			.span3{
-				width:50%;
+				width:48.006645%;/*578/1204*/
+				margin: 0.5em 0 0.5em 1.328904%;
 			}
 
 			.span4{
-				width:66.66666666667%;
+				width:64.451827%;/*776/1204*/
+				margin: 0.5em 0 0.5em 1.328904%;				
 			}
 
 			.span5{
-				width:83.3333333334%;
+				width:80.89701%;/*974/1204*/
+				margin: 0.5em 0 0.5em 1.328904%;				
+
 			}
 
 			.span6{
-				width:100%;
+				width:97.342193%;/*1172/1204*/
+				margin: 0.5em 0 0.5em 1.328904%;				
 			}
+
 }
 
-@media (min-width:960px) and (max-width: 1199px){
-
-/*			.span1, .span2, .span3, .span4, .span5, .span6{
-					border: 1px solid black;
-					margin: 0 auto;
-			}*/
-
+@media (min-width:958px) and (max-width:1203px){
 			.main-container{
-				width: 960px;
+				width: 958px;
 				margin:0 auto;
-				/*background-color: #000000;*/
 			}
 
 			.span1{
-				width:33.33333334%;
+				width:31.106472%;/*298/958*/
+				margin: 0.5em 0 0.5em 1.670146%;/*16/958*/
 			}
 
-			.span2{
-				width:66.666666667%;
+			.span2, .span3{
+				width:47.494781%;/*455/958*/
+				margin: 0.5em 0 0.5em 1.670146%;/*16/958*/
 			}
 
-			.span3{
-				width:50%;
-			}
-
-			.span4, .span5,.span6{
-				width:100%;
+			.span4, .span5, .span6{
+				width:96.659708%;/*926/958*/
+				margin: 0.5em 0 0.5em 1.670146%;/*16/958*/
 			}
 
 }
 
-@media (max-width:959px){
-	img{
-		max-width: 100%;
-	}
-
+@media (min-width:680px) and (max-width:957px){
 	.main-container{
 		width:100%;
 	}
 
 	.span1{
-		width:50%;
+		width:47.494781%;/*455/958*/
+		margin: 0.5em 0 0.5em 1.670146%;/*16/958*/
 	}
 
 	.span2, .span3, .span4, .span5, .span6{
-		width:100%;
-	}
+		width: 96.659708%;
+		margin: 0.5em 0 0.5em 1.670146%;	}
 }
 
-@media (max-width: 480px){
-	img{
-		max-height: 20%;
+
+@media (max-width:679px){
+	header h1{
+		font-size: 1.5rem;
 	}
 
 	.main-container{
 		width:100%;
+		min-width: 320px;
 	}
+
 
 
 	.span1, .span2, .span3, .span4, .span5, .span6{
-		width:100%;
-	}
+		width: 96.659708%;
+		margin: 0.5em 0 0.5em 1.670146%;	}
+
+
+		/*************************************************************************/
+		/*MENU MEDIA QUERIE*/
+		header nav{
+			width:100%;
+			padding: 0.5em;
+			text-transform: uppercase;
+			text-align: center;
+			background-color: darkgray;
+			font-weight: 900;
+		}
+
+		header nav:before {
+			content:'Ouvrir menu';
+		}	
+
+		header nav ul, header nav li{
+			display: block;
+		}
+
+		header nav ul {
+			max-height:0;
+			overflow: hidden;
+			width:100%;
+			-webkit-transition: max-height .4s;
+			transition: max-height .4s;
+			-webkit-transform: translateZ(0); /* Activer l'accélération matériel */
+			-ms-transform: translateZ(0);
+			transform: translateZ(0);
+		}
+
+		header nav li{
+			border-bottom: 1px solid lightgray;
+		}
+
+
+
+		header nav:hover ul{
+			max-height: 30em;
+		}
+
+		header nav:hover:before{
+			content: 'Fermer menu';
+		}
+
 }
-}
 
 
-/*NOTES*/
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-/*.cf:before,*/
-/*.cf:after {*/
-    /*content: " "; *//* 1 */
-    /*display: table;*/ /* 2 */
-/*}*/
-
-/*.cf:after {
-    clear: both;
-}*/
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-/*.cf {
-    *zoom: 1;
-}

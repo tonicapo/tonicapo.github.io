@@ -46,17 +46,14 @@ h2{
 
 	font:  bold 1em 'Helvetica Neue', 'gyro';
 	text-transform: uppercase;
-	/*color:#002635;*/
 	color:white;
 	text-align:left;
 	margin:0;
 	padding:0 10px 0 10px;
-	/*width:100%;*/
 }
 
 a{
 	text-decoration: none;
-	/*font: bold 1em 'Helvetica Neue';*/
 	color:white;
 }
 
@@ -75,7 +72,8 @@ hr{
 	visibility: hidden;
 }
 
-img{
+
+section img{
 	height: 2em;
 }
 
@@ -195,7 +193,7 @@ section{
 
 			}
 
-			.global div.icon img{
+			.global div.icon > img{
 				width:30px;	
 				padding-left: 1em;
 			}
@@ -278,4 +276,6 @@ Orange : FE9A0D et 7F500D*/
 				padding:5px;
 				text-align: left;
 			}
+
+
 

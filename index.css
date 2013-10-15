@@ -270,8 +270,8 @@ article{
 
 
 .ico-large1{
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
+	-webkit-transition: all 0s;
+	-moz-transition: all 0s;
 	position: absolute;
 	top:0;
 	left:0;
@@ -281,6 +281,8 @@ article{
 }
 
 .event-catcher:hover .ico-large1{
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
 	position: absolute;
 	top:100%;
 	left:0;
@@ -288,8 +290,8 @@ article{
 }
 
 .ico-large2{
-	-webkit-transition: all 0.6s;
-	-moz-transition: all 0.6s;
+	-webkit-transition: all 0s;
+	-moz-transition: all 0s;
 	position: absolute;
 	top:100%;
 	left:0;
@@ -299,6 +301,8 @@ article{
 }
 
 .event-catcher:hover .ico-large2{
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
 	position: absolute;
 	top:0;
 	left:0;
@@ -310,8 +314,8 @@ article{
 }
 
 .shadow{
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
+	-webkit-transition: all 0s;
+	-moz-transition: all 0s;
 	position: absolute;
 	top:100%;
 	left:0;
@@ -324,6 +328,8 @@ article{
 }
 
 .event-catcher:hover .shadow{
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
 	position: absolute;
 	top:0;
 	left:0;

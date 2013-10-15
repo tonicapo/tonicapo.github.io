@@ -281,11 +281,17 @@ article p{
 			max-height:0;
 			overflow: hidden;
 			width:100%;
-			-webkit-transition: max-height .4s;
-			transition: max-height .4s;
-			-webkit-transform: translateZ(0); /* Activer l'accélération matériel */
-			-ms-transform: translateZ(0);
-			transform: translateZ(0);
+			position: relative;
+
+			-webkit-transform: scaleY(0);
+			-ms-transform: scaleY(0);
+			transform: scaleY(0);
+
+			-webkit-transition: all .4s;
+			transition: all .4s;
+			 /* Activer l'accélération matériel */
+
+
 		}
 
 		header nav li{
@@ -296,6 +302,15 @@ article p{
 
 		header nav:hover ul{
 			max-height: 30em;
+			
+/*			-webkit-transform: translateY(-100px);
+			-ms-transform: translateY(10);
+			transform: translateY(10);*/
+
+			-webkit-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+			transform: scaleY(1);
+
 		}
 
 		header nav:hover:before{

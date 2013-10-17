@@ -29,8 +29,8 @@ $("document").ready(function(){
 
    					$(".photo").animate({ whyNotToUseANonExistingProperty: 100 }, {
 						step: function(now,fx) {
-                        	$(this).css('-webkit-transform',"translateX("+now + "%)");
-                        	$(this).css('-moz-transform',"translateX("+now + "%)");
+                        	$(this).css('-webkit-transform',"translateX(-"+now + "%)");
+                        	$(this).css('-moz-transform',"translateX(-"+now + "%)");
                     },
                     duration:'slow'
                 },'linear');

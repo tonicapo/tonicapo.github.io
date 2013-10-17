@@ -28,12 +28,12 @@ $("document").ready(function(){
    					// $(".photo").animate({WebkitTransform:'translateX(200px)'}, 5000);
 
    					$(".photo").animate({ whyNotToUseANonExistingProperty: 100 }, {
-						    step: function() {
-						        $(this).css('-webkit-transform',"translateX(500px)");
-						        $(this).css('-moz-transform',"translateX(500px)");
-						    },
-						    duration:5000
-						},'ease-out');
+						step: function(now,fx) {
+                        	$(this).css('-webkit-transform',"translateX("+now + "%)");
+                        	$(this).css('-moz-transform',"translateX("+now + "%)");
+                    },
+                    duration:'slow'
+                },'linear');
 					// $(".photo").css('-webkit-transition',  "-webkit-translateX 2s ease-out" );
    		// 			$(".photo").css( "-webkit-transform", "translateX(100%)" );
 

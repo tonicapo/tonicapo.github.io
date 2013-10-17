@@ -49,7 +49,7 @@ $("document").ready(function(){
 				// $(".photo").promise().done(changer());
 				// laPhoto2.animate({left:'-=1400'});
 			};
-			setInterval(animer, 1000);
+			setInterval(animer, 5000);
 
 //La fonction est appelée 2 fois!!!
 			function changer(){

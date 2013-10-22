@@ -10,6 +10,7 @@ $("document").ready(function(){
 			// var leTiming = new Date();
 
 			var animer = function(){
+				// alert('changing');
 				    // $(".photo").each(function(){this.style.webkitTransition = '-webkit-translateX 2s ease-out';});
    					// $(".photo").each(function(){this.style.webkitTransform = '-webkit-translateX(100px)';});
 
@@ -26,14 +27,15 @@ $("document").ready(function(){
 						// });
 					// $(".photo").css('-webkit-transition',  "-webkit-translateX 2s ease-out" );
    					// $(".photo").animate({WebkitTransform:'translateX(200px)'}, 5000);
-
+                        	$(this).css('-webkit-transform',"translateX(0%)");
+                        	$(this).css('-moz-transform',"translateX(0%)");
    					$(".photo").animate({ whyNotToUseANonExistingProperty: 100 }, {
 						step: function(now,fx) {
                         	$(this).css('-webkit-transform',"translateX(-"+now + "%)");
                         	$(this).css('-moz-transform',"translateX(-"+now + "%)");
                     },
                     duration:'slow'
-                },'linear');
+                	},'linear');
 					// $(".photo").css('-webkit-transition',  "-webkit-translateX 2s ease-out" );
    		// 			$(".photo").css( "-webkit-transform", "translateX(100%)" );
 
@@ -43,7 +45,7 @@ $("document").ready(function(){
 					//POur jouer sur l'opacité, on place l'élément initialement invisible à display:none;
 					// opacity:'toggle'
 				// }, 1000);
-				// setTimeout(changer, 4000);
+				setTimeout(changer, 4000);
 				// $(".photo").promise().done(changer());
 				// }, { duration: 2000, done : function(){setTimeout(changer(), 1000);}});
 				// $(".photo").promise().done(changer());
@@ -57,7 +59,7 @@ $("document").ready(function(){
 				if (image==2){
 					$('.1').css('background-image', "url(./photos/"+lesImages[j]+")");
 
-					// $('.1').css('left', '100%');
+					$('.1').css('left',"100%");
 					// $('.1').css('display', 'none');
 
 					// console.log($('.1').css('opacity'));
@@ -66,7 +68,7 @@ $("document").ready(function(){
 				}else{
 					$('.2').css('background-image', "url(./photos/"+lesImages[j]+")");
 
-					// $('.2').css('left', '100%');
+					$('.2').css('-webkit-transform',"translateX(100%)");
 					image=2;
 					j++;
 				}

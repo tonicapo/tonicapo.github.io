@@ -40,7 +40,7 @@ $("document").ready(function(){
 
 			$.getJSON("./list_images.json", function (obj) 
 				{
-   				$.each(obj.users, function (key, value) 
+   				$(obj.users).each(function (key, value) 
    						{
         			$("ul").append("<li>" + value.name + "</li>");
 						}

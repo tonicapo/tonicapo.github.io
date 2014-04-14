@@ -16,21 +16,21 @@ $("document").ready(function(){
                     },
                     duration:'slow'
                 	},'linear');
-				setTimeout(changer, 4000);
+				setTimeout(changer, 500);
 			};
-			setInterval(animer, 5000);
+			setInterval(animer, 1000);
 
 			function changer(){
 				console.log('changer');
 				if (image==2){
 					$('.1').css('background-image', "url(./photos/"+lesImages[j]+")");
-
-					$('.1').css('left',"100%");
+					//$('.1').css('-webkit-transform',"translateX(100%)");
+					//$('.1').css('left',"100%");
 					image=1;
 					j++;
 				}else{
 					$('.2').css('background-image', "url(./photos/"+lesImages[j]+")");
-					$('.2').css('-webkit-transform',"translateX(100%)");
+					//$('.2').css('-webkit-transform',"translateX(100%)");
 					image=2;
 					j++;
 				}
@@ -38,15 +38,12 @@ $("document").ready(function(){
 				if(j==lesImages.length){j=0;}
 			}
 
-			$.getJSON("./list_images.json", function (obj) 
-				{
-   				$(obj.users).each(function (key, value) 
-   						{
-        			$("ul").append("<li>" + value.name + "</li>");
-						}
-					)
-				}
-			);
+			  $.getJSON("http://localhost/www/list-images.json", {format: "json" }, function (data)
+				    {
+				        $.each(data.images, function(i, image) {
+				             $("ul").append("<li>"+ image.name + "</li>");
+				        });
+				    });
 
 
     });

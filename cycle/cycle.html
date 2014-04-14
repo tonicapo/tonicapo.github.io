@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Mon site web</title>
+		<link rel="stylesheet" href="cycle.css" >
+
+
+		<!--
+				<script type="./js/jquery.cycle.all.js"></script> 
+				
+		 -->
+	</head>
+	<body>
+		<div class="slideshow">
+		    <img src="./images/Chicago1.jpg">
+		    <img src="./images/Chicago2.jpg">
+		    <img src="./images/Chicago3.jpg">
+		    <img src="./images/Chicago4.jpg">
+		</div>
+		<div class="center">
+    <a href=# id="prev">Prev</a> 
+    <a href=# id="next">Next</a>
+</div>
+
+
+
+
+		<script src="./js/jquery1.js"></script>		
+		<script src="./js/jquery.cycle2.js"></script>		
+		<script type="text/javascript">
+			$(document).ready(function() {
+			    $('.slideshow').cycle({
+			        fx: 'fade',
+			        pauseOnHover: 'false',
+			    });
+			});
+		</script>
+
+	</body>
+</html>

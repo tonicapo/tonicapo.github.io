@@ -190,13 +190,6 @@ header img{
     max-width: 2em;   
 }
 
-/*
-header h2 ~ div{
-    float: right;
-}
-*/
-
-
 /*NAV*/
 nav{
     background-color: rgb(43,43,43);

@@ -114,7 +114,7 @@ html{
 
 h1, h2, h3{
     font-family: "Oswald";
-    line-height: 1.2em;
+    line-height: 1.3em;
 }
 
 .wrapper{
@@ -162,8 +162,6 @@ header h1:first-letter, header h1 span{
 }
 
 header h2{
-/*    font-family: "MyriadBoldCondIt";*/
-/*    font-family: "Lato";*/
     margin-left: 2em;   
 }
 
@@ -194,7 +192,6 @@ nav{
 }
 
 nav ul{
-/*    font-family: "BebasNeue";*/
     font-family: "Oswald";
     font-size: 2em;
     height: 100%;

@@ -1,0 +1,38 @@
+Breakpoints :
+http://www.1stwebdesigner.com/design/overview-of-breakpoints-in-responsive-web-design/
+@media only screen and (max-device-width : 320px)
+@media only screen and (min-device-width : 321px)
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) 
+
+
+Contenus :
+Mobile :
+Carte de visite :
+Antonio capobianco
+Assistant Professor
+University of strasbourg
+
+Laboratoire ICube, Equipe IGG
+Réalité Virtuelle, Interaction 3D, Environnements d'apprentissage
+
+IUT DE HAGUENAU, DEPARTEMENT MMI
+Ergonomie, Intégration Multimédia, Développement web, Réalité Virtuelle et Interaction
+
+a.capobianco@unistra.fr
+
+Contact me / Twitter 
+
+
+
+
+
+Recherche :
+	Présentation
+	Publications
+	Projets
+	Sujets recherche
+
+Enseignements 
+
+

@@ -1,0 +1,33 @@
+Codeacademy json
+
+Start with 2 methods to retrieve JSON feeds from another website
+There are a number of ways to retrieve JSON data from sites. One way is using getJSON, but this is in fact a simple version of generic $.ajax JQuery call.
+
+This exercise is to introduce you to the $.ajax command in more detail.
+
+When using $.ajax to retrieve JSON data from a site that is in a different domain, you have to specify dataType: 'jsonp' so you don't get an error saying that the request "is not allowed by Access-Control-Origin". This is CORS related. When you specify jsonp you must also specify a callback function that will receive the data from the remote site.
+
+Again retrieve the last 10 items from the Google Feed about jquery, but this time use the $.ajax call. However, because you are specifying the option jsonpCallback the URL string does not need to contain &callback=?. Instead, you specify the function name as a string value for jsonpCallback. You must also specify "jsonp" as a dataType. Make sure this time the $.each command is inserted into the listTweets function.
+
+$(function() {
+    $.getJSON("https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=codecademy&callback=?",
+      function(response) {
+        $.each(response.responseData.entries, function (i,newsItem) {
+            $("#newsfeed").append("<li>"+newsItem.title+"</li>");
+        });
+      });
+
+   $.ajax({
+        url: "https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=jquery?",
+        dataType:"jsonp",
+        jsonpCallback: "listFeeds",
+    });
+
+});
+
+function listFeeds(response) {
+     // each goes here with appends to #jqueryfeed
+     $.each(response.responseData.entries, function(i,     newsItem){
+         $("#jqueryfeed").append("<li>"+newsItem.title+"</li>");
+     });
+}

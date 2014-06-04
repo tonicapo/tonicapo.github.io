@@ -1,0 +1,397 @@
+/*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; /* Needed for mobile WebKit */
+    -moz-box-sizing: border-box; /* Needed for Firefox */
+    box-sizing: border-box;
+}
+
+/*FONTS*/
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v8/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url(http://themes.googleusercontent.com/static/fonts/oswald/v8/bH7276GfdCjMjApa_dkG6bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Lato Hairline'), local('Lato-Hairline'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/Kom15zUm24dIPfIRiNogNuvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Lato Black'), local('Lato-Black'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/G2uphNnNqGFMHLRsO_72ngLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 100;
+  src: local('Lato Hairline Italic'), local('Lato-HairlineItalic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/CggrdU0t5c42NcNxN-VM33YhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/2HG_tEPiQ4Z6795cGfdivLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Lato Black Italic'), local('Lato-BlackItalic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/VNUH7ZAcagYBWsAiBBCEY7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+
+
+/*GENERAL STYLES*/
+html{
+    font-size:16px;
+    font-family: 'Lato';
+    line-height: 1.5em;
+}
+
+h1, h2, h3{
+    font-family: "Oswald";
+    line-height: 1.2em;
+}
+
+.wrapper{
+    width:1024px;
+    margin:auto;
+}
+
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*CONTENT STYLES*/
+/*HEADER*/
+header{
+    margin: 2em 0 2em 0;
+}
+
+header > div {
+/*    height:100%;*/
+}
+
+header > div > *{
+    display: inline-block;
+    vertical-align:baseline;
+    height:100%;
+}
+
+header h1{
+    line-height: 1em;
+    font-size: 2.5em;
+/*    font-family: "BebasNeue";*/
+    
+    text-transform: uppercase;
+}
+
+header h1:first-letter, header h1 span{
+    color:rgb(235,60,0);
+}
+
+header h2{
+/*    font-family: "MyriadBoldCondIt";*/
+/*    font-family: "Lato";*/
+    margin-left: 2em;   
+}
+
+header li{
+    display: inline-block;
+/*    float:left;*/
+    vertical-align:middle;
+}
+
+header img{
+    max-width: 4em;
+    margin: 0 0.5em 0 0.5em;
+}
+
+#logosmall{
+    max-width: 2em;   
+}
+
+header h2 ~ div{
+    float: right;
+}
+
+
+/*NAV*/
+nav{
+    background-color: rgb(43,43,43);
+    height: 72px;
+}
+
+nav ul{
+/*    font-family: "BebasNeue";*/
+    font-family: "Oswald";
+    font-size: 2em;
+    height: 100%;
+}
+
+nav ul li{
+    /*Indispensable pour que l'élément table-celle puisse hériter de la taille du conteneur en utilisant les %    */
+    display:table;
+    float:left;
+    height:100%;
+    padding:0 0.5em 0 0.5em;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+nav ul li a{
+    display:table-cell;
+    vertical-align: middle;
+    height:100%;
+    width:100%;
+    color:lightgray;
+}
+
+nav ul li:hover{
+    background-color:rgba(235,60,0, 0.9);
+}
+
+/*SECTION*/
+.left{
+    float:left;
+    width:66%;
+}
+
+.right{
+    float:left;
+    width:34%;
+    padding-left:2em;
+}
+
+section h1{
+/*    font-family: "MyriadBoldCond";*/
+/*    font-family: "Oswald";*/
+    text-transform: uppercase;
+}
+
+section h2{
+/*    font-family: "BebasBold";*/
+/*    font-family: "MyriadBoldCond";*/
+/*    font-family: "Oswald";*/
+}
+
+section article{
+    padding: 1em 0 1em 0;
+}
+
+section article a{
+    font-weight: 900;
+}
+
+section article a:hover{
+    color:rgb(235,60,0);
+}
+
+section article a:visited{
+   color:rgb(117, 117, 119);
+}
+
+section article h1{
+    color:rgba(235,60,0, 0.9);
+    font-size: 1.5em;
+    margin: 1em 0 0.5em 0;
+}
+
+/*Article principal accueil*/
+.large img{
+    max-width: 100%;
+}
+
+/*Articles secondaires accueil*/
+.small img{
+    display: block;
+    float:left;
+    max-width: 34%;
+}
+
+.small > div > div{
+    padding-left:1em;
+    float:left;
+    width:66%;
+}
+
+.left article:last-child{
+    margin-bottom:2em;   
+}
+
+.abstract{
+    background-color: rgba(247, 247, 247, 0.5);
+}
+
+.abstract h2{
+    padding: 0.5em 0.5em 0 0.5em;
+}
+
+.abstract p{
+    padding:0 0.5em 0 0.5em;
+}
+
+.small p{
+    height: 4.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*DOWNLINKS : mise en forme des liens de téléchargement*/
+.downlinks{
+    font-size: 0.8em;
+    padding: 0.5em 0 0.5em 0.5em;
+    color: rgb(117, 117, 119);
+    text-align: right;
+}
+
+.downlinks p{
+    display:inline;
+    margin-right: 2em;
+}
+
+.downlinks span{
+    font-size: 1.5em;
+}
+
+.downlinks a:hover{
+    color:rgba(235,60,0, 0.7);
+}
+
+/*FOOTER*/
+footer{
+    background-color: rgb(43,43,43);
+    padding: 2em 0 0 0;
+    color:rgb(117, 117, 119);
+}
+
+footer article{
+    float:left;
+}
+
+footer article:nth-child(2){
+    margin:0 1em 0 2em;
+}
+
+footer article:last-child{
+    float:right;   
+}
+
+footer h1, footer h3{
+/*    font-family: "MyriadBoldCond";*/
+    color:rgba(235,60,0, 0.8);
+    font-size: 1.5em;
+    text-transform:uppercase;
+}
+
+
+footer h2{
+    color:inherit;
+    border-bottom: 1px solid rgb(117, 117, 119);
+    padding-bottom: 1em;
+}
+
+footer h3{
+    margin-top: 2em;
+}
+
+footer a:hover{
+    color: rgba(235,60,0, 0.7);
+}
+
+footer ul li{
+    list-style-type: none;    
+}
+
+footer article:last-child ul li{
+    border-bottom: 1px solid rgb(117, 117, 119);
+    padding: 1em 1em 1em 0;
+}
+
+footer article:last-child ul li:last-child{
+    border-bottom: none;
+}
+
+footer div:last-child{
+    padding: 1em 0 1em 0;
+    background-color: rgb(40, 40, 40);
+}
+
+.social li{
+    display:inline-block;
+    font-size: 3em;
+    margin: 0.25em 0.5em 0 0;
+}
+
+

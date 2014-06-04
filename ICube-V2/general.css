@@ -286,6 +286,7 @@ section article h1{
 
 .abstract{
     background-color: rgba(247, 247, 247, 0.5);
+    position: relative;
 }
 
 .abstract h2{
@@ -306,15 +307,18 @@ section article h1{
 /*DOWNLINKS : mise en forme des liens de téléchargement*/
 .downlinks{
     font-size: 0.8em;
-    padding: 0.5em 0 0.5em 0.5em;
+    padding: 0.5em 0 0 0.5em;
     color: rgb(117, 117, 119);
     text-align: right;
+    position: absolute;
+    right:0;
+    bottom: 0;
 }
 
 .downlinks p{
     display:inline;
     font-size: 1em;
-    margin-right: 2em;
+/*    margin-right: 2em;*/
 }
 
 .downlinks span{
@@ -391,7 +395,7 @@ footer div:last-child{
     margin: 0.25em 0.5em 0 0;
 }
 
-.twittertimeline{
+.twitter-timeline{
     width:3em;
 }
 

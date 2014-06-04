@@ -59,24 +59,29 @@ Voir cette page : https://github.com/CSSLint/csslint/wiki/Bulletproof-font-face
   font-weight: 300;
   src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
 }
+/*
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
   src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
 }
+*/
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
   src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
 }
+/*
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 900;
   src: local('Lato Black'), local('Lato-Black'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/G2uphNnNqGFMHLRsO_72ngLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
 }
+*/
+/*
 @font-face {
   font-family: 'Lato';
   font-style: italic;
@@ -107,6 +112,7 @@ Voir cette page : https://github.com/CSSLint/csslint/wiki/Bulletproof-font-face
   font-weight: 900;
   src: local('Lato Black Italic'), local('Lato-BlackItalic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/VNUH7ZAcagYBWsAiBBCEY7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
+*/
 
 
 
@@ -120,6 +126,10 @@ html{
 h1, h2, h3{
     font-family: "Oswald";
     line-height: 1.35em;
+}
+
+h1, h3{
+     text-transform: uppercase;
 }
 
 .wrapper{
@@ -138,6 +148,10 @@ a{
     color: inherit;
 }
 
+p{
+    text-align: justify;
+}
+
 /*CONTENT STYLES*/
 /*HEADER*/
 header{
@@ -150,7 +164,6 @@ header > div > div {
 
 header h1{
     font-size: 2em;
-    text-transform: uppercase;
     display: inline-block;
 }
 
@@ -220,24 +233,13 @@ nav ul li:hover{
 .left{
     float:left;
     width:66%;
+    background-color: rgba(247, 247, 247, 0.4);
 }
 
 .right{
     float:left;
     width:34%;
     padding-left:2em;
-}
-
-section h1{
-/*    font-family: "MyriadBoldCond";*/
-/*    font-family: "Oswald";*/
-    text-transform: uppercase;
-}
-
-section h2{
-/*    font-family: "BebasBold";*/
-/*    font-family: "MyriadBoldCond";*/
-/*    font-family: "Oswald";*/
 }
 
 section article{
@@ -263,6 +265,7 @@ section article h1{
 }
 
 /*Article principal accueil*/
+
 .large img{
     max-width: 100%;
 }
@@ -284,11 +287,6 @@ section article h1{
     margin-bottom:2em;   
 }
 
-.abstract{
-    background-color: rgba(247, 247, 247, 0.5);
-    position: relative;
-}
-
 .abstract h2{
     padding: 0.5em 0.5em 0.5em 0.5em;
 }
@@ -299,9 +297,9 @@ section article h1{
 }
 
 .small p{
-    height: 4.5em;
-    overflow-y: hidden;
-    text-overflow: ellipsis;
+/*    height: 4.5em;*/
+/*    overflow-y: hidden;*/
+/*    text-overflow: ellipsis;*/
 }
 
 /*DOWNLINKS : mise en forme des liens de téléchargement*/
@@ -310,15 +308,11 @@ section article h1{
     padding: 0.5em 0 0 0.5em;
     color: rgb(117, 117, 119);
     text-align: right;
-    position: absolute;
-    right:0;
-    bottom: 0;
 }
 
 .downlinks p{
     display:inline;
     font-size: 1em;
-/*    margin-right: 2em;*/
 }
 
 .downlinks span{
@@ -349,11 +343,9 @@ footer article:last-child{
 }
 
 footer h1, footer h3{
-/*    font-family: "MyriadBoldCond";*/
     color:rgba(235,60,0, 0.8);
     margin-bottom:0.5em;
     font-size: 1.5em;
-    text-transform:uppercase;
 }
 
 
@@ -396,6 +388,6 @@ footer div:last-child{
 }
 
 .twitter-timeline{
-    width:3em;
+    width:5em;
 }
 

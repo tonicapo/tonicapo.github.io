@@ -26,11 +26,16 @@ time, mark, audio, video {
 }
 
 /*FONTS*/
+/*Remarque :
+Concernant l'avertissement "use the bulletproof @font-face syntax"
+Voir cette page : https://github.com/CSSLint/csslint/wiki/Bulletproof-font-face
+*/
+
 @font-face {
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v8/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+  src: local('Oswald Regular'), local('Oswald-Regular'), url('http://themes.googleusercontent.com/static/fonts/oswald/v8/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff') format('woff');
 }
 
 
@@ -38,7 +43,7 @@ time, mark, audio, video {
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url(http://themes.googleusercontent.com/static/fonts/oswald/v8/bH7276GfdCjMjApa_dkG6bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+  src: local('Oswald Bold'), local('Oswald-Bold'), url('http://themes.googleusercontent.com/static/fonts/oswald/v8/bH7276GfdCjMjApa_dkG6bO3LdcAZYWl9Si6vvxL-qU.woff') format('woff');
 }
 
 
@@ -46,7 +51,7 @@ time, mark, audio, video {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 100;
-  src: local('Lato Hairline'), local('Lato-Hairline'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/Kom15zUm24dIPfIRiNogNuvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+  src: local('Lato Hairline'), local('Lato-Hairline'), url('xhttp://themes.googleusercontent.com/static/fonts/lato/v7/Kom15zUm24dIPfIRiNogNuvvDin1pK8aKteLpeZ5c0A.woff') format('woff');
 }
 @font-face {
   font-family: 'Lato';
@@ -109,12 +114,12 @@ time, mark, audio, video {
 html{
     font-size:16px;
     font-family: 'Lato';
-    line-height: 1.5em;
+    line-height: 1.35em;
 }
 
 h1, h2, h3{
     font-family: "Oswald";
-    line-height: 1.3em;
+    line-height: 1.35em;
 }
 
 .wrapper{
@@ -139,25 +144,12 @@ header{
     margin: 2em 0 2em 0;
 }
 
-header > div {
-/*    height:100%;*/
-}
-
-header > div > *{
-/*
-    display: inline-block;
-    vertical-align:baseline;
-*/
-    height:100%;
-}
-
 header > div > div {
     float:left;
 }
 
 header h1{
-    line-height: 1em;
-    font-size: 2.5em;
+    font-size: 2em;
     text-transform: uppercase;
     display: inline-block;
 }
@@ -253,7 +245,7 @@ section article{
 }
 
 section article a{
-    font-weight: 900;
+    font-weight: 700;
 }
 
 section article a:hover{
@@ -297,16 +289,17 @@ section article h1{
 }
 
 .abstract h2{
-    padding: 0.5em 0.5em 0 0.5em;
+    padding: 0.5em 0.5em 0.5em 0.5em;
 }
 
 .abstract p{
+    font-size: 0.9em;
     padding:0 0.5em 0 0.5em;
 }
 
 .small p{
     height: 4.5em;
-    overflow: hidden;
+    overflow-y: hidden;
     text-overflow: ellipsis;
 }
 
@@ -320,6 +313,7 @@ section article h1{
 
 .downlinks p{
     display:inline;
+    font-size: 1em;
     margin-right: 2em;
 }
 
@@ -353,6 +347,7 @@ footer article:last-child{
 footer h1, footer h3{
 /*    font-family: "MyriadBoldCond";*/
     color:rgba(235,60,0, 0.8);
+    margin-bottom:0.5em;
     font-size: 1.5em;
     text-transform:uppercase;
 }

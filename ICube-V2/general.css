@@ -144,17 +144,22 @@ header > div {
 }
 
 header > div > *{
+/*
     display: inline-block;
     vertical-align:baseline;
+*/
     height:100%;
+}
+
+header > div > div {
+    float:left;
 }
 
 header h1{
     line-height: 1em;
     font-size: 2.5em;
-/*    font-family: "BebasNeue";*/
-    
     text-transform: uppercase;
+    display: inline-block;
 }
 
 header h1:first-letter, header h1 span{
@@ -162,12 +167,17 @@ header h1:first-letter, header h1 span{
 }
 
 header h2{
-    margin-left: 2em;   
+    margin-left: 2em;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+header ul{
+    float: right;
 }
 
 header li{
     display: inline-block;
-/*    float:left;*/
     vertical-align:middle;
 }
 
@@ -180,9 +190,11 @@ header img{
     max-width: 2em;   
 }
 
+/*
 header h2 ~ div{
     float: right;
 }
+*/
 
 
 /*NAV*/

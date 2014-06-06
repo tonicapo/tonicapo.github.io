@@ -167,9 +167,11 @@ header h1{
     display: inline-block;
 }
 
+/*
 header h1:first-letter, header h1 span{
     color:rgb(235,60,0);
 }
+*/
 
 header h2{
     margin-left: 2em;
@@ -225,9 +227,24 @@ nav ul li a{
     color:lightgray;
 }
 
+nav span{
+    font-size:1.5em;   
+}
+
 nav ul li:hover{
     background-color:rgba(235,60,0, 0.9);
 }
+
+.current a{
+    color:rgba(235,60,0, 0.9);
+}
+
+.current:hover a{
+    color:lightgray;
+}
+
+
+
 
 /*SECTION*/
 .left{
@@ -294,12 +311,6 @@ section article h1{
 .abstract p{
     font-size: 0.9em;
     padding:0 0.5em 0 0.5em;
-}
-
-.small p{
-/*    height: 4.5em;*/
-/*    overflow-y: hidden;*/
-/*    text-overflow: ellipsis;*/
 }
 
 /*DOWNLINKS : mise en forme des liens de téléchargement*/
@@ -399,8 +410,8 @@ footer div:last-child{
 }
 @media only screen and (min-device-width : 321px){
 }
-/*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)*/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation: portrait)
 {
     .wrapper{
         width:100%;
@@ -411,16 +422,60 @@ footer div:last-child{
         float: none;
         width: 100%;
         padding-left: 0;
+        background-color: transparent;
+    }
+    
+    p{
+        text-align: left;
+    }
+    
+    
+    header h1, header h2{
+        display: block;
+        margin-left: 0;
     }
     
     nav ul{
         font-size:1.5em;
+        display:block;
+        margin: auto;
+    }
+    
+    section h1 > p{
+      display: inline;  
+    }
+    
+    .abstract p{
+        font-size:1em;
+    }
+    
+    .downlinks {
+        font-size: 1.1em;
+        text-align: center;
     }
     
     .twitter{
         display:none;   
     }
+    
+    
 }
     
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        .wrapper{
+            width:100%;
+            padding:0 1em 0 1em;
+        }
+    
+        p{
+            text-align: left;
+        }
+    
+        .abstract p{
+            font-size:1em;
+        }
+    
+        .downlinks {
+            font-size: 1.1em;
+        }
 }

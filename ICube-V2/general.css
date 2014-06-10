@@ -465,6 +465,25 @@ footer div:last-child{
         display:none;   
     }
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) and (orientation : landscape) {
+        .wrapper{
+            width:100%;
+            padding:0 1em 0 1em;
+        }
+    
+        p{
+            text-align: left;
+        }
+    
+        .abstract p{
+            font-size:1em;
+        }
+    
+        .downlinks {
+            font-size: 1.1em;
+        }
+}
     
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
         .wrapper{

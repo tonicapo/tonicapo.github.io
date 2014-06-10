@@ -10,12 +10,12 @@ $('window').ready(function(){
     $(window).scroll(function(){
         newoffset = $(this).scrollTop();
         
-        if(newoffset < (oldoffset) && newoffset > navoffset){
+        if(newoffset < (oldoffset) && newoffset > navoffset && !((window.innerHeight + window.scrollY) >= document.body.offsetHeight)   ){
 //            nav.css('top', -50);
-            ref.addClass('sticky');
+            ref.addClass('stick');
             nav.addClass('animated fadeInDown');
         } else {
-            ref.removeClass('sticky');
+            ref.removeClass('stick');
             nav.removeClass('animated fadeInDown');
         }
         

@@ -458,8 +458,6 @@ footer div:last-child{
     .twitter{
         display:none;   
     }
-    
-    
 }
     
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
@@ -482,12 +480,21 @@ footer div:last-child{
 }
 
 
+
+@media (min-width:320px) and (max-width:1920px){
+    nav, footer{
+        background-color: rgb(43,43,43); 
+    }
+}
+
+
+
 /*STICKY MENU CLASS*/
 .navcontainer{
     height:72px;
 }
 
-.sticky{
+.stick{
     position: fixed;
     top:0;
     width:100%;
@@ -512,13 +519,23 @@ footer div:last-child{
 */
 
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
 @keyframes fadeInDown {
+  0% {
+      top: -72px;
+  }
+
+  100% {
+      top: 0;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
   0% {
       top: -72px;
   }

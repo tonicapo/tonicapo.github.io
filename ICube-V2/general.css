@@ -137,6 +137,10 @@ h1, h3{
     margin:auto;
 }
 
+nav > .wrapper, footer >.wrapper{
+    background-color: rgb(43,43,43);
+}
+
 .clearfix:after{
     content: "";
     display: block;
@@ -477,15 +481,6 @@ footer div:last-child{
         .downlinks {
             font-size: 1.1em;
         }
-}
-
-
-
-@media (min-width:320px) and (max-width:1024px){
-    nav, footer{
-        background-color: rgb(43,43,43);
-        width:100%;
-    }
 }
 
 /*STICKY MENU CLASS*/

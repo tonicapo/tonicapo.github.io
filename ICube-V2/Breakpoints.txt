@@ -36,3 +36,28 @@ Recherche :
 Enseignements 
 
 
+Redirections : 
+http://www.toutjavascript.com/reference/reference.php?iref=137
+<SCRIPT language=javascript>
+document.write("<A href='"+document.referrer+"'>Retour vers "+document.referrer+"</A>")
+</SCRIPT>
+
+
+
+http://www.destrucsaweb.com/ressources/phpmyannu/goto_44.php
+Voici une méthode simple pour faire une redirection en javascript.
+
+Voir également comment rediriger une page en html
+
+A mettre entre les balises <head></head>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+     document.location.href="nouvellepage.html" 
+</SCRIPT>
+
+on peut rediriger également vers un autre site
+
+<SCRIPT LANGUAGE="JavaScript">
+     document.location.href="http://www.mondomaine.com" 
+</SCRIPT>

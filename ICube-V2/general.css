@@ -413,12 +413,15 @@ footer div:last-child{
 }
 
 /*MEDIA QUERIES*/
+/*
 @media only screen and (max-device-width : 320px){
 }
 @media only screen and (min-device-width : 321px){
 }
+*/
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) and (orientation: portrait)
+/*@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) and (orientation: portrait)*/
+@media handheld and (min-width : 768px) 
 {
     .wrapper{
         width:100%;
@@ -487,6 +490,7 @@ footer div:last-child{
 }
 */
     
+/*
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
         .wrapper{
             width:100%;
@@ -505,12 +509,9 @@ footer div:last-child{
             font-size: 1.1em;
         }
 }
+*/
 
-@media (min-width:320px) and (max-width:1024px){
-    nav, footer{
-/*        width:1024px;   */
-    }
-}
+
 
 /*STICKY MENU CLASS*/
 .navcontainer{

@@ -422,13 +422,22 @@ footer div:last-child{
 
 /*@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) and (orientation: portrait)*/
 @media handheld and (min-width : 320px) and (max-width : 767px){
+    .wrapper{
+        width:100%;
+        padding:0 1em 0 1em;
+    }
+    
     nav li{
-        display:block;
+        display:none;
         color: red;
     }
     
     nav li a{
         color:red;
+    }
+    
+    .twitter{
+        display:none;   
     }
 }
 

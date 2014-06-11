@@ -422,13 +422,33 @@ footer div:last-child{
         padding:0 1em 0 1em;
     }
     
-    nav li{
-        display:block;
+/*    Attention : pour écraser la style défini plus haut, il faut faire attention à bien utiliser le même selecteur, soit nav ul li
+    Faute de quoi, le style n'est pas appliqué car son poids est moindre !*/
+    nav ul li{
+        float:none;
         color: red;
     }
     
     nav li a{
         color:red;
+    }
+    
+    .left, .right{
+        float: none;
+        width: 100%;
+        padding-left: 0;
+        background-color: transparent;
+    }
+    
+        
+    .small > div > div {
+        float: none;
+        width : 100%;
+        padding : 0;
+    }
+    
+    .small > div > div > p{
+        padding: 0;
     }
     
     .twitter{
@@ -540,23 +560,6 @@ footer div:last-child{
 }
 
 /*http://daneden.github.io/animate.css/*/
-
-/*
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-*/
-
 .animated {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;

@@ -254,6 +254,10 @@ nav ul li:hover{
 
 
 /*SECTION*/
+section a{
+    border-bottom: dotted 1px inherit;
+}
+
 .left{
     float:left;
     width:66%;
@@ -421,8 +425,21 @@ footer div:last-child{
 /*MEDIA QUERIES*/
 /* Attention : la propriété handheld est ignorée par la plupart des navigateurs ! */
 
-/*@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) and (orientation: portrait)*/
-/*@media only screen and (min-device-width : 320px) and (max-device-width : 767px){*/
+/* gestion du menu mobile*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px){
+    header ul{
+        display: none;
+    }
+}
+
+/* gestion des logos */
+@media only screen and (min-device-width : 768px ) and (max-device-width : 1024px) and (orientation:portrait){
+    header ul{
+        display: none;
+    }
+}
+
+/* gestion du contenu mobile + tablettes*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 1024px){
     .wrapper{
         width:100%;
@@ -447,6 +464,10 @@ footer div:last-child{
         background-color: transparent;
     }
     
+    .downlinks{
+/*        font-size: 1.1em;   */
+    }
+    
     .twitter, .menu{
         display:none;   
     }
@@ -463,106 +484,6 @@ footer div:last-child{
         margin-bottom: 1em;
     }
 }
-
-/*
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
-    .wrapper{
-        width:100%;
-        padding:0 1em 0 1em;
-    }
-    
-    .left, .right{
-        float: none;
-        width: 100%;
-        padding-left: 0;
-        background-color: transparent;
-    }
-    
-    header h1, header h2{
-        display: block;
-        margin-left: 0;
-    }
-    
-    nav ul{
-        font-size:1.5em;
-        display:block;
-        margin: auto;
-    }
-    
-    section h1 > p{
-      display: inline;  
-    }
-    
-    .abstract p{
-        font-size:1em;
-    }
-    
-    .downlinks {
-        font-size: 1.1em;
-        text-align: center;
-    }
-    
-    footer article{
-        float: none;
-    }
-    
-    .twitter, .menu{
-        display:none;   
-    }
-    
-    .contact{
-        text-align: center;
-    }
-    
-    .social{
-        margin-bottom: 1em;
-    }
-}
-*/
-
-/*
-@media only screen and (min-width : 320px) and (max-width : 767px) {
-        .wrapper{
-            width:100%;
-            padding:0 1em 0 1em;
-        }
-    
-        p{
-            text-align: left;
-        }
-    
-        .abstract p{
-            font-size:1em;
-        }
-    
-        .downlinks {
-            font-size: 1.1em;
-        }
-}
-*/
-    
-/*
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-        .wrapper{
-            width:100%;
-            padding:0 1em 0 1em;
-        }
-    
-        p{
-            text-align: left;
-        }
-    
-        .abstract p{
-            font-size:1em;
-        }
-    
-        .downlinks {
-            font-size: 1.1em;
-        }
-}
-*/
-
-
 
 /*STICKY MENU CLASS*/
 .navcontainer{

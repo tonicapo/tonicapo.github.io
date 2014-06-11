@@ -413,12 +413,7 @@ footer div:last-child{
 }
 
 /*MEDIA QUERIES*/
-/*
-@media only screen and (max-device-width : 320px){
-}
-@media only screen and (min-device-width : 321px){
-}
-*/
+/* Attention : la propriété handheld est ignorée par la plupart des navigateurs ! */
 
 /*@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) and (orientation: portrait)*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 767px){
@@ -428,7 +423,7 @@ footer div:last-child{
     }
     
     nav li{
-        display:none;
+        display:block;
         color: red;
     }
     

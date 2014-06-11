@@ -299,12 +299,17 @@ section article h1{
     display: block;
     float:left;
     max-width: 34%;
+    margin : 0 1em 0 0;
 }
 
 .small > div > div{
-    padding-left:1em;
-    float:left;
-    width:66%;
+        float: none;
+        width : 100%;
+        padding : 0;
+}
+
+.small > div > div > *{
+        padding: 0 0.5em 0 0;
 }
 
 .left article:last-child{
@@ -322,6 +327,7 @@ section article h1{
 
 /*DOWNLINKS : mise en forme des liens de téléchargement*/
 .downlinks{
+    margin-top: 0.5em;
     font-size: 0.8em;
     padding: 0.5em 0 0 0.5em;
     color: rgb(117, 117, 119);
@@ -438,17 +444,6 @@ footer div:last-child{
         width: 100%;
         padding-left: 0;
         background-color: transparent;
-    }
-    
-        
-    .small > div > div {
-        float: none;
-        width : 100%;
-        padding : 0;
-    }
-    
-    .small > div > div > p{
-        padding: 0;
     }
     
     .twitter{

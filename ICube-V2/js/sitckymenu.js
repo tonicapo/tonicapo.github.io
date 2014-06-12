@@ -1,15 +1,19 @@
 $('window').ready(function(){
     nav = $('nav');
     ref = $('.ref');
+    mobilemenu = $('#mobilemenu');
     navoffset = $('.navcontainer').offset().top;
 //    console.log(navoffset);
     oldoffset = 0;
     newoffset = 0;
     
+   mobilemenu.click(function(){
+       nav.css('height','200px');
+   });
     
-    $(window).scroll(function(){
-        newoffset = $(this).scrollTop();
-        
+    
+    $(window).scroll(function(){        
+        newoffset = $(this).scrollTop();      
         if(newoffset < (oldoffset) && newoffset > navoffset && !((window.innerHeight + window.scrollY) >= document.body.offsetHeight)   ){
 //            nav.css('top', -50);
             ref.addClass('stick');
@@ -21,4 +25,5 @@ $('window').ready(function(){
         
         oldoffset  = $(this).scrollTop();
     });
+    
 });

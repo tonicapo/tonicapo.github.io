@@ -427,138 +427,138 @@ footer div:last-child{
     color:black;
 }
 
-/*MEDIA QUERIES*/
-/* Attention : la propriété handheld est ignorée par la plupart des navigateurs ! */
+                /*MEDIA QUERIES*/
+                /* Attention : la propriété handheld est ignorée par la plupart des navigateurs ! */
 
-/* gestion du menu mobile*/
-@media only screen and (min-device-width : 320px) and (max-device-width : 767px){
-    header ul{
-        display: none;
-    }
-    
-    header h2{
-        margin-left: 0;
-    }
-}
+                /* gestion du menu mobile*/
+                @media only screen and (min-device-width : 320px) and (max-device-width : 767px){
+                    header ul{
+                        display: none;
+                    }
 
-/* gestion des logos */
-@media only screen and (min-device-width : 768px ) and (max-device-width : 1024px) and (orientation:portrait){
-    header ul{
-        display: none;
-    }
+                    header h2{
+                        margin-left: 0;
+                    }
+                }
 
-}
+                /* gestion des logos */
+                @media only screen and (min-device-width : 768px ) and (max-device-width : 1024px) and          (orientation:portrait){
+                    header ul{
+                        display: none;
+                    }
 
-/* gestion du contenu mobile + tablettes*/
-@media only screen and (min-device-width : 320px) and (max-device-width : 1024px){
-    .wrapper{
-        width:100%;
-        padding:0 1em 0 1em;
-    }
-    
-/*    Attention : pour écraser la style défini plus haut, il faut faire attention à bien utiliser le même selecteur, soit nav ul li
-    Faute de quoi, le style n'est pas appliqué car son poids est moindre !*/
-    nav ul li{
-        float:none;
-        color: red;
-    }
-    
-    nav li a{
-        color:red;
-    }
-    
-    .left, .right{
-        float: none;
-        width: 100%;
-        padding-left: 0;
-        background-color: transparent;
-    }
-    
-    .downlinks{
-/*        font-size: 1.1em;   */
-    }
-    
-    .twitter, .menu{
-        display:none;   
-    }
-    
-    footer article{
-        float: none;
-    }
-    
-    .contact{
-        text-align: center;
-    }
-    
-    .social{
-        margin-bottom: 1em;
-    }
-    
-    
-/*    Gestion du menu */
-    #mobilemenu{
-        display:table;
-        font-size: 0.7em;
-    }
-    
-    .navcontainer{
-        width: 100%;
-        position:absolute;
-        top:0;
-    }
-    
-    nav ul{
-        height: 100%;
-        overflow: hidden;
-        padding: 0;
-    }
-    
-    nav ul li{
-        display: block;
-    }
-}
+                }
 
-/*STICKY MENU CLASS*/
-.navcontainer{
-    height:72px;
-}
+                /* gestion du contenu mobile + tablettes*/
+                @media only screen and (min-device-width : 320px) and (max-device-width : 1024px){
+                    .wrapper{
+                        width:100%;
+                        padding:0 1em 0 1em;
+                    }
 
-.stick{
-    position: fixed;
-    top:0;
-    width:100%;
-}
+                /*    Attention : pour écraser la style défini plus haut, il faut faire attention à bien utiliser le même selecteur, soit nav ul li
+                    Faute de quoi, le style n'est pas appliqué car son poids est moindre !*/
+                    nav ul li{
+                        float:none;
+                        color: red;
+                    }
 
-/*http://daneden.github.io/animate.css/*/
-.animated {
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
+                    nav li a{
+                        color:red;
+                    }
 
-@keyframes fadeInDown {
-  0% {
-      top: -72px;
-  }
+                    .left, .right{
+                        float: none;
+                        width: 100%;
+                        padding-left: 0;
+                        background-color: transparent;
+                    }
 
-  100% {
-      top: 0;
-  }
-}
+                    .downlinks{
+                /*        font-size: 1.1em;   */
+                    }
 
-@-webkit-keyframes fadeInDown {
-  0% {
-      top: -72px;
-  }
+                    .twitter, .menu{
+                        display:none;   
+                    }
 
-  100% {
-      top: 0;
-  }
-}
+                    footer article{
+                        float: none;
+                    }
 
-.fadeInDown {
-/*    top:50px;*/
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
+                    .contact{
+                        text-align: center;
+                    }
+
+                    .social{
+                        margin-bottom: 1em;
+                    }
+
+
+                /*    Gestion du menu */
+                    #mobilemenu{
+                        display:table;
+                        font-size: 0.7em;
+                    }
+
+                    .navcontainer{
+                        width: 100%;
+                        position:absolute;
+                        top:0;
+                    }
+
+                    nav ul{
+                        height: 100%;
+                        overflow: hidden;
+                        padding: 0;
+                    }
+
+                    nav ul li{
+                        display: block;
+                    }
+                }
+
+        /*STICKY MENU CLASS*/
+        .navcontainer{
+            height:72px;
+        }
+
+        .stick{
+            position: fixed;
+            top:0;
+            width:100%;
+        }
+
+        /*http://daneden.github.io/animate.css/*/
+        .animated {
+          -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+        }
+
+        @keyframes fadeInDown {
+          0% {
+              top: -72px;
+          }
+
+          100% {
+              top: 0;
+          }
+        }
+
+        @-webkit-keyframes fadeInDown {
+          0% {
+              top: -72px;
+          }
+
+          100% {
+              top: 0;
+          }
+        }
+
+        .fadeInDown {
+        /*    top:50px;*/
+          -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+        }

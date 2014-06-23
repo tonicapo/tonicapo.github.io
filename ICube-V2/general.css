@@ -257,7 +257,6 @@ nav ul li:hover{
 
 
 
-
 /*SECTION*/
 section a{
     border-bottom: dotted 1px inherit;
@@ -432,12 +431,18 @@ footer div:last-child{
 
                 /* gestion du menu mobile*/
                 @media only screen and (min-device-width : 320px) and (max-device-width : 767px){
+/*
                     header ul{
                         display: none;
                     }
 
                     header h2{
                         margin-left: 0;
+                    }
+                    
+*/
+                    header {
+                        display:none;
                     }
                 }
 

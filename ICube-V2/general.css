@@ -482,17 +482,6 @@ footer article:last-child ul li:last-child{
                     .right{
                         margin-top: 4.5em;
                     }
-                /*    Attention : pour écraser la style défini plus haut, il faut faire attention à bien utiliser le même selecteur, soit nav ul li
-                    Faute de quoi, le style n'est pas appliqué car son poids est moindre !*/
-
-                    nav ul li{
-                        float:none;
-                        color: red;
-                    }
-
-                    nav li a{
-                        color:red;
-                    }
 
                     .left, .right{
                         float: none;
@@ -525,7 +514,12 @@ footer article:last-child ul li:last-child{
                 /*    Gestion du menu */
                     #mobilemenu{
                         display:block;
-/*                        font-size: 0.7em;*/
+                        height:4.5em;
+                    }
+
+                    #mobilemenu a{
+                        color:rgba(235,60,0, 0.7);;
+                        border-bottom: none;
                     }
 
                     .navcontainer{
@@ -540,9 +534,18 @@ footer article:last-child ul li:last-child{
                         padding: 0;
                     }
 
+                                    /*    Attention : pour écraser la style défini plus haut, il faut faire attention à bien utiliser le même selecteur, soit nav ul li
+                    Faute de quoi, le style n'est pas appliqué car son poids est moindre !*/
+
                     nav ul li{
-                        display: block;
+                        float:none;
                     }
+
+                    nav ul li:first-child{
+                        display: none;
+                    }
+
+
                 }
 
         /*STICKY MENU CLASS*/
@@ -588,4 +591,10 @@ footer article:last-child ul li:last-child{
         /*    top:50px;*/
           -webkit-animation-name: fadeInDown;
           animation-name: fadeInDown;
+        }
+
+
+/*        Javascript menu class*/
+        .toggleMenu{
+            height:100%;
         }

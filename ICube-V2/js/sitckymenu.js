@@ -8,7 +8,9 @@ $('window').ready(function(){
     newoffset = 0;
     
    mobilemenu.click(function(){
-       nav.css('height','200px');
+//       nav.css('height','200px');
+        nav.toggleClass("toggleMenu");
+        console.log("toggle");
    });
     
     

@@ -126,12 +126,10 @@ html{
 h1, h2, h3{
     font-family: "Oswald";
     line-height: 1.35em;
-    color:green;
-    display:none;
 }
 
 h1, h3{
-/*     text-transform: uppercase;*/
+     text-transform: uppercase;
 }
 
 .wrapper{

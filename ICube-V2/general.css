@@ -199,7 +199,7 @@ header img{
     margin: 0 0.5em 0 0.5em;
 }
 
-#logosmall{
+.logosmall{
     max-width: 2em;   
 }
 
@@ -410,7 +410,7 @@ footer article:last-child ul li:last-child{
     border-bottom: none;
 }
 
-footer div:last-child{
+.signature{
     padding: 1em 0 1em 0;
     background-color: rgb(40, 40, 40);
 }
@@ -432,26 +432,25 @@ footer div:last-child{
                 /* gestion du menu mobile*/
                 @media only screen and (min-device-width : 320px) and (max-device-width : 767px){
 /*
-                    header ul{
-                        display: none;
-                    }
-
-                    header h2{
-                        margin-left: 0;
-                    }
-                    
-*/
                     header {
                         display:none;
                     }
+*/
                 }
 
                 /* gestion des logos */
-                @media only screen and (min-device-width : 768px ) and (max-device-width : 1024px) and          (orientation:portrait){
-                    header ul{
-                        display: none;
+                @media only screen and (min-device-width : 768px ) and (max-device-width : 1024px) and          (orientation:landscape){
+                    .contact div:first-child{
+                        float:left;
                     }
 
+                    .contact div:nth-child(2){
+                        float:right;
+                    }
+
+                    footer h3{
+                        margin-top: 0;
+                    }
                 }
 
                 /* gestion du contenu mobile + tablettes*/
@@ -461,8 +460,16 @@ footer div:last-child{
                         padding:0 1em 0 1em;
                     }
 
+                    header {
+                        display:none;
+                    }
+
+                    .right{
+                        margin-top: 4.5em;
+                    }
                 /*    Attention : pour écraser la style défini plus haut, il faut faire attention à bien utiliser le même selecteur, soit nav ul li
                     Faute de quoi, le style n'est pas appliqué car son poids est moindre !*/
+
                     nav ul li{
                         float:none;
                         color: red;
@@ -502,8 +509,8 @@ footer div:last-child{
 
                 /*    Gestion du menu */
                     #mobilemenu{
-                        display:table;
-                        font-size: 0.7em;
+                        display:block;
+/*                        font-size: 0.7em;*/
                     }
 
                     .navcontainer{

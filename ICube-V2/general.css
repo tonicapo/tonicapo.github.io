@@ -143,12 +143,37 @@ nav > .wrapper, footer >.wrapper{
 }
 */
 
+/*CLASSES DEFINITION*/
 .clearfix:after{
     content: "";
     display: block;
     clear: both;
 }
 
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+
+.tabled{
+    display:table;
+    vertical-align: middle;
+}
+
+.celled{
+    display:table-cell;
+}
+
+.maxheight{
+    height:100%;
+    vertical-align: middle;
+}
+
+
+/*TAG STYLING*/
 a{
     text-decoration: none;
     color: rgb(117, 117, 119);
@@ -175,10 +200,6 @@ header{
     margin: 2em 0 2em 0;
 }
 
-header > div > div {
-    float:left;
-}
-
 header h1{
     font-size: 2em;
     display: inline-block;
@@ -194,10 +215,6 @@ header h2{
     margin-left: 2em;
     display: inline-block;
     vertical-align: baseline;
-}
-
-header ul{
-    float: right;
 }
 
 header li{
@@ -273,13 +290,13 @@ section a{
     border-bottom: dotted 1px inherit;
 }
 
-.left{
+.left-block{
     float:left;
     width:66%;
     background-color: rgba(247, 247, 247, 0.4);
 }
 
-.right{
+.right-block{
     float:right;
     width:34%;
     padding-left:2em;
@@ -335,7 +352,7 @@ section article h1{
         padding: 0 0.5em 0 0;
 }
 
-.left article:last-child{
+.left-block article:last-child{
     margin-bottom:2em;   
 }
 
@@ -479,11 +496,11 @@ footer article:last-child ul li:last-child{
                         display:none;
                     }
 
-                    .right{
+                    .right-block{
                         margin-top: 4.5em;
                     }
 
-                    .left, .right{
+                    .left-block, .right-block{
                         float: none;
                         width: 100%;
                         padding-left: 0;
@@ -513,13 +530,18 @@ footer article:last-child ul li:last-child{
 
                 /*    Gestion du menu */
                     #mobilemenu{
-                        display:block;
+                        display:table;
                         height:4.5em;
                     }
 
                     #mobilemenu a{
                         color:rgba(235,60,0, 0.7);;
                         border-bottom: none;
+                    }
+
+                    #mobilemenu icon-menu{
+                        color:rgb(43,43,43);
+                        font-size: 2em;
                     }
 
                     .navcontainer{
@@ -595,6 +617,27 @@ footer article:last-child ul li:last-child{
 
 
 /*        Javascript menu class*/
+        @keyframes toggleMenu {
+          0% {
+              height: 72px;
+          }
+
+          100% {
+              height: 200px;
+          }
+        }
+
+        @-webkit-keyframes toggleMenu {
+          0% {
+              height: 72px;
+          }
+
+          100% {
+              height: 200px;
+          }
+        }
+
         .toggleMenu{
-            height:100%;
+          -webkit-animation-name: toggleMenu;
+          animation-name: toggleMenu;
         }

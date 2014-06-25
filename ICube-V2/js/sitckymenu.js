@@ -9,12 +9,15 @@ $('window').ready(function(){
     
    mobilemenu.click(function(){
 //       nav.css('height','200px');
-        nav.toggleClass("toggleMenu");
+        nav.toggleClass("animated toggleMenu");
         console.log("toggle");
    });
     
     
-    $(window).scroll(function(){        
+    $(window).scroll(function(){
+        if(nav.hasClass("toggleMenu")){
+            nav.toggleClass("animated toggleMenu");
+        }
         newoffset = $(this).scrollTop();      
         if(newoffset < (oldoffset) && newoffset > navoffset && !((window.innerHeight + window.scrollY) >= document.body.offsetHeight)   ){
 //            nav.css('top', -50);

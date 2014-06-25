@@ -46,75 +46,26 @@ Voir cette page : https://github.com/CSSLint/csslint/wiki/Bulletproof-font-face
   src: local('Oswald Bold'), local('Oswald-Bold'), url('http://themes.googleusercontent.com/static/fonts/oswald/v8/bH7276GfdCjMjApa_dkG6bO3LdcAZYWl9Si6vvxL-qU.woff') format('woff');
 }
 
-
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 100;
   src: local('Lato Hairline'), local('Lato-Hairline'), url('xhttp://themes.googleusercontent.com/static/fonts/lato/v7/Kom15zUm24dIPfIRiNogNuvvDin1pK8aKteLpeZ5c0A.woff') format('woff');
 }
+
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
   src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
 }
-/*
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
-}
-*/
+
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
   src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
 }
-/*
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 900;
-  src: local('Lato Black'), local('Lato-Black'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/G2uphNnNqGFMHLRsO_72ngLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
-}
-*/
-/*
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 100;
-  src: local('Lato Hairline Italic'), local('Lato-HairlineItalic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/CggrdU0t5c42NcNxN-VM33YhjbSpvc47ee6xR_80Hnw.woff) format('woff');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/2HG_tEPiQ4Z6795cGfdivLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 900;
-  src: local('Lato Black Italic'), local('Lato-BlackItalic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/VNUH7ZAcagYBWsAiBBCEY7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-}
-*/
-
-
 
 /*GENERAL STYLES*/
 html{
@@ -137,12 +88,6 @@ h1, h3{
     margin:auto;
 }
 
-/*
-nav > .wrapper, footer >.wrapper{
-    background-color: rgb(43,43,43);
-}
-*/
-
 /*CLASSES DEFINITION*/
 .clearfix:after{
     content: "";
@@ -160,16 +105,16 @@ nav > .wrapper, footer >.wrapper{
 
 .tabled{
     display:table;
-    vertical-align: middle;
+
 }
 
 .celled{
     display:table-cell;
+    vertical-align: middle;
 }
 
 .maxheight{
     height:100%;
-    vertical-align: middle;
 }
 
 
@@ -177,18 +122,23 @@ nav > .wrapper, footer >.wrapper{
 a{
     text-decoration: none;
     color: rgb(117, 117, 119);
-    border-bottom: 1px dotted rgb(117, 117, 119);
     font-weight: 700;
+}
+
+.dotted{
+    border-bottom: 1px dotted rgb(117, 117, 119);
 }
 
 a:hover, a:active{
     color: rgba(235,60,0, 0.9);
-    border-bottom: 1px dotted rgba(235,60,0, 0.9);
+    border-bottom-color:rgba(235,60,0, 0.9);
 }
+/*
 
 li a, .downlinks a, li a:hover, li a:active, .downlinks a:hover, .downlinks a:active {
     border-bottom: none;
 }
+*/
 
 p{
     text-align: justify;
@@ -231,6 +181,18 @@ header img{
     max-width: 2em;   
 }
 
+.icon-Home{
+    font-size:1.5em;
+}
+
+.icon-menu{
+    text-align: center;
+}
+
+.active{
+    color:rgb(235,60,0);
+}
+
 /*NAV*/
 nav{
     background-color: rgb(43,43,43);
@@ -245,10 +207,10 @@ nav ul{
 }
 
 nav ul li{
-    /*Indispensable pour que l'élément table-celle puisse hériter de la taille du conteneur en utilisant les %    */
+/*Indispensable pour que l'élément table-celle puisse hériter de la taille du conteneur en utilisant les %    */
     display:table;
+/*    */
     float:left;
-/*    height:100%;*/
     height : 72px;
     padding:0 0.5em 0 0.5em;
     list-style-type: none;
@@ -263,16 +225,17 @@ nav ul li a{
     color:lightgray;
 }
 
-nav span:first-child{
-    font-size:1.5em;   
+nav ul li a:hover, nav ul li a:active{
+    color:lightgray;
 }
 
+
 nav ul li:hover{
-    background-color:rgba(235,60,0, 0.9);
+    background-color:rgb(235,60,0);
 }
 
 .current a{
-    color:rgba(235,60,0, 0.9);
+    color:rgb(235,60,0);
 }
 
 .current:hover a{
@@ -305,22 +268,6 @@ section a{
 section article{
     padding: 1em 0 1em 0;
 }
-
-/*
-section article a{
-    font-weight: 700;
-}
-*/
-
-/*
-section article a:hover{
-    color:rgb(235,60,0);
-}
-
-section article a:visited{
-   color:rgb(117, 117, 119);
-}
-*/
 
 section article h1{
     color:rgba(235,60,0, 0.9);
@@ -507,10 +454,6 @@ footer article:last-child ul li:last-child{
                         background-color: transparent;
                     }
 
-                    .downlinks{
-                /*        font-size: 1.1em;   */
-                    }
-
                     .twitter, .menu{
                         display:none;   
                     }
@@ -534,37 +477,51 @@ footer article:last-child ul li:last-child{
                         height:4.5em;
                     }
 
-                    #mobilemenu a{
-                        color:rgba(235,60,0, 0.7);;
-                        border-bottom: none;
-                    }
-
-                    #mobilemenu icon-menu{
-                        color:rgb(43,43,43);
+                    #mobilemenu .icon-menu{
                         font-size: 2em;
+                        border-radius: 4px;
+                        border: 1 solid lightgray;
                     }
 
                     .navcontainer{
                         width: 100%;
                         position:absolute;
                         top:0;
+                        color:lightgray;
                     }
 
                     nav ul{
-                        height: 100%;
+                        height:0;
+                        width:100%;
                         overflow: hidden;
                         padding: 0;
+                        background-color: rgba(43,43,43, 0.98);
                     }
 
-                                    /*    Attention : pour écraser la style défini plus haut, il faut faire attention à bien utiliser le même selecteur, soit nav ul li
+                    /*    Attention : pour écraser la style défini plus haut, il faut faire attention à bien utiliser le même selecteur, soit nav ul li
                     Faute de quoi, le style n'est pas appliqué car son poids est moindre !*/
 
                     nav ul li{
                         float:none;
+                        width:100%;
                     }
 
                     nav ul li:first-child{
                         display: none;
+                    }
+
+                    nav ul li a{
+                        height:100%;
+                        width:100%;
+                        color:lightgray;
+                    }
+
+                    nav ul li a:hover, nav ul li a:active{
+                        color:rgba(235,60,0, 0.7);
+                    }
+
+                    nav ul li:hover{
+                        background-color:transparent;
                     }
 
 
@@ -610,7 +567,6 @@ footer article:last-child ul li:last-child{
         }
 
         .fadeInDown {
-        /*    top:50px;*/
           -webkit-animation-name: fadeInDown;
           animation-name: fadeInDown;
         }
@@ -619,21 +575,21 @@ footer article:last-child ul li:last-child{
 /*        Javascript menu class*/
         @keyframes toggleMenu {
           0% {
-              height: 72px;
+              height: 0;
           }
 
           100% {
-              height: 200px;
+              height: 288px;
           }
         }
 
         @-webkit-keyframes toggleMenu {
           0% {
-              height: 72px;
+              height: 0;
           }
 
           100% {
-              height: 200px;
+              height: 288px;
           }
         }
 

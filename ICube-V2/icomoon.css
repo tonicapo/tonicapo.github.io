@@ -34,6 +34,7 @@
 }
 .icon-menu:before {
 	content: "\e60a";
+    display: block;
 }
 .icon-googleplus:before {
 	content: "\e603";

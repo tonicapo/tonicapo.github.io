@@ -1,31 +1,34 @@
 $('window').ready(function(){
-    nav = $('nav');
-    ref = $('.ref');
-    mobilemenu = $('#mobilemenu');
-    navoffset = $('.navcontainer').offset().top;
-//    console.log(navoffset);
-    oldoffset = 0;
-    newoffset = 0;
+    var nav = $('nav');
+    var navul = $('nav > ul');
+    var ref = $('.ref');
+    var menubutton = $('#menubutton');
+    var mobilemenu = $('#mobilemenu');
+    var navoffset = $('.navcontainer').offset().top;
+    console.log(navoffset);
+    var oldoffset = 0;
+    var newoffset = 0;
     
-   mobilemenu.click(function(){
-//       nav.css('height','200px');
-        nav.toggleClass("animated toggleMenu");
-        console.log("toggle");
+   menubutton.click(function(){
+        menubutton.toggleClass('active');
+        navul.toggleClass("toggleMenu");
+//        console.log("toggle");
    });
     
     
     $(window).scroll(function(){
-        if(nav.hasClass("toggleMenu")){
-            nav.toggleClass("animated toggleMenu");
+        if(navul.hasClass("toggleMenu")){
+            navul.toggleClass("toggleMenu");
         }
+
         newoffset = $(this).scrollTop();      
         if(newoffset < (oldoffset) && newoffset > navoffset && !((window.innerHeight + window.scrollY) >= document.body.offsetHeight)   ){
 //            nav.css('top', -50);
             ref.addClass('stick');
-            nav.addClass('animated fadeInDown');
+            nav.addClass('fadeInDown');
         } else {
             ref.removeClass('stick');
-            nav.removeClass('animated fadeInDown');
+            nav.removeClass('fadeInDown');
         }
         
         oldoffset  = $(this).scrollTop();

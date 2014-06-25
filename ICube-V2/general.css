@@ -151,7 +151,18 @@ nav > .wrapper, footer >.wrapper{
 
 a{
     text-decoration: none;
-    color: inherit;
+    color: rgb(117, 117, 119);
+    border-bottom: 1px dotted rgb(117, 117, 119);
+    font-weight: 700;
+}
+
+a:hover, a:active{
+    color: rgba(235,60,0, 0.9);
+    border-bottom: 1px dotted rgba(235,60,0, 0.9);
+}
+
+li a, .downlinks a, li a:hover, li a:active, .downlinks a:hover, .downlinks a:active {
+    border-bottom: none;
 }
 
 p{
@@ -278,10 +289,13 @@ section article{
     padding: 1em 0 1em 0;
 }
 
+/*
 section article a{
     font-weight: 700;
 }
+*/
 
+/*
 section article a:hover{
     color:rgb(235,60,0);
 }
@@ -289,6 +303,7 @@ section article a:hover{
 section article a:visited{
    color:rgb(117, 117, 119);
 }
+*/
 
 section article h1{
     color:rgba(235,60,0, 0.9);

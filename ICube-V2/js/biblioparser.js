@@ -13,9 +13,7 @@ $('window').ready(function(){
                     },
                     success: function(data, textStatus, jqXHR) {
                         //parse(data);
-                        $(section).append("<h1> Gotcha </h1>");
-                        $(section).append("<p>"+articlelist.article.type+"</p>";
-
+                        parse(data);
                     },
 
 //                    jsonpCallback:"parse"
@@ -26,7 +24,9 @@ $('window').ready(function(){
            });
 
 function parse(response) {
-    $.each(response.movies, function (i,movie) {
-            $("#moviefeed").append("<li>"+movie.title+" ("+movie.runtime+" mins)</li>");
-    });
+//    $.each(response.movies, function (i,movie) {
+//            $("#moviefeed").append("<li>"+movie.title+" ("+movie.runtime+" mins)</li>");
+//    });
+        $(section).append("<h1> Gotcha </h1>");
+        $(section).append("<p>"+articlelist.article.type+"</p>";
 }

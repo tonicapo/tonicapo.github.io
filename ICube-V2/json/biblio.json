@@ -1,42 +1,33 @@
 {
-    "articlelist":{
-            "article":{
-                    "type":"journal",
-                    "title":"Réalité virtuelle et jeux : de nouveaux outils pour des apprentissages plurilingues ?",
-                    "author":[
-                            {"name":"G. Schlemminger"},
-                            {"name":"M. Roy"},
-                            {"name":"M. Veit"},
-                            {"name":"A. Capobianco"},
-                            {"name":"G. Noeppel"}
-                        ],
-                    "year":"2014 (to be published)",
-                    "journal":{
-                        "name":"Education et Sociétés Plurilingues, revue du CIEBP (Centre d'Information sur l'Education Bilingue et Plurilingue)",
-                        "num":"35",
-                        "vol":"",
-                        "pages":"29-42"
-                        },
-                    "link":""
+    "articlelist": {
+        "article": {
+            "type": "journal",
+            "title": "Réalité virtuelle et jeux : de nouveaux outils pour des apprentissages plurilingues ?",
+            "author": [
+                {
+                    "name": "G. Schlemminger"
+                },
+                {
+                    "name": "M. Roy"
+                },
+                {
+                    "name": "M. Veit"
+                },
+                {
+                    "name": "A. Capobianco"
+                },
+                {
+                    "name": "G. Noeppel"
                 }
-
-    //        "article":{
-    //                "title":"",
-    //                "author":[
-    //                        "name":"",
-    //                        "name":""
-    //                    ],
-    //                "type":"",
-    //                "year":"",
-    //                "journal":{
-    //                    "name":"",
-    //                    "num":"",
-    //                    "vol":"",
-    //                    "pages":""
-    //                    }
-    //                "link":"",
-    //            }
-
-
+            ],
+            "year": "2014 (to be published)",
+            "journal": {
+                "name": "Education et Sociétés Plurilingues, revue du CIEBP (Centre d'Information sur l'Education Bilingue et Plurilingue)",
+                "num": "35",
+                "vol": "",
+                "pages": "29-42"
+            },
+            "link": ""
         }
+    }
 }

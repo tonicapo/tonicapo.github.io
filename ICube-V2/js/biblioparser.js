@@ -13,9 +13,8 @@ $('window').ready(function(){
                     },
                     success: function(data, textStatus, jqXHR) {
                         //parse(data);
-                        parse(data);
-                    }
-//                  jsonpCallback:"parse"
+                    },
+                  jsonpCallback:"parse"
                });
 
 //               $(this).html("Load Again"); // Change back text of button
@@ -27,5 +26,5 @@ function parse(response) {
 //            $("#moviefeed").append("<li>"+movie.title+" ("+movie.runtime+" mins)</li>");
 //    });
         $(section).append("<h1> Gotcha </h1>");
-        $(section).append("<p>"+articlelist.article.type+"</p>");
+        $(section).append("<p>"+response.articlelist.article.type+"</p>");
 }

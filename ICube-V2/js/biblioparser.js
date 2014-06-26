@@ -14,8 +14,7 @@ $('window').ready(function(){
                     success: function(data, textStatus, jqXHR) {
                         //parse(data);
                         parse(data);
-                    },
-
+                    }
 //                    jsonpCallback:"parse"
                });
 

@@ -14,8 +14,7 @@ $('window').ready(function(){
                        console.log("Completed: "+textStatus);
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
-                        $("section").html("Error: "+textStatus+" "+errorThrown);
-//                        console.log(responseText);
+                        console.log(errorThrown);
                     },
                     success: function(data, textStatus, jqXHR) {
                         parse(data);
@@ -47,6 +46,16 @@ function parse(response) {
 //            $("#moviefeed").append("<li>"+movie.title+" ("+movie.runtime+" mins)</li>");
 //    });
         console.log("function call");
-        $("section").append("<h1> Gotcha </h1>");
-        $("section").append("<p>"+response.articlelist.article.type+"</p>");
+        $("section").append("<h1 class='mainh1'>"+response.title+"</h1>");
+        var articles =
+        $.each(response.articlelist, function (i, item) {
+            $("section").append("<p>"+item.article.title+"</p>");
+            $("section").append("<p>");
+            $.each(item.article.author, function (i,item) {
+    //            $("#newsfeed").append("<li>"+newsItem.title+"</li>");
+               $("section").append("<span>"+item.name+"</span>, ");
+            });
+            $("section").append("</p>");
+        });
+
 }

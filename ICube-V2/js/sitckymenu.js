@@ -19,6 +19,7 @@ $('window').ready(function(){
     $(window).scroll(function(){
         if(navul.hasClass("toggleMenu")){
             navul.toggleClass("toggleMenu");
+            menubutton.toggleClass('active');
         }
 
         newoffset = $(this).scrollTop();      

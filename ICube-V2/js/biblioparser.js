@@ -3,7 +3,7 @@ $('window').ready(function(){
 //               $(this).toggleClass("btn-primary"); // Switch to default grey
 //               $(this).html("Loading"); // Change text of button
                $.ajax({
-                    url: "../json/biblio.json",
+                    url: "./json/biblio.json",
                     dataType: "jsonp",
                     complete: function(jqXHR, textStatus) {
                         console.log("Completed: "+textStatus);
@@ -15,7 +15,7 @@ $('window').ready(function(){
                         //parse(data);
                         parse(data);
                     }
-//                    jsonpCallback:"parse"
+//                  jsonpCallback:"parse"
                });
 
 //               $(this).html("Load Again"); // Change back text of button

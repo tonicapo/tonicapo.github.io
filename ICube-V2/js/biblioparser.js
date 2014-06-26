@@ -27,5 +27,5 @@ function parse(response) {
 //            $("#moviefeed").append("<li>"+movie.title+" ("+movie.runtime+" mins)</li>");
 //    });
         $(section).append("<h1> Gotcha </h1>");
-        $(section).append("<p>"+articlelist.article.type+"</p>";
+        $(section).append("<p>"+articlelist.article.type+"</p>");
 }

@@ -1,0 +1,146 @@
+
+Revue internationale avec comitÃ© de lecture
+
+[2-SRVCxx]	ReÌaliteÌ virtuelle et jeux : de nouveaux outils pour des apprentissages plurilingues ?
+		G. Schlemminger, M. Roy, M. Veit, A. Capobianco, G. Noeppel 
+		, Num. 35 : 29-42 (To be published)
+
+[2-SVRCxx]	Serious game et apprentissage en reÌaliteÌ virtuelle : reÌsultats d'une eÌtude preÌliminaire sur la meÌmorisation en langue eÌtrangeÌre
+		L. Schmoll, M. Veit, M. Roy, A. Capobianco 
+		Synergies %u2013 Pays germanophones, Num. 7 (To be published)
+
+ConfÃ©rence internationale avec comitÃ© de lecture, avec actes
+
+[4-WGCB13]	Bubble Bee, an Alternative to Arrow for Pointing Out Directions
+		J. Wonner, J. Grosjean, A. Capobianco, D. Bechmann
+		VRST13 (The 19th ACM Symposium on Virtual Reality and Software Technology), ACM Press, pp 97--100, ACM, ACM (octobre 2013)
+
+[4-VCB12]	CrOS: a touch screen interaction technique for cursor manipulation on 2-manifolds
+		M. Veit, A. Capobianco, D. Bechmann
+		VRST 2012, ACM, pp 97--100, ACM, New York, NY, USA (mars 2012)
+
+[4-WGCB12]	
+		J. Wonner, J. Grosjean, A. Capobianco, D. Bechmann
+		Symposium on Virtual reality software and technology, ACM, VRST'12, pp 101--104, ACM, New York, NY, USA (dÃ©cembre 2012)
+
+[4-VCB11]	Experimental Analysis of the Impact of Touch Screen Interaction Techniques for 3D Positioning Tasks
+		M. Veit, A. Capobianco, D. Bechmann
+		IEEE Virtual Reality, Springer, pp 75--82, Michitaka Hirose, Benjamin Lok, Aditi Majumder, Dieter Schmalstieg, IEEE (mars 2011)
+
+ConfÃ©rence nationale et francophone avec comitÃ© de lecture, avec actes
+
+[5-WGCB11]	SPEED : PrÃ©diction de cibles
+		J. Wonner, J. Grosjean, A. Capobianco, D. Bechmann
+		IHM 2011, ACM, pp 113--116, ACM (octobre 2011)
+
+Autre confÃ©rence nationale
+
+[7-WGCB11]	STARFISH : une aide graphique et haptique Ã  la sÃ©lection en rÃ©alitÃ© virtuelle
+		J. Wonner, J. Grosjean, A. Capobianco, D. Bechmann
+		AFRV 2011, pp 95--100 (octobre 2011)
+
+Communications et publications diverses
+
+[7-WGCB11a]	STARFISH : a new assistance to select targets in virtual reality
+		J. Wonner, J. Grosjean, A. Capobianco, D. Bechmann
+		Workshop on Next Generation of Virtual Reality, Todai Forum (octobre 2011)
+
+ConfÃ©rence internationale avec comitÃ© de lecture, avec actes
+
+[4-CE10]	Study of Performances of âHaptic Wallsâ Modalities for a 3D Menu
+		A. Capobianco, C. Essert
+		EuroHaptics 2010, Springer, LNCS, pp 152--159, Vol. 6192, Num. 2 (juillet 2010)
+
+[4-EC10]	Comparative Study of the Performances of Several Haptic Modalities for a 3D Menu
+		C. Essert, A. Capobianco
+		IEEE Virtual Reality Conference, In proceedings of IEEE, pp 265--266 (mars 2010)
+
+[4-VCB10]	Dynamic Decomposition and Integration of Degrees of Freedom for 3-D Positioning
+		M. Veit, A. Capobianco, D. Bechmann
+		The 17th ACM Symposium on Virtual Reality and Software Technology, ACM Press, pp 131--134, ACM (novembre 2010)
+
+Autre confÃ©rence nationale
+
+[7-WGCB10]	Aide haptique prÃ©dictive Ã  la sÃ©lection de cibles en trois dimensions
+		J. Wonner, J. Grosjean, A. Capobianco, D. Bechmann
+		5Ã¨me JournÃ©e de l'AFRV 2010, pp 29--35 (dÃ©cembre 2010)
+
+ConfÃ©rence internationale avec comitÃ© de lecture, avec actes
+
+[4-EC09]	HardBorders: a New Haptic Approach for Selection Tasks in 3D Menus
+		C. Essert, A. Capobianco
+		Proceedings of The 16th ACM Symposium on Virtual Reality and Software Technology, ACM Press, pp 243--244, ACM (novembre 2009)
+
+[4-VCB09]	Influence of Degrees of Freedom's Manipulation on Performances During Orientation Tasks in Virtual Reality Environments
+		M. Veit, A. Capobianco, D. Bechmann
+		Proceedings of The 16th ACM Symposium on Virtual Reality and Software Technology, ACM Press, pp 51--58 (novembre 2009)
+
+Communications et publications diverses
+
+[7-CE09]	Experimental evaluation of two haptic techniques for 3D interaction: the constriction polyhedron technique vs magnetic attraction.
+		A. Capobianco, C. Essert
+Abstract/Poster
+		Communication in the 2nd french-spanish workshop on Virtual Reality and Graphical Interaction VRGI'09, Rennes, France (mars 2009)
+
+Autre confÃ©rence nationale
+
+[7-VCB09]	A Preliminary Study of the Influence of Interaction Techniques Integrating/Separating Degrees of Freedom on Users' Performances during 3-D Positioning Tasks 
+		M. Veit, A. Capobianco, D. Bechmann
+		4Ã¨me JournÃ©e de l'AFRV, 4Ã¨me JournÃ©e de l'AFRV (dÃ©cembre 2009)
+
+Revue internationale avec comitÃ© de lecture
+
+[2-VCB08a]	Consequence of Two-handed Manipulation on Speed, Precision and Perception on Spatial Input Task in 3D Modelling Applications
+		M. Veit, A. Capobianco, D. Bechmann 
+		Journal of Universal Computer Science, Vol. 14, Num. 19, pp 3174--3187 (novembre 2008)
+
+ConfÃ©rence internationale avec comitÃ© de lecture, avec actes
+
+[4-CVB08]	A preliminary study of two handed manipulation for spatial input tasks in a 3D modeling application
+		A. Capobianco, M. Veit, D. Bechmann
+		Proceedings of 7th International Conference on Computer-Aided Design of User Interfaces 2008 (CADUI 2008), Springer (juin 2008)
+
+Autre confÃ©rence nationale
+
+[7-VCB08]	Interaction technique's and task's degrees of freedom manipulation during rotation task in VR environment
+		M. Veit, A. Capobianco, D. Bechmann
+		3Ã¨me JournÃ©e de l'AFRV (octobre 2008)
+
+ConfÃ©rence internationale avec comitÃ© de lecture, avec actes
+
+[4-VCB07]	Using proprioception as a cue towards effective spatial input in VR ; a framework for an experimental study
+		M. Veit, A. Capobianco, D. Bechmann
+		13th Eurographics Symposium on Virtual Environments & 10th Immersive Projection Technology Workshop IPT-EGVE Symposium 2007, Eurographics (juillet 2007)
+
+Revue nationale avec comitÃ© de lecture
+
+[3-CC06]	Aides en ligne Ã  l'utilisation de logiciels grand public : problÃ¨mes spÃ©cifiques de conception et solutions potentielles
+		A. Capobianco, N. Carbonell 
+		Intellectica : revue de l Association pour la recherche cognitive, Vol. 2, Num. 43 (2006)
+
+Revue internationale avec comitÃ© de lecture
+
+[2-CC03]	Online help for the general public : specific design issues and recommendations
+		A. Capobianco, N. Carbonell 
+		Universal Access In the Information Society, Vol. 2, Num. 3, Springer-Verlag, pp 265-279 (octobre 2003)
+
+ConfÃ©rence internationale avec comitÃ© de lecture, avec actes
+
+[4-Capo03]	Experimental evaluation of the effectiveness of expert online help strategies
+		A. Capobianco
+		10th International Conference On Human-Computer Interaction - HCI International 2003, LEA - Lawrence Erlbaum Associates, pp 626-630, Vol. 1, Julie Jacko, Constantine Stephanidis (2003)
+
+[4-Capo03a]	Questionning the effectiveness of contextual online help : some alternative propositions
+		A. Capobianco
+		Ninth IFIP TC13 International Conference on Human-Computer Interaction - INTERACT'03, IOS Press, Amsterdam, pp 65-72, Matthias Rauterberg, Marion Menozzi, Janet Wesson (2003)
+
+[4-Capo03b]	Questionning the effectiveness of contextual online help : some alternative propositions
+		A. Capobianco
+		Ninth IFIP TC13 International Conference on Human-Computer Interaction - INTERACT'03, IOS Press, Amsterdam, pp 65-72, Matthias Rauterberg, Marion Menozzi, Janet Wesson (2003)
+
+Communications et publications diverses
+
+[7-Capo03]	Online Help Design - A survey
+		A. Capobianco
+Workshop
+		Satellite workshop for HCI 2003 : Selecting best practice research methods for HCI : beyond fashion statement (juin 2003)

@@ -200,6 +200,11 @@ nav{
     position:relative;
 }
 
+nav h1{
+    color:rgb(235,60,0);
+    font-size: 1.2em;
+}
+
 nav ul{
     font-family: "Oswald";
     font-size: 2em;
@@ -410,11 +415,9 @@ footer article:last-child ul li:last-child{
 
                 /* gestion du menu mobile*/
                 @media only screen and (min-device-width : 320px) and (max-device-width : 767px){
-/*
-                    header {
-                        display:none;
+                    nav h2{
+                        font-size: 0.6em;
                     }
-*/
                 }
 
                 /* gestion des logos */

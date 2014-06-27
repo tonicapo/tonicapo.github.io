@@ -127,6 +127,10 @@ h1, h3{
     border-bottom: 1px dotted rgb(117, 117, 119);
 }
 
+.none{
+    display: none;
+}
+
 /*TAG STYLING*/
 a{
     text-decoration: none;

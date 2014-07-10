@@ -10,9 +10,6 @@ $('window').ready(function(){
                     complete: function(jqXHR, textStatus) {
                         console.log("Completed: "+textStatus);
                     },
-                   complete:function (xhr, textStatus) {
-                       console.log("Completed: "+textStatus);
-                    },
                     error: function(jqXHR, textStatus, errorThrown) {
                         console.log(errorThrown);
                     },
@@ -54,10 +51,13 @@ function parse(response) {
         $.each(response.list, function(i, listitem) {
                 section.append("<h1 class='mainh1 articlesection'>"+listitem.pubtypelist.title+"</h1>");
                         $.each(listitem.pubtypelist.articlelist, function (i, item) {
-                            if (item.type == "article"){
-                                parsearticle(section, item);
-                            } else {
+                            console.log(item.article.type);
+                            if (item.article.type == "article"){
+                                parsereview(section, item);
+                            } else if(item.article.type == "inproceedings"){
                                 parseinproceedings(section, item);
+                            } else {
+                                parsemisc(section, item);
                             }
                         });
         });
@@ -83,9 +83,8 @@ var parseauthors = function(target, authors){
     target.append("<p>"+authorslist+"</p>");
 }
 
-var parsearticle = function(target, item){
+var parsereview = function(target, item){
     target.append("<p class='title'>"+item.article.title+"</p>");
-
     parseauthors(target, item.article.author);
 
     var reference = "";
@@ -93,13 +92,17 @@ var parsearticle = function(target, item){
     if(item.article.journal.num!=""){reference += (", num. "+item.article.journal.num)};
     if(item.article.journal.vol!=""){reference += (", vol. "+item.article.journal.vol)};
     if(item.article.journal.pages!=""){reference += (", pp. "+item.article.journal.pages)};
+    if(item.article.month!="" && item.article.year!=""){
+        reference += (", "+item.article.month+". "+item.article.year)
+    }else if(item.article.year!=""){
+        reference += (", "+item.article.year)
+    };
     reference+=".";
     target.append("<p class='reference'>"+reference+"</p>");
 }
 
 var parseinproceedings = function(target, item){
     target.append("<p class='title'>"+item.article.title+"</p>");
-    var num = item.article.author.length - 1;
 
     parseauthors(target, item.article.author);
 
@@ -114,6 +117,28 @@ var parseinproceedings = function(target, item){
 
     if(item.article.editor!=""){reference += (", "+item.article.editor)};
     if(item.article.publisher!=""){reference += (", "+item.article.publisher)};
+    reference+=".";
+    target.append("<p class='reference'>"+reference+"</p>");
+}
+
+var parsemisc = function(target, item){
+    target.append("<p class='title'>"+item.article.title+"</p>");
+
+    parseauthors(target, item.article.author);
+
+    var reference = "";
+    reference += item.article.event;
+    // if(item.article.pages!=""){reference += (", pp. "+item.article.pages)};
+    if(item.article.date!="" && item.article.month!="" && item.article.year!=""){
+        reference += (", "+item.article.month+". "+item.article.date+", "+item.article.year)
+    }else if(item.article.month!="" && item.article.year!=""){
+        reference += (", "+item.article.month+". "+item.article.year)
+    }else if(item.article.year!=""){
+        reference += (", "+item.article.year)
+    };
+    if(item.article.country!=""){reference += (", "+item.article.country)};
+    if(item.article.city!=""){reference += (", "+item.article.city)};
+
     reference+=".";
     target.append("<p class='reference'>"+reference+"</p>");
 }

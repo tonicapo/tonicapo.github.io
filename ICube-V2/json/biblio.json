@@ -19,6 +19,7 @@
                                         {"name": "G. Noeppel"}
                                     ],
                                     "year": "2014 (to be published)",
+                                    "month":"",
                                     "journal": {
                                         "name": "Education et Sociétés Plurilingues, revue du CIEBP (Centre d'Information sur l'Education Bilingue et Plurilingue)",
                                         "num": "35",
@@ -31,25 +32,102 @@
 
                             {
                                 "article": {
-                                    "type": "article",
-                                    "title": "Serious game et apprentissage en réalité virtuelle : résultats d'une étude préliminaire sur la mémorisation en langue étrangère.",
-                                    "author": [
-                                        {"name": "L. Schmoll"},
-                                        {"name": "M. Veit"},
-                                        {"name": "M. Roy"},
-                                        {"name": "A. Capobianco"}
-                                    ],
-                                    "year": "2013 (to be published)",
-                                    "journal": {
-                                        "name": "Synergies Pays germanophones",
-                                        "num": "7",
-                                        "vol": "",
-                                        "pages": ""
-                                    },
-                                    "link": ""
-                                }
+                                            "type": "article",
+                                            "title": "Serious game et apprentissage en réalité virtuelle : résultats d'une étude préliminaire sur la mémorisation en langue étrangère.",
+                                            "author": [
+                                                {"name": "L. Schmoll"},
+                                                {"name": "M. Veit"},
+                                                {"name": "M. Roy"},
+                                                {"name": "A. Capobianco"}
+                                            ],
+                                            "year": "2013 (to be published)",
+                                            "month":"",
+                                            "journal": {
+                                                "name": "Synergies Pays germanophones",
+                                                "num": "7",
+                                                "vol": "",
+                                                "pages": ""
+                                            },
+                                            "link": ""
+                                        }
+                            },
+ 
+                            {
+                                "article": {
+                                            "type": "article",
+                                            "title": "Consequence of Two-handed Manipulation on Speed, Precision and Perception on Spatial Input Task in 3D Modelling Applications.",
+                                            "author": [
+                                                {"name": "M. Veit"},
+                                                {"name": "M. Roy"},
+                                                {"name": "A. Capobianco"}
+                                            ],
+                                            "year": "2008",
+                                            "month": "Nov",
+                                            "journal": {
+                                                "name": "Journal of Universal Computer Science",
+                                                "num": "19",
+                                                "vol": "14",
+                                                "pages": "3174-3187"
+                                            },
+                                            "link": ""
+                                        }
+                            },
+
+                            {
+                                "article": {
+                                            "type": "article",
+                                            "title": "Online help for the general public : specific design issues and recommendations.",
+                                            "author": [
+                                                {"name": "A. Capobianco"},
+                                                {"name": "N. Carbonell"}
+                                            ],
+                                            "year": "2003",
+                                            "month": "Oct",
+                                            "journal": {
+                                                "name": "Universal Access In the Information Society",
+                                                "num": "3",
+                                                "vol": "2",
+                                                "pages": ""
+                                            },
+                                            "link": ""
+                                        }
                             }
-                ]}
+
+
+
+                   ]}
+                },
+
+
+
+       {"pubtypelist":
+            {
+                "type":"review",
+                "title":"Revue nationale avec comité de lecture",
+                "articlelist":
+                [
+
+                            {
+                                "article": {
+                                            "type": "article",
+                                            "title": "Aides en ligne à l’utilisation de logiciels grand public : problèmes spécifiques de conception et solutions potentielles.",
+                                            "author": [
+                                                {"name": "A. Capobianco"},
+                                                {"name": "N. Carbonell"}
+                                            ],
+                                            "year": "2006",
+                                            "month": "",
+                                            "journal": {
+                                                "name": "Intellectica : revue de l'Association pour la recherche cognitive",
+                                                "num": "2",
+                                                "vol": "44",
+                                                "pages": ""
+                                            },
+                                            "link": ""
+                                        }
+                            }
+
+                   ]}
                 },
 
         {"pubtypelist":
@@ -125,7 +203,7 @@
                     {
                         "article": {
                                     "type": "inproceedings",
-                                    "title": "Experimental Analysis of the Impact of Touch Screen Interaction Techniques for 3D Positioning Tasks",
+                                    "title": "Experimental Analysis of the Impact of Touch Screen Interaction Techniques for 3D Positioning Tasks.",
                                     "author": [
                                         {"name": "M. Veit"},
                                         {"name": "A. Capobianco"},
@@ -143,9 +221,393 @@
                                     "note":"Acceptance rate : 19 %",
                                     "link": ""
                                 }
+                            },
+
+
+                    {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "Study of Performances of “Haptic Walls” Modalities for a 3D Menu.",
+                                    "author": [
+                                        {"name": "A. Capobianco"},
+                                        {"name": "C. Essert"}
+                                    ],
+                                    "booktitle":"Proceedings of the EuroHaptics Conference : Generating and Perceiving Sensations, EuroHaptics 2010",
+                                    "pages":"152-159",
+                                    "month":"Jul",
+                                    "year": "2010",
+                                    "editor":"",
+                                    "publisher":"Springer",
+                                    "organization":"LNCS",
+                                    "address":"",
+                                    "link": ""
+                                }
+                            },
+
+
+                    {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "Dynamic Decomposition and Integration of Degrees of Freedom for 3-D Positioning.",
+                                    "author": [
+                                        {"name": "M. Veit"},
+                                        {"name": "A. Capobianco"},
+                                        {"name": "D. Bechmann"}
+                                    ],
+                                    "booktitle":"Proceedings of The 17th ACM Symposium on Virtual Reality and Software Technology, VRST 2010",
+                                    "pages":"131-134",
+                                    "month":"Nov",
+                                    "year": "2010",
+                                    "editor":"",
+                                    "publisher":"ACM Press",
+                                    "organization":"ACM",
+                                    "address":"",
+                                    "link": ""
+                                }
+                            },
+
+
+                    {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "Comparative Study of the Performances of Several Haptic Modalities for a 3D Menu.",
+                                    "author": [
+                                        {"name": "C. Essert"},
+                                        {"name": "A. Capobianco"}
+                                    ],
+                                    "booktitle":"Proceedings of IEEE Virtual Reality Conference, IEEE VR 2010",
+                                    "pages":"265-266",
+                                    "month":"Mar",
+                                    "year": "2010",
+                                    "editor":"",
+                                    "publisher":"IEEE",
+                                    "organization":"IEEE",
+                                    "address":"",
+                                    "link": ""
+                                }
+                            },
+
+                    {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "HardBorders: a New Haptic Approach for Selection Tasks in 3D Menus.",
+                                    "author": [
+                                        {"name": "C. Essert"},
+                                        {"name": "A. Capobianco"}
+                                    ],
+                                    "booktitle":"Proceedings of The 16th ACM Symposium on Virtual Reality and Software Technology, VRST 2009",
+                                    "pages":"243-244",
+                                    "month":"Nov",
+                                    "year": "2009",
+                                    "editor":"",
+                                    "publisher":"ACM Press",
+                                    "organization":"ACM",
+                                    "address":"",
+                                    "link": ""
+                                }
+                            },
+
+                    {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "Influence of Degrees of Freedom's Manipulation on Performances During Orientation Tasks in Virtual Reality Environments.",
+                                    "author": [
+                                        {"name": "M. Veit"},
+                                        {"name": "A. Capobianco"},
+                                        {"name": "D. Bechmann"}
+                                    ],
+                                    "booktitle":"Proceedings of The 16th ACM Symposium on Virtual Reality and Software Technology, VRST 2009",
+                                    "pages":"51-58",
+                                    "month":"Nov",
+                                    "year": "2009",
+                                    "editor":"",
+                                    "publisher":"ACM Press",
+                                    "note":"Full paper: acceptance rate: 28 %",
+                                    "organization":"ACM",
+                                    "address":"",
+                                    "link": ""
+                                }
+                            },
+
+                    {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "A preliminary study of two handed manipulation for spatial input tasks in a 3D modeling application.",
+                                    "author": [
+                                        {"name": "M. Veit"},
+                                        {"name": "A. Capobianco"},
+                                        {"name": "D. Bechmann"}
+                                    ],
+                                    "booktitle":"Proceedings of 7th International Conference on Computer-Aided Design of User Interfaces, CADUI 2008",
+                                    "pages":"",
+                                    "month":"Jun",
+                                    "year": "2008",
+                                    "editor":"",
+                                    "publisher":"Springer",
+                                    "note":"Full paper: acceptance rate: 46 %",
+                                    "organization":"ACM",
+                                    "address":"",
+                                    "link": ""
+                                }
+                            },
+
+
+                   {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "Using proprioception as a cue towards effective spatial input in VR ; a framework for an experimental study.",
+                                    "author": [
+                                        {"name": "M. Veit"},
+                                        {"name": "A. Capobianco"},
+                                        {"name": "D. Bechmann"}
+                                    ],
+                                    "booktitle":"Proceedings of the 13th Eurographics Symposium on Virtual Environments & 10th Immersive Projection Technology Workshop, IPT-EGVE Symposium 2007",
+                                    "pages":"",
+                                    "month":"Jul",
+                                    "year": "2007",
+                                    "editor":"",
+                                    "publisher":"Springer",
+                                    "note":"",
+                                    "organization":"Eurographics",
+                                    "address":"",
+                                    "link": ""
+                                }
+                            },
+
+                   {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "Experimental evaluation of the effectiveness of expert online help strategies.",
+                                    "author": [
+                                        {"name": "A. Capobianco"}
+                                    ],
+                                    "booktitle":"Proceedings of the 10th International Conference On Human-Computer Interaction, HCI 2003",
+                                    "pages":"626-630",
+                                    "month":"",
+                                    "year": "2003",
+                                    "editor":"Julie Jacko, Constantine Stephanidis",
+                                    "publisher":"LEA - Lawrence Erlbaum Associates",
+                                    "note":"",
+                                    "organization":"",
+                                    "address":"",
+                                    "link": ""
+                                }
+                            },
+
+                   {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "Questionning the effectiveness of contextual online help : some alternative propositions.",
+                                    "author": [
+                                        {"name": "A. Capobianco"}
+                                    ],
+                                    "booktitle":"Proceedings of the 9th IFIP TC13 International Conference on Human-Computer Interaction,NTERACT 2003",
+                                    "pages":"65-72",
+                                    "month":"",
+                                    "year": "2003",
+                                    "editor":"Matthias Rauterberg, Marion Menozzi, Janet Wesson",
+                                    "publisher":"IOS Press, Amsterdam",
+                                    "note":"",
+                                    "organization":"",
+                                    "address":"",
+                                    "link": ""
+                                }
                             }
 
+
                 ]}
+        },
+
+        {"pubtypelist":
+            {
+                "type":"ntlconf",
+                "title":"Conférence nationale avec comité de lecture, avec actes",
+                "articlelist":
+                [
+                    {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "SPEED : Prédiction de cibles.",
+                                    "author": [
+                                        {"name": "J. Wonner"},
+                                        {"name": "J. Grosjean"},
+                                        {"name": "A. Capobianco"},
+                                        {"name": "D. Bechmann"}
+                                    ],
+                                    "booktitle":"23rd French Speaking Conference on Human-Computer Interaction, IHM 2011",
+                                    "pages":"113-116",
+                                    "month":"Oct",
+                                    "year": "2011",
+                                    "editor":"",
+                                    "eds":"",
+                                    "publisher":"ACM",
+                                    "organization":"ACM",
+                                    "address":"",
+                                    "note":"",
+                                    "link": ""
+                                }
+                            }
+                ]
+            }
+        },
+
+
+        {"pubtypelist":
+            {
+                "type":"misc",
+                "title":"Communications et publications diverses",
+                "articlelist":
+                [
+                    {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "STARFISH : une aide graphique et haptique à la sélection en réalité virtuelle.",
+                                    "author": [
+                                        {"name": "J. Wonner"},
+                                        {"name": "J. Grosjean"},
+                                        {"name": "A. Capobianco"},
+                                        {"name": "D. Bechmann"}
+                                    ],
+                                    "booktitle":"Journées de l'Association Française de Réalité Virtuelle, Augmentée, Mixte et d'Interaction 3D, AFRV 2011",
+                                    "pages":"95-100",
+                                    "month":"Oct",
+                                    "year": "2011",
+                                    "editor":"",
+                                    "eds":"",
+                                    "publisher":"",
+                                    "organization":"",
+                                    "address":"",
+                                    "note":"",
+                                    "link": ""
+                                }
+                            },
+
+                    {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "Aide haptique prédictive à la sélection de cibles en trois dimensions.",
+                                    "author": [
+                                        {"name": "J. Wonner"},
+                                        {"name": "J. Grosjean"},
+                                        {"name": "A. Capobianco"},
+                                        {"name": "D. Bechmann"}
+                                    ],
+                                    "booktitle":"Actes des Journées de l'Association Française de Réalité Virtuelle, Augmentée, Mixte et d'Interaction 3D, AFRV 2010",
+                                    "pages":"26-35",
+                                    "month":"Dec",
+                                    "year": "2010",
+                                    "editor":"",
+                                    "eds":"",
+                                    "publisher":"",
+                                    "organization":"",
+                                    "address":"",
+                                    "note":"",
+                                    "link": ""
+                                }
+                            },
+
+
+                    {
+                        "article": {
+                                    "type": "misc",
+                                    "title": "STARFISH : a new assistance to select targets in virtual reality.",
+                                    "author": [
+                                        {"name": "J. Wonner"},
+                                        {"name": "J. Grosjean"},
+                                        {"name": "A. Capobianco"},
+                                        {"name": "D. Bechmann"}
+                                    ],
+                                    "event":"Todai Forum",
+                                    "country":"France",
+                                    "city":"Paris",
+                                    "year":"2011",
+                                    "month":"Oct",
+                                    "date": "20-21"
+                        }
+                    },
+
+                    {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "Aide haptique prédictive à la sélection de cibles en trois dimensions.",
+                                    "author": [
+                                        {"name": "M. Veit"},
+                                        {"name": "A. Capobianco"},
+                                        {"name": "D. Bechmann"}
+                                    ],
+                                    "booktitle":"Actes des Journées de l'Association Française de Réalité Virtuelle, Augmentée, Mixte et d'Interaction 3D, AFRV 2009",
+                                    "pages":"",
+                                    "month":"Dec",
+                                    "year": "2009",
+                                    "editor":"",
+                                    "eds":"",
+                                    "publisher":"",
+                                    "organization":"",
+                                    "address":"",
+                                    "note":"",
+                                    "link": ""
+                                }
+                            },
+
+                    {
+                        "article": {
+                                    "type": "misc",
+                                    "title": "Experimental evaluation of two haptic techniques for 3D interaction: the constriction polyhedron technique vs magnetic attraction.",
+                                    "author": [
+                                        {"name": "A. Capobianco"},
+                                        {"name": "C. Essert"}
+                                    ],
+                                    "event":"2nd French-Spanish workshop on Virtual Reality and Graphical Interaction, VRGI'09",
+                                    "country":"France",
+                                    "city":"Rennes",
+                                    "year":"2009",
+                                    "month":"Mar",
+                                    "date": ""
+                        }
+                    },
+
+                    {
+                        "article": {
+                                    "type": "inproceedings",
+                                    "title": "Interaction technique's and task's degrees of freedom manipulation during rotation task in VR environment.",
+                                    "author": [
+                                        {"name": "M. Veit"},
+                                        {"name": "A. Capobianco"},
+                                        {"name": "D. Bechmann"}
+                                    ],
+                                    "booktitle":"Actes des Journées de l'Association Française de Réalité Virtuelle, Augmentée, Mixte et d'Interaction 3D, AFRV 2008",
+                                    "pages":"",
+                                    "month":"Oct",
+                                    "year": "2008",
+                                    "editor":"",
+                                    "eds":"",
+                                    "publisher":"",
+                                    "organization":"",
+                                    "address":"",
+                                    "note":"",
+                                    "link": ""
+                                }
+                            },
+
+
+                    {
+                        "article": {
+                                    "type": "misc",
+                                    "title": "Online Help Design - A survey.",
+                                    "author": [
+                                        {"name": "A. Capobianco"}
+                                    ],
+                                    "event":"Satellite workshop for HCI 2003 : Selecting best practice research methods for HCI : beyond fashion statement",
+                                    "country":"",
+                                    "city":"",
+                                    "year":"2003",
+                                    "month":"Jun",
+                                    "date": ""
+                        }
+                    }
+
+                ]
+            }
         }
     ]
 }

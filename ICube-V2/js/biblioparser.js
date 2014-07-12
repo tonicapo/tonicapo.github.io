@@ -3,6 +3,7 @@ $('window').ready(function(){
 //              $("li").remove(); // Remove any existing li elements
 //               $(this).toggleClass("btn-primary"); // Switch to default grey
 //               $(this).html("Loading"); // Change text of button
+                $('#floatingBarsG').toggleClass('none');
                $.ajax({
                     url: "./json/biblio.json",
                     dataType: "json",
@@ -18,7 +19,7 @@ $('window').ready(function(){
                     },
 
                });
-
+                $('#floatingBarsG').toggleClass('none');
 //               $(this).html("Load Again"); // Change back text of button
 //               $(this).toggleClass("btn-primary"); // Revert back to default grey
             });

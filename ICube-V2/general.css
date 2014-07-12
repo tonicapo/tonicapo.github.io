@@ -128,16 +128,8 @@ h1, h3{
     padding-top: 0.5em;
 }
 
-.title{
-    color: rgb(117, 117, 119);
-    font-weight: 700;
-    margin-top: 0.5em;
-}
 
-.reference{
-    font-style: italic;
-    margin-bottom: 1em;
-}
+
 
 .dotted{
     border-bottom: 1px dotted rgb(117, 117, 119);
@@ -146,6 +138,32 @@ h1, h3{
 .none{
     display: none;
 }
+
+
+/*REFERENCE CLASSES*/
+.article{
+    max-width: 35em;
+    margin: 1em 0 1em 0;
+}
+
+.article-title{
+    color: rgb(117, 117, 119);
+    font-weight: 700;
+}
+
+.article-ref{
+    font-style: italic;
+    /*margin-bottom: 1em;*/
+}
+
+.article-down{
+    font-size: 0.9em;
+    padding-top: 0.2em;
+    color: rgb(117, 117, 119);
+    text-align: right;
+    font-style: italic;
+}
+
 
 /*TAG STYLING*/
 a{
@@ -351,10 +369,6 @@ section article{
     font-size: 1.5em;
 }
 
-.downlinks a:hover{
-    color:rgba(235,60,0, 0.7);
-}
-
 /*FOOTER*/
 footer{
     background-color: rgb(43,43,43);
@@ -413,6 +427,7 @@ footer article:last-child ul li:last-child{
 .signature{
     padding: 1em 0 1em 0;
     background-color: rgb(40, 40, 40);
+    text-align: center;
 }
 
 .social li{
@@ -590,9 +605,32 @@ footer article:last-child ul li:last-child{
           animation-name: fadeInDown;
         }
 
+        @keyframes fadeInUp {
+          0% {
+              top: 0;
+          }
 
+          100% {
+              top: -72px;
+          }
+        }
+
+        @-webkit-keyframes fadeInUp {
+          0% {
+              top: 0;
+          }
+
+          100% {
+              top: -72px;
+          }
+        }
+
+        .fadeInUp {
+          -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+        }
 /*        Javascript menu class*/
-        @keyframes toggleMenu {
+        @keyframes toggleMenuDown {
           0% {
               height: 0;
           }
@@ -602,7 +640,7 @@ footer article:last-child ul li:last-child{
           }
         }
 
-        @-webkit-keyframes toggleMenu {
+        @-webkit-keyframes toggleMenuDown {
           0% {
               height: 0;
           }
@@ -612,7 +650,33 @@ footer article:last-child ul li:last-child{
           }
         }
 
-        .toggleMenu{
-          -webkit-animation-name: toggleMenu;
-          animation-name: toggleMenu;
+        .toggleMenuDown{
+          -webkit-animation-name: toggleMenuDown;
+          animation-name: toggleMenuDown;
+        }
+
+
+        @keyframes toggleMenuUp {
+          0% {
+              height: 288px;
+          }
+
+          100% {
+              height: 0;
+          }
+        }
+
+        @-webkit-keyframes toggleMenuUp {
+          0% {
+              height: 288px;
+          }
+
+          100% {
+              height: 0;
+          }
+        }
+
+        .toggleMenuUp{
+          -webkit-animation-name: toggleMenuUp;
+          animation-name: toggleMenuUp;
         }

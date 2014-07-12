@@ -26,7 +26,7 @@
                                         "vol": "",
                                         "pages": "29-42"
                                     },
-                                    "link": ""
+                                    "link": "VRST2012.pdf"
                                 }
                             },
 
@@ -175,7 +175,7 @@
                                     "publisher":"ACM Press",
                                     "organization":"ACM",
                                     "address":"New York, NY, USA",
-                                    "link": ""
+                                    "link": "VRST2012.pdf"
                                 }
                             },
                     {
@@ -522,7 +522,8 @@
                                     "city":"Paris",
                                     "year":"2011",
                                     "month":"Oct",
-                                    "date": "20-21"
+                                    "date": "20-21",
+                                    "link": ""                                    
                         }
                     },
 
@@ -562,7 +563,8 @@
                                     "city":"Rennes",
                                     "year":"2009",
                                     "month":"Mar",
-                                    "date": ""
+                                    "date": "",
+                                    "link": ""
                         }
                     },
 
@@ -602,7 +604,8 @@
                                     "city":"",
                                     "year":"2003",
                                     "month":"Jun",
-                                    "date": ""
+                                    "date": "",
+                                    "link": ""                                    
                         }
                     }
 

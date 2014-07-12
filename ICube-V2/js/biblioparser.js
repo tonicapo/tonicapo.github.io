@@ -54,9 +54,12 @@ function parse(response) {
                             console.log(item.article.type);
                             if (item.article.type == "article"){
                                 parsereview(section, item);
-                            } else if(item.article.type == "inproceedings"){
+                            } 
+
+                            else if(item.article.type == "inproceedings"){
                                 parseinproceedings(section, item);
-                            } else {
+                            } 
+                            else {
                                 parsemisc(section, item);
                             }
                         });
@@ -80,65 +83,77 @@ var parseauthors = function(target, authors){
             authorslist += ".";
        }
     });
-    target.append("<p>"+authorslist+"</p>");
+    return ("<p>"+authorslist+"</p>");
 }
 
 var parsereview = function(target, item){
-    target.append("<p class='title'>"+item.article.title+"</p>");
-    parseauthors(target, item.article.author);
-
-    var reference = "";
-    reference += item.article.journal.name;
-    if(item.article.journal.num!=""){reference += (", num. "+item.article.journal.num)};
-    if(item.article.journal.vol!=""){reference += (", vol. "+item.article.journal.vol)};
-    if(item.article.journal.pages!=""){reference += (", pp. "+item.article.journal.pages)};
+    var refcontent = "<div class='article'>";
+    refcontent+=("<h2 class='article-title'>"+item.article.title+"</h2>");
+    refcontent+=parseauthors(target, item.article.author);
+    refcontent += "<p class='article-ref'>"+item.article.journal.name;
+    if(item.article.journal.num!=""){refcontent += (", num. "+item.article.journal.num)};
+    if(item.article.journal.vol!=""){refcontent += (", vol. "+item.article.journal.vol)};
+    if(item.article.journal.pages!=""){refcontent += (", pp. "+item.article.journal.pages)};
     if(item.article.month!="" && item.article.year!=""){
-        reference += (", "+item.article.month+". "+item.article.year)
+        refcontent += (", "+item.article.month+". "+item.article.year)
     }else if(item.article.year!=""){
-        reference += (", "+item.article.year)
+        refcontent += (", "+item.article.year)
     };
-    reference+=".";
-    target.append("<p class='reference'>"+reference+"</p>");
+
+    refcontent+=".</p>"
+    if(item.article.link!=""){
+        refcontent += addLink(item.article.link);
+    }
+    refcontent+="</div>";
+    target.append(refcontent);
 }
 
 var parseinproceedings = function(target, item){
-    target.append("<p class='title'>"+item.article.title+"</p>");
-
-    parseauthors(target, item.article.author);
-
-    var reference = "";
-    reference += item.article.booktitle;
-    if(item.article.pages!=""){reference += (", pp. "+item.article.pages)};
+    var refcontent = "<div class='article'>";
+    refcontent+=("<h2 class='article-title'>"+item.article.title+"</h2>");
+    refcontent+=parseauthors(target, item.article.author);
+    refcontent += "<p class='article-ref'>"+item.article.booktitle;
+    if(item.article.pages!=""){refcontent += (", pp. "+item.article.pages)};
     if(item.article.month!="" && item.article.year!=""){
-        reference += (", "+item.article.month+". "+item.article.year)
+        refcontent += (", "+item.article.month+". "+item.article.year)
     }else if(item.article.year!=""){
-        reference += (", "+item.article.year)
+        refcontent += (", "+item.article.year)
     };
-
-    if(item.article.editor!=""){reference += (", "+item.article.editor)};
-    if(item.article.publisher!=""){reference += (", "+item.article.publisher)};
-    reference+=".";
-    target.append("<p class='reference'>"+reference+"</p>");
+    if(item.article.editor!=""){refcontent += (", "+item.article.editor)};
+    if(item.article.publisher!=""){refcontent += (", "+item.article.publisher)};
+    refcontent+=".</p>";
+    if(item.article.link!=""){
+        refcontent += addLink(item.article.link);
+    }
+    refcontent+="</div>";
+    target.append(refcontent);
 }
 
 var parsemisc = function(target, item){
-    target.append("<p class='title'>"+item.article.title+"</p>");
-
-    parseauthors(target, item.article.author);
-
-    var reference = "";
-    reference += item.article.event;
+    var refcontent = "<div class='article'>";
+    refcontent+=("<h2 class='article-title'>"+item.article.title+"</h2>");
+    refcontent+=parseauthors(target, item.article.author);
+    refcontent += "<p class='article-ref'>"+item.article.event;
     // if(item.article.pages!=""){reference += (", pp. "+item.article.pages)};
     if(item.article.date!="" && item.article.month!="" && item.article.year!=""){
-        reference += (", "+item.article.month+". "+item.article.date+", "+item.article.year)
+        refcontent += (", "+item.article.month+". "+item.article.date+", "+item.article.year)
     }else if(item.article.month!="" && item.article.year!=""){
-        reference += (", "+item.article.month+". "+item.article.year)
+        refcontent += (", "+item.article.month+". "+item.article.year)
     }else if(item.article.year!=""){
-        reference += (", "+item.article.year)
+        refcontent += (", "+item.article.year)
     };
-    if(item.article.country!=""){reference += (", "+item.article.country)};
-    if(item.article.city!=""){reference += (", "+item.article.city)};
+    if(item.article.country!=""){refcontent += (", "+item.article.country)};
+    if(item.article.city!=""){refcontent += (", "+item.article.city)};
 
-    reference+=".";
-    target.append("<p class='reference'>"+reference+"</p>");
+    refcontent+=".</p>";
+    if(item.article.link!=""){
+        refcontent += addLink(item.article.link);
+    }
+    refcontent+="</div>";
+    target.append(refcontent);
+}
+
+var addLink = function(item){
+    var ref= "./article/"+item;
+    return "<p class='article-down'><a href='"+ref+"'><span class='icon-file-pdf'></span> Télécharger l'article</a></p>";
 }

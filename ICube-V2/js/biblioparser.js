@@ -9,6 +9,7 @@ $('window').ready(function(){
                     dataType: "json",
                     mimeType: "application/json; charset=utf-8",
                     complete: function(jqXHR, textStatus) {
+                        $('#floatingBarsG').toggleClass('none');
                         console.log("Completed: "+textStatus);
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
@@ -19,7 +20,7 @@ $('window').ready(function(){
                     },
 
                });
-                $('#floatingBarsG').toggleClass('none');
+
 //               $(this).html("Load Again"); // Change back text of button
 //               $(this).toggleClass("btn-primary"); // Revert back to default grey
             });

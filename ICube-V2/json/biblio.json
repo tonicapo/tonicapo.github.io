@@ -64,7 +64,7 @@
                                             "year": "2008",
                                             "month": "Nov",
                                             "journal": {
-                                                "name": "Journal of Universal Computer Science",
+                                                "name": "Journal of Universal Computer Science: Special Issue on Human-Computer Interaction, JUCS 2008",
                                                 "num": "19",
                                                 "vol": "14",
                                                 "pages": "3174-3187"
@@ -196,7 +196,7 @@
                                     "publisher":"ACM Press",
                                     "organization":"ACM",
                                     "address":"New York, NY, USA",
-                                    "link": ""
+                                    "link": "VRST2012-Starfish.pdf"
                                 }
                             },
 
@@ -219,7 +219,7 @@
                                     "organization":"IEEE",
                                     "address":"",
                                     "note":"Acceptance rate : 19 %",
-                                    "link": ""
+                                    "link": "IEEEVR2011.pdf"
                                 }
                             },
 
@@ -240,7 +240,7 @@
                                     "publisher":"Springer",
                                     "organization":"LNCS",
                                     "address":"",
-                                    "link": ""
+                                    "link": "capobianco_Eurohaptics2010.pdf"
                                 }
                             },
 
@@ -262,7 +262,7 @@
                                     "publisher":"ACM Press",
                                     "organization":"ACM",
                                     "address":"",
-                                    "link": ""
+                                    "link": "VRST2010.pdf"
                                 }
                             },
 
@@ -283,7 +283,7 @@
                                     "publisher":"IEEE",
                                     "organization":"IEEE",
                                     "address":"",
-                                    "link": ""
+                                    "link": "essert_VR2010.pdf  "
                                 }
                             },
 
@@ -303,7 +303,7 @@
                                     "publisher":"ACM Press",
                                     "organization":"ACM",
                                     "address":"",
-                                    "link": ""
+                                    "link": "VRST09-HardborderTechniqueMenu.pdf"
                                 }
                             },
 
@@ -325,7 +325,7 @@
                                     "note":"Full paper: acceptance rate: 28 %",
                                     "organization":"ACM",
                                     "address":"",
-                                    "link": ""
+                                    "link": "VRST2009.pdf"
                                 }
                             },
 
@@ -347,7 +347,7 @@
                                     "note":"Full paper: acceptance rate: 46 %",
                                     "organization":"ACM",
                                     "address":"",
-                                    "link": ""
+                                    "link": "CADUI2008.pdf"
                                 }
                             },
 
@@ -370,7 +370,7 @@
                                     "note":"",
                                     "organization":"Eurographics",
                                     "address":"",
-                                    "link": ""
+                                    "link": "IPT-EGVE2007.pdf"
                                 }
                             },
 
@@ -444,7 +444,7 @@
                                     "organization":"ACM",
                                     "address":"",
                                     "note":"",
-                                    "link": ""
+                                    "link": "IHM2011.pdf"
                                 }
                             }
                 ]
@@ -478,7 +478,7 @@
                                     "organization":"",
                                     "address":"",
                                     "note":"",
-                                    "link": ""
+                                    "link": "JW-2011-afrv.pdf"
                                 }
                             },
 
@@ -502,7 +502,7 @@
                                     "organization":"",
                                     "address":"",
                                     "note":"",
-                                    "link": ""
+                                    "link": "AFRV2010-Wonner.pdf"
                                 }
                             },
 
@@ -529,29 +529,6 @@
 
                     {
                         "article": {
-                                    "type": "inproceedings",
-                                    "title": "Aide haptique prédictive à la sélection de cibles en trois dimensions.",
-                                    "author": [
-                                        {"name": "M. Veit"},
-                                        {"name": "A. Capobianco"},
-                                        {"name": "D. Bechmann"}
-                                    ],
-                                    "booktitle":"Actes des Journées de l'Association Française de Réalité Virtuelle, Augmentée, Mixte et d'Interaction 3D, AFRV 2009",
-                                    "pages":"",
-                                    "month":"Dec",
-                                    "year": "2009",
-                                    "editor":"",
-                                    "eds":"",
-                                    "publisher":"",
-                                    "organization":"",
-                                    "address":"",
-                                    "note":"",
-                                    "link": ""
-                                }
-                            },
-
-                    {
-                        "article": {
                                     "type": "misc",
                                     "title": "Experimental evaluation of two haptic techniques for 3D interaction: the constriction polyhedron technique vs magnetic attraction.",
                                     "author": [
@@ -564,7 +541,7 @@
                                     "year":"2009",
                                     "month":"Mar",
                                     "date": "",
-                                    "link": ""
+                                    "link": "AFRV2009.pdf"
                         }
                     },
 
@@ -587,7 +564,7 @@
                                     "organization":"",
                                     "address":"",
                                     "note":"",
-                                    "link": ""
+                                    "link": "AFRV2008.pdf"
                                 }
                             },
 

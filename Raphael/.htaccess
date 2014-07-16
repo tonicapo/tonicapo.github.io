@@ -224,6 +224,14 @@ RewriteRule ^(.*)$ $1.php [L]
     Header set X-XSS-Protection "1; mode=block"
   </IfModule>
 </FilesMatch>
+
+<IfModule mod_headers.c>
+   Header set Access-Control-Allow-Origin *
+   Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
+   Header always set Access-Control-Allow-Headers "*"
+   Header set Access-Control-Allow-Credentials true
+</IfModule>
+
 # ------------------------------------------------------------------------------
 # | Redirects |
 # ------------------------------------------------------------------------------
@@ -239,7 +247,3 @@ RewriteRule ^(.*)$ $1.php [L]
 # URL with querystring to new one keeping the querystring (301 = permanent)
 # RewriteCond %{QUERY_STRING} id=(\w+)  
 # RewriteRule ^old_path/index\.php http://www.new_site.com/new_path/index.php?id=%1 [L,R=301]
-
-Header set Access-Control-Allow-Origin "*"
-Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
-Header always set Access-Control-Allow-Headers "*"

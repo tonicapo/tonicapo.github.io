@@ -240,6 +240,6 @@ RewriteRule ^(.*)$ $1.php [L]
 # RewriteCond %{QUERY_STRING} id=(\w+)  
 # RewriteRule ^old_path/index\.php http://www.new_site.com/new_path/index.php?id=%1 [L,R=301]
 
-# Header set Access-Control-Allow-Origin *
+Header set Access-Control-Allow-Origin *
 # Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
 # Header always set Access-Control-Allow-Headers "*"

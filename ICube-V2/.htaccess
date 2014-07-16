@@ -224,6 +224,11 @@ RewriteRule ^(.*)$ $1.php [L]
     Header set X-XSS-Protection "1; mode=block"
   </IfModule>
 </FilesMatch>
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
 # ------------------------------------------------------------------------------
 # | Redirects |
 # ------------------------------------------------------------------------------

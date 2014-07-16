@@ -229,6 +229,7 @@ RewriteRule ^(.*)$ $1.php [L]
    Header set Access-Control-Allow-Origin *
    Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
    Header always set Access-Control-Allow-Headers "*"
+   Header set Access-Control-Allow-Credentials true
 </IfModule>
 
 # ------------------------------------------------------------------------------

@@ -29,22 +29,26 @@ function parsing(){
 //              $("li").remove(); // Remove any existing li elements
 //               $(this).toggleClass("btn-primary"); // Switch to default grey
 //               $(this).html("Loading"); // Change text of button
-               $.ajax({
-                    url: "http://carto.strasmap.eu/remote.amf.json/Bike.geometry",
-                    dataType: "json",
-                    mimeType: "application/json; charset=utf-8",
-                    complete: function(jqXHR, textStatus) {
-                        console.log("Completed: "+textStatus);
-                    },
-                    error: function(jqXHR, textStatus, errorThrown) {
-                        console.log(errorThrown);
-                    },
-                    success: function(data, textStatus, jqXHR) {
-                        parse(data);
-                    },
-
-               });
-
+//               $.ajax({
+//                    url: "http://carto.strasmap.eu/remote.amf.json/Bike.geometry",
+//                    dataType: "json",
+//                    mimeType: "application/json; charset=utf-8",
+//                    complete: function(jqXHR, textStatus) {
+//                        console.log("Completed: "+textStatus);
+//                    },
+//                    error: function(jqXHR, textStatus, errorThrown) {
+//                        console.log(errorThrown);
+//                    },
+//                    success: function(data, textStatus, jqXHR) {
+//                        parse(data);
+//                    },
+//
+//               });
+   $.ajax({
+        url: "http://carto.strasmap.eu/remote.amf.json/Bike.geometry",
+        dataType:"jsonp",
+        jsonpCallback: "",
+    });
 //               $(this).html("Load Again"); // Change back text of button
 //               $(this).toggleClass("btn-primary"); // Revert back to default grey
             };

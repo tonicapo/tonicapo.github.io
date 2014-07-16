@@ -29,6 +29,25 @@ window.onload = function(){
 				transform: "r-45"
 			}
 		);
-	tetronimo.animate({transform:'r360'}, 2000, 'bounce');
+	tetronimo.animate({transform:'r360'}, 2000, 'bounce',
+    // /* callback after original animation finishes */
+	    	function(){
+		    	this.animate({
+			        transform: 'r45',
+			        stroke: '#3b4449',
+			        'stroke-width': 10
+		    	}, 1000);
+	    	}
+		);
 
+	tetronimo.node.onclick = function(){
+			// tetronimo.attr("fill", "red");
+				console.log('gotcha');
+	    		tetronimo.animate({
+	  			  path: "M 250 250 l 0 -50 l -50 0 l 0 -50 l -100 0 l 0 50 l 50 0 l 0 50 z"
+				}, 5000, 'elastic');
+		};
+
+	initialisation();
+	parsing();
 };

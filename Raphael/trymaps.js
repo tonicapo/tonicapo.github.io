@@ -379,7 +379,10 @@ function parseOccupation(response) {
 
                 var d = "M"+x0+","+y0+", L" + x1 + "," + y1 + "  A150,150"+arc_flag+", 1 " + x2 + "," + y2 + ", L" + x3 + "," + y3 +"  A80,80"+arc_flag+", 0 "+ x0 + "," + y0 +"z"  ; //1 means clockwise
                 arc = paper.path(d);
-                arc.attr("fill",colorArr[i]);
+                arc.attr({
+                	"fill":colorArr[i],
+                	'stroke-width': 0
+            	});
                 textx = startX + 180*Math.cos(Math.PI*(startAngle+sectorAngleArr[i]/2)/180);
                 texty = startY + 180*Math.sin(Math.PI*(startAngle+sectorAngleArr[i]/2)/180);
                 paper.text(textx , texty , dataText[i]).attr({

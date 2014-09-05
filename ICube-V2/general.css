@@ -88,6 +88,23 @@ h1, h3{
     margin:auto;
 }
 
+/*TAG STYLING*/
+a{
+    text-decoration: none;
+    color: rgb(117, 117, 119);
+    font-weight: 700;
+    line-height: 1.35em;
+}
+
+a:hover, a:active{
+    color: rgba(235,60,0, 0.9);
+    border-bottom-color:rgba(235,60,0, 0.9);
+}
+
+p{
+  margin-top: 0.5em;
+}
+
 /*CLASSES DEFINITION*/
 .clearfix:after{
     content: "";
@@ -117,6 +134,14 @@ h1, h3{
     height:100%;
 }
 
+.margintop2em{
+  margin-top: 2em;
+}
+
+.shifted{
+  padding-left: 1em;
+}
+
 .mainh1{
 /*    color:rgba(235,60,0, 0.9);*/
     color:rgb(235,60,0);
@@ -128,58 +153,23 @@ h1, h3{
     padding-top: 0.5em;
 }
 
-
-
-
 .dotted{
     border-bottom: 1px dotted rgb(117, 117, 119);
 }
 
+.nomargintop{
+  margin-top:0;
+}
+
+.home-text{
+  display: none;
+}
+
+/*Classe utilisée pour les éléments ajoutés pour servir l'accessibilité*/
 .none{
     display: none;
 }
 
-
-/*REFERENCE CLASSES*/
-.article{
-    max-width: 35em;
-    margin: 1em 0 1em 0;
-}
-
-.article-title{
-    color: rgb(117, 117, 119);
-    font-weight: 700;
-}
-
-.article-ref{
-    font-style: italic;
-    /*margin-bottom: 1em;*/
-}
-
-.article-down{
-    font-size: 0.9em;
-    padding-top: 0.2em;
-    color: rgb(117, 117, 119);
-    text-align: right;
-    font-style: italic;
-}
-
-
-/*TAG STYLING*/
-a{
-    text-decoration: none;
-    color: rgb(117, 117, 119);
-    font-weight: 700;
-    line-height: 1.35em;
-}
-
-a:hover, a:active{
-    color: rgba(235,60,0, 0.9);
-    border-bottom-color:rgba(235,60,0, 0.9);
-}
-
-
-/*CONTENT STYLES*/
 /*HEADER*/
 header{
     margin: 2em 0 2em 0;
@@ -296,81 +286,9 @@ nav ul li:hover{
     display:none;   
 }
 
-
-
-/*SECTION*/
-.left-block{
-    float:left;
-    width:66%;
-    background-color: rgba(247, 247, 247, 0.4);
-}
-
-.right-block{
-    float:right;
-    width:34%;
-    padding-left:2em;
-}
-
-section article{
-    padding: 1em 0 1em 0;
-}
-
-/*Article principal accueil*/
-.large img{
-    max-width: 100%;
-}
-
-/*Articles secondaires accueil*/
-.small img{
-    display: block;
-    float:left;
-    max-width: 34%;
-    margin : 0 1em 0 0;
-}
-
-.small > div > div{
-        float: none;
-        width : 100%;
-        padding : 0;
-}
-
-.small > div > div > *{
-        padding: 0 0.5em 0 0;
-}
-
-.left-block article:last-child{
-    margin-bottom:2em;   
-}
-
-.abstract h2{
-    padding: 0.5em 0.5em 0.5em 0.5em;
-}
-
-.abstract p{
-    font-size: 0.9em;
-    padding:0 0.5em 0 0.5em;
-}
-
-/*DOWNLINKS : mise en forme des liens de téléchargement*/
-.downlinks{
-    margin-top: 0.5em;
-    font-size: 0.8em;
-    padding: 0.5em 0 0 0.5em;
-    color: rgb(117, 117, 119);
-    text-align: right;
-}
-
-.downlinks p{
-    display:inline;
-    font-size: 1em;
-}
-
-.downlinks span{
-    font-size: 1.5em;
-}
-
 /*FOOTER*/
 footer{
+    margin-top:2em;
     background-color: rgb(43,43,43);
     padding: 2em 0 0 0;
     color:rgb(117, 117, 119);
@@ -441,6 +359,142 @@ footer article:last-child ul li:last-child{
     color:black;
 }
 
+
+/* ACCUEIL PAGE STYLING*/
+.left-block{
+    float:left;
+    width:66%;
+    background-color: rgba(247, 247, 247, 0.4);
+}
+
+.right-block{
+    float:right;
+    width:34%;
+    padding-left:2em;
+}
+
+
+section article{
+    padding: 1em 0 1em 0;
+}
+
+/*Article principal accueil*/
+.large img{
+    max-width: 100%;
+}
+
+/*Articles secondaires accueil*/
+.small img{
+    display: block;
+    float:left;
+    max-width: 34%;
+    margin : 0 1em 0 0;
+}
+
+.small > div > div{
+        float: none;
+        width : 100%;
+        padding : 0;
+}
+
+.small > div > div > *{
+        padding: 0 0.5em 0 0;
+}
+
+.left-block article:last-child{
+    margin-bottom:2em;   
+}
+
+.abstract h2{
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.abstract p{
+    font-size: 0.9em;
+    padding:0 0.5em 0 0.5em;
+}
+
+/*RECHERCHE PAGE STYLING*/
+.textcontent{
+  /*max-width:75ch;*/
+  width:66%;
+  padding-right: 1.5em;
+}
+
+.figcontent{
+  width: 34%;
+}
+
+figcaption{
+  font-size: 0.8em;
+  font-style: italic;
+  line-height: 1em;
+}
+
+.figimg{
+  max-width: 100%;
+}
+
+
+
+
+/*REFERENCE PAGE CLASSES*/
+.article{
+    max-width: 35em;
+    margin: 1em 0 1em 0;
+}
+
+.article-title{
+    color: rgb(117, 117, 119);
+    font-weight: 700;
+}
+
+.article-ref{
+    font-style: italic;
+    /*margin-bottom: 1em;*/
+}
+
+.article-down{
+    font-size: 0.9em;
+    padding-top: 0.2em;
+    color: rgb(117, 117, 119);
+    text-align: right;
+    font-style: italic;
+}
+
+/*PROJETS PAGE CLASSES*/
+.partnertitle{
+  margin: 1em 0 0.5em 0;
+}
+
+.partnerlogo{
+  max-height:2em;
+  margin-right: 1em;
+}
+
+
+
+
+/*DOWNLINKS : mise en forme des liens de téléchargement*/
+.downlinks{
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    padding: 0.5em 0 0 0.5em;
+    color: rgb(117, 117, 119);
+    text-align: right;
+}
+
+.downlinks p{
+    display:inline;
+    font-size: 1em;
+}
+
+.downlinks span{
+    font-size: 1.5em;
+}
+
+
+
                 /*MEDIA QUERIES*/
                 /* Attention : la propriété handheld est ignorée par la plupart des navigateurs ! */
 
@@ -452,7 +506,7 @@ footer article:last-child ul li:last-child{
                 }
 
                 /* gestion des logos */
-                @media only screen and (min-device-width : 768px ) and (max-device-width : 1024px) and          (orientation:landscape){
+                @media only screen and (min-device-width : 768px ) and (max-device-width : 1024px) and (orientation:landscape){
                     .contact div:first-child{
                         float:left;
                     }
@@ -466,7 +520,7 @@ footer article:last-child ul li:last-child{
                     }
                 }
 
-                /* gestion du contenu mobile + tablettes*/
+                /* gestion du contenu mobile + tablettes */
                 @media only screen and (min-device-width : 320px) and (max-device-width : 1024px){
                     .wrapper{
                         width:100%;
@@ -512,6 +566,9 @@ footer article:last-child ul li:last-child{
                 /*    Gestion du menu */
                     #mobilemenu{
                         display:table;
+                        padding: 0.5em 0 0.5em 0;
+                        /*border-collapse:separate;*/
+                        border-spacing:0.5em;
                         height:4.5em;
                     }
 
@@ -548,8 +605,12 @@ footer article:last-child ul li:last-child{
                         width:100%;
                     }
 
-                    nav ul li:first-child{
+                    .icon-Home{
                         display: none;
+                    }
+
+                    .home-text{
+                      display:block;
                     }
 
                     nav ul li a{
@@ -558,6 +619,28 @@ footer article:last-child ul li:last-child{
 
                     nav ul li a:hover, nav ul li a:active{
                         color:white;
+                    }
+
+                    /*RECHERCHE PAGE STYLE*/
+                    .textcontent{
+                        /*max-width:75ch;*/
+                          width:100%;
+                          /*padding-right: 1.5em;*/
+                        }
+
+                    .figcontent{
+                      margin-top: 4.25em;
+                      width: 100%;
+                    }
+
+                    figcaption{
+/*                      font-size: 0.8em;
+                      font-style: italic;
+                      line-height: 1em;*/
+                    }
+
+                    .figimg{
+                      /*max-width: 100%;*/
                     }
                 }
 
@@ -629,6 +712,7 @@ footer article:last-child ul li:last-child{
           -webkit-animation-name: fadeInUp;
           animation-name: fadeInUp;
         }
+
 /*        Javascript menu class*/
         @keyframes toggleMenuDown {
           0% {
@@ -636,7 +720,7 @@ footer article:last-child ul li:last-child{
           }
 
           100% {
-              height: 288px;
+              height: 360px;
           }
         }
 
@@ -646,7 +730,7 @@ footer article:last-child ul li:last-child{
           }
 
           100% {
-              height: 288px;
+              height: 360px;
           }
         }
 
@@ -658,7 +742,7 @@ footer article:last-child ul li:last-child{
 
         @keyframes toggleMenuUp {
           0% {
-              height: 288px;
+              height: 360px;
           }
 
           100% {
@@ -668,7 +752,7 @@ footer article:last-child ul li:last-child{
 
         @-webkit-keyframes toggleMenuUp {
           0% {
-              height: 288px;
+              height: 360px;
           }
 
           100% {

@@ -85,14 +85,14 @@ var parseauthors = function(target, authors){
             authorslist += ".";
        }
     });
-    return ("<p>"+authorslist+"</p>");
+    return ("<p class='nomargintop'>"+authorslist+"</p>");
 }
 
 var parsereview = function(target, item){
     var refcontent = "<div class='article'>";
     refcontent+=("<h2 class='article-title'>"+item.article.title+"</h2>");
     refcontent+=parseauthors(target, item.article.author);
-    refcontent += "<p class='article-ref'>"+item.article.journal.name;
+    refcontent += "<p class='article-ref nomargintop'>"+item.article.journal.name;
     if(item.article.journal.num!=""){refcontent += (", num. "+item.article.journal.num)};
     if(item.article.journal.vol!=""){refcontent += (", vol. "+item.article.journal.vol)};
     if(item.article.journal.pages!=""){refcontent += (", pp. "+item.article.journal.pages)};
@@ -114,7 +114,7 @@ var parseinproceedings = function(target, item){
     var refcontent = "<div class='article'>";
     refcontent+=("<h2 class='article-title'>"+item.article.title+"</h2>");
     refcontent+=parseauthors(target, item.article.author);
-    refcontent += "<p class='article-ref'>"+item.article.booktitle;
+    refcontent += "<p class='article-ref nomargintop'>"+item.article.booktitle;
     if(item.article.pages!=""){refcontent += (", pp. "+item.article.pages)};
     if(item.article.month!="" && item.article.year!=""){
         refcontent += (", "+item.article.month+". "+item.article.year)
@@ -135,7 +135,7 @@ var parsemisc = function(target, item){
     var refcontent = "<div class='article'>";
     refcontent+=("<h2 class='article-title'>"+item.article.title+"</h2>");
     refcontent+=parseauthors(target, item.article.author);
-    refcontent += "<p class='article-ref'>"+item.article.event;
+    refcontent += "<p class='article-ref nomargintop'>"+item.article.event;
     // if(item.article.pages!=""){reference += (", pp. "+item.article.pages)};
     if(item.article.date!="" && item.article.month!="" && item.article.year!=""){
         refcontent += (", "+item.article.month+". "+item.article.date+", "+item.article.year)
@@ -157,5 +157,5 @@ var parsemisc = function(target, item){
 
 var addLink = function(item){
     var ref= "./article/"+item;
-    return "<p class='article-down'><a href='"+ref+"'><span class='icon-file-pdf'></span> Télécharger l'article</a></p>";
+    return "<p class='article-down nomargintop'><a href='"+ref+"'><span class='icon-file-pdf'></span> Télécharger l'article</a></p>";
 }

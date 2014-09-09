@@ -1,15 +1,24 @@
 $('window').ready(function(){
 
-//              $("li").remove(); // Remove any existing li elements
-//               $(this).toggleClass("btn-primary"); // Switch to default grey
-//               $(this).html("Loading"); // Change text of button
-                $('#floatingBarsG').toggleClass('none');
-               $.ajax({
+    $('body')
+  .delay(500)
+  .queue( 
+    function(next){ 
+        $(this).css('padding-right', '1px'); 
+    }
+  );
+
+                // $("li").remove(); // Remove any existing li elements
+                // $(this).toggleClass("btn-primary"); // Switch to default grey
+                // $(this).html("Loading"); // Change text of button
+               $('#floatingBarsG').toggleClass('none');
+            $.ajax({
                     url: "./json/biblio.json",
                     dataType: "json",
                     mimeType: "application/json; charset=utf-8",
                     complete: function(jqXHR, textStatus) {
-                        $('#floatingBarsG').toggleClass('none');
+
+                        /*$('#floatingBarsG').toggleClass('none');*/
                         console.log("Completed: "+textStatus);
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
@@ -17,12 +26,13 @@ $('window').ready(function(){
                     },
                     success: function(data, textStatus, jqXHR) {
                         parse(data);
+                        
                     },
 
                });
 
-//               $(this).html("Load Again"); // Change back text of button
-//               $(this).toggleClass("btn-primary"); // Revert back to default grey
+            // $(this).html("Load Again"); // Change back text of button
+            // $(this).toggleClass("btn-primary"); // Revert back to default grey
             });
 
 //Version alternative avec getJSON

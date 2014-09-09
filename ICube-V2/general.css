@@ -35,7 +35,8 @@ Voir cette page : https://github.com/CSSLint/csslint/wiki/Bulletproof-font-face
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url('http://themes.googleusercontent.com/static/fonts/oswald/v8/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff') format('woff');
+/*  src: local('Oswald Regular'), local('Oswald-Regular'), url('https://themes.googleusercontent.com/static/fonts/oswald/v8/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff') format('woff');*/
+  src: url(./fonts/Oswald/Oswald-Regular.ttf);
 }
 
 
@@ -43,28 +44,41 @@ Voir cette page : https://github.com/CSSLint/csslint/wiki/Bulletproof-font-face
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url('http://themes.googleusercontent.com/static/fonts/oswald/v8/bH7276GfdCjMjApa_dkG6bO3LdcAZYWl9Si6vvxL-qU.woff') format('woff');
+  /*src: local('Oswald Bold'), local('Oswald-Bold'), url('https://themes.googleusercontent.com/static/fonts/oswald/v8/bH7276GfdCjMjApa_dkG6bO3LdcAZYWl9Si6vvxL-qU.woff') format('woff');*/
+  src: url(./fonts/Oswald/Oswald-Bold.ttf);
 }
 
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 100;
-  src: local('Lato Hairline'), local('Lato-Hairline'), url('xhttp://themes.googleusercontent.com/static/fonts/lato/v7/Kom15zUm24dIPfIRiNogNuvvDin1pK8aKteLpeZ5c0A.woff') format('woff');
+  src: local('Lato Hairline'), local('Lato-Hairline'), url('xhttsp://themes.googleusercontent.com/static/fonts/lato/v7/Kom15zUm24dIPfIRiNogNuvvDin1pK8aKteLpeZ5c0A.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Lato';
   font-style: normal;
-  font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+  font-weight: 400;
+/*  src: local('Lato Light'), local('Lato-Light'), url(https://themes.googleusercontent.com/static/fonts/lato/v7/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+*/
+  src: url(./fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+/*  src: local('Lato Light'), local('Lato-Light'), url(https://themes.googleusercontent.com/static/fonts/lato/v7/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+*/
+  src: url(./fonts/Lato/Lato-Italic.ttf);
 }
 
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+/*  src: local('Lato Bold'), local('Lato-Bold'), url(https://themes.googleusercontent.com/static/fonts/lato/v7/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');*/
+  src: url(./fonts/Lato/Lato-Bold.ttf);
 }
 
 /*GENERAL STYLES*/
@@ -410,8 +424,26 @@ section article{
 }
 
 .abstract p{
-    font-size: 0.9em;
+    font-size: 1em;
     padding:0 0.5em 0 0.5em;
+}
+
+/*mise en forme des liens de téléchargement*/
+.downlinks{
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    padding: 0.5em 0 0 0.5em;
+    color: rgb(117, 117, 119);
+    text-align: right;
+}
+
+.downlinks p{
+    display:inline;
+    font-size: 1em;
+}
+
+.downlinks span{
+    font-size: 1.5em;
 }
 
 /*RECHERCHE PAGE STYLING*/
@@ -438,7 +470,7 @@ figcaption{
 
 
 
-/*REFERENCE PAGE CLASSES*/
+/*PUBLICATIONS PAGE CLASSES*/
 .article{
     max-width: 35em;
     margin: 1em 0 1em 0;
@@ -459,7 +491,6 @@ figcaption{
     padding-top: 0.2em;
     color: rgb(117, 117, 119);
     text-align: right;
-    font-style: italic;
 }
 
 /*PROJETS PAGE CLASSES*/
@@ -475,23 +506,7 @@ figcaption{
 
 
 
-/*DOWNLINKS : mise en forme des liens de téléchargement*/
-.downlinks{
-    margin-top: 0.5em;
-    font-size: 0.8em;
-    padding: 0.5em 0 0 0.5em;
-    color: rgb(117, 117, 119);
-    text-align: right;
-}
 
-.downlinks p{
-    display:inline;
-    font-size: 1em;
-}
-
-.downlinks span{
-    font-size: 1.5em;
-}
 
 
 

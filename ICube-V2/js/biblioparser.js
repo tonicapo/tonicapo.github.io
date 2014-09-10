@@ -11,14 +11,14 @@ $('window').ready(function(){
                 // $("li").remove(); // Remove any existing li elements
                 // $(this).toggleClass("btn-primary"); // Switch to default grey
                 // $(this).html("Loading"); // Change text of button
-               $('#floatingBarsG').toggleClass('none');
+               $('#loader-container').toggleClass('none');
             $.ajax({
                     url: "./json/biblio.json",
                     dataType: "json",
                     mimeType: "application/json; charset=utf-8",
                     complete: function(jqXHR, textStatus) {
 
-                        /*$('#floatingBarsG').toggleClass('none');*/
+                        $('#loader-container').toggleClass('none');
                         console.log("Completed: "+textStatus);
                     },
                     error: function(jqXHR, textStatus, errorThrown) {

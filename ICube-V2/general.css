@@ -185,6 +185,42 @@ p{
 }
 
 /*HEADER*/
+
+      /*SPRITES*/
+      .sprite-container{
+          display: inline-block;
+          vertical-align:middle;
+          margin-right: 1em;
+          background: url(./logos/sprite.png) no-repeat top left;
+      }
+
+      .sprite-almedia{ background-position: 0 0; width: 142px; height: 32px; } 
+      .sprite-anr-small{ background-position: 0 -82px; width: 66px; height: 36px; } 
+      .sprite-anr{ background-position: 0 -168px; width: 58px; height: 32px; } 
+      .sprite-ci2n{ background-position: 0 -250px; width: 52px; height: 32px; } 
+      .sprite-cnrs{ background-position: 0 -332px; width: 32px; height: 32px; } 
+      .sprite-cstb{ background-position: 0 -414px; width: 75px; height: 32px; } 
+      .sprite-espe{ background-position: 0 -496px; width: 83px; height: 32px; } 
+      .sprite-eveil3d{ background-position: 0 -578px; width: 60px; height: 32px; } 
+      .sprite-holo3{ background-position: 0 -660px; width: 138px; height: 32px; } 
+      .sprite-icube{ background-position: 0 -742px; width: 86px; height: 32px; } 
+      .sprite-igg{ background-position: 0 -824px; width: 32px; height: 32px; } 
+      .sprite-insermfr{ background-position: 0 -906px; width: 119px; height: 32px; } 
+      .sprite-ircad{ background-position: 0 -988px; width: 89px; height: 32px; } 
+      .sprite-iut{ background-position: 0 -1070px; width: 58px; height: 32px; } 
+      .sprite-kit{ background-position: 0 -1152px; width: 60px; height: 32px; } 
+      .sprite-koblenz{ background-position: 0 -1234px; width: 203px; height: 32px; } 
+      .sprite-legrand{ background-position: 0 -1316px; width: 91px; height: 32px; } 
+      .sprite-lilpa{ background-position: 0 -1398px; width: 89px; height: 32px; } 
+      .sprite-lsiit{ background-position: 0 -1480px; width: 45px; height: 32px; } 
+      .sprite-natura-concept{ background-position: 0 -1562px; width: 32px; height: 32px; } 
+      .sprite-pole-energivie{ background-position: 0 -1644px; width: 111px; height: 32px; } 
+      .sprite-sage{ background-position: 0 -1726px; width: 80px; height: 32px; } 
+      .sprite-saint-gobain{ background-position: 0 -1808px; width: 112px; height: 32px; } 
+      .sprite-uds{ background-position: 0 -1890px; width: 59px; height: 32px; } 
+      .sprite-ureca{ background-position: -253px 0; width: 123px; height: 32px; } 
+
+
 header{
     margin: 2em 0 2em 0;
 /*    color:rgb(43,43,43);*/
@@ -213,10 +249,11 @@ header h2{
     color:rgb(117, 117, 119);
 }
 
-header li{
-    display: inline-block;
-    vertical-align:middle;
+/*header li{
+
 }
+*/
+
 
 header img{
     max-width: 4em;
@@ -503,10 +540,145 @@ figcaption{
   margin-right: 1em;
 }
 
+.inprogress{
+  text-align: center;
+}
+
+        /*Glitch effect */
+          .glitch {
+            position: relative;
+          }
+          .glitch::before,
+          .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
 
 
+          .glitch::before {
+              /* ... anything needed to make it identical */
+
+              /* variation */
+              left: 2px;
+              text-shadow: -2px 0 green;
+              
+              /* important: opaque background masks the original */
+              background: white;
+
+              clip: rect(0px, 1024px, 16px, 0px);
+                /*
+                  Essentially a box from 0, 44px
+                  to 450px, 56px
+                */
+                -webkit-animation: glitch-anim-1 2s infinite linear alternate-reverse;
+                animation: glitch-anim-1 2s infinite linear alternate-reverse;
+                          
+            }
 
 
+            .glitch::after {
+              /* ... anything needed to make it identical */
+
+              /* variation */
+              left: -2px;
+              text-shadow: -2px 0 blue;
+              
+              /* important: opaque background masks the original */
+              background: white;
+
+              clip: rect(16px, 1024px, 32px, 0px);
+              -webkit-animation: glitch-anim-2 2s infinite linear alternate-reverse;
+              animation: glitch-anim-2 2s infinite linear alternate-reverse;
+            }
+
+            @keyframes glitch-anim-1 {
+              0% {
+                clip: rect(0px, 1024px, 8px, 0px);
+              }
+              20% {
+                clip: rect(9px, 1024px, 25px, 0px);
+              }
+              40% {
+                clip: rect(20px, 1024px, 32px, 0px);
+              }
+              60% {
+                clip: rect(0px, 1024px, 17px, 0px);
+              }
+              80% {
+                clip: rect(21px, 1024px, 32px, 0px);
+              }
+              100% {
+                clip: rect(6px, 1024px, 18px, 0px);
+              }
+            }
+
+            @keyframes glitch-anim-2 {
+              0% {
+                clip: rect(1px, 1024px, 30px, 0px);
+              }
+              20% {
+                clip: rect(5px, 1024px, 21px, 0px);
+              }
+              40% {
+                clip: rect(8px, 1024px, 17px, 0px);
+              }
+              60% {
+                clip: rect(16px, 1024px, 28px, 0px);
+              }
+              80% {
+                clip: rect(15px, 1024px, 19px, 0px);
+              }
+              100% {
+                clip: rect(28px, 1024px, 32px, 0px);
+              }
+            }
+
+
+            @-webkit-keyframes glitch-anim-1 {
+              0% {
+                clip: rect(0px, 1024px, 8px, 0px);
+              }
+              20% {
+                clip: rect(9px, 1024px, 25px, 0px);
+              }
+              40% {
+                clip: rect(20px, 1024px, 32px, 0px);
+              }
+              60% {
+                clip: rect(0px, 1024px, 17px, 0px);
+              }
+              80% {
+                clip: rect(21px, 1024px, 32px, 0px);
+              }
+              100% {
+                clip: rect(6px, 1024px, 18px, 0px);
+              }
+            }
+
+            @-webkit-keyframes glitch-anim-2 {
+              0% {
+                clip: rect(1px, 1024px, 30px, 0px);
+              }
+              20% {
+                clip: rect(5px, 1024px, 21px, 0px);
+              }
+              40% {
+                clip: rect(8px, 1024px, 17px, 0px);
+              }
+              60% {
+                clip: rect(16px, 1024px, 28px, 0px);
+              }
+              80% {
+                clip: rect(15px, 1024px, 19px, 0px);
+              }
+              100% {
+                clip: rect(28px, 1024px, 32px, 0px);
+              }
+            }
 
 
 
@@ -783,10 +955,21 @@ figcaption{
 
 
 /*LOADING ANIMATION*/
+#loader-container{
+  padding: 5em;
+  position: relative;
+}
+
 #floatingBarsG{
-position:relative;
-width:74px;
-height:92px}
+  position:absolute;
+  width: 75px;
+  height: 90px;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
 .blockG{
 position:absolute;

@@ -148,9 +148,7 @@ p{
     height:100%;
 }
 
-.margintop2em{
-  margin-top: 2em;
-}
+
 
 .shifted{
   padding-left: 1em;
@@ -171,9 +169,7 @@ p{
     border-bottom: 1px dotted rgb(117, 117, 119);
 }
 
-.nomargintop{
-  margin-top:0;
-}
+
 
 .home-text{
   display: none;
@@ -237,9 +233,9 @@ header h1 a{
     font-weight: 700;
 }
 
-header h1 a:hover, header h1 a:active{
+/*header h1 a:hover, header h1 a:active{
     text-shadow: 0px 1px 1px rgb(117, 117, 119);
-}
+}*/
 
 header h2{
     margin-left: 2em;
@@ -504,6 +500,14 @@ figcaption{
   max-width: 100%;
 }
 
+.margintop2em{
+  margin-top: 2em;
+}
+
+.nomargintop{
+  margin-top:0;
+}
+
 
 
 
@@ -540,6 +544,11 @@ figcaption{
   margin-right: 1em;
 }
 
+.margintop1em{
+  margin-top: 1em;
+}
+
+/* PAGE ENCADREMENT */
 .inprogress{
   text-align: center;
 }
@@ -718,8 +727,8 @@ figcaption{
                         display:none;
                     }
 
-                    section{
-                        margin-top: 4.5em!important;
+                    .maincontent{
+                        margin-top: 4.5em;
                     }
 
                     .mainh1{
@@ -770,6 +779,10 @@ figcaption{
                         position:absolute;
                         top:0;
                         color:lightgray;
+
+                        /*On ajoute une valeur de z-index pour que le menu déroulant apparaisse au dessus des autres éléments
+                        positionnés en absolu dans le reste du contenu de la page*/
+                        z-index:1;
                     }
 
                     nav .wrapper{
@@ -808,7 +821,7 @@ figcaption{
                         color:white;
                     }
 
-                    /*RECHERCHE PAGE STYLE*/
+                    /*RECHERCHE PAGE STYLES*/
                     .textcontent{
                         /*max-width:75ch;*/
                           width:100%;
@@ -816,12 +829,16 @@ figcaption{
                         }
 
                     .figcontent{
-                      margin-top: 4.25em;
+                      margin: 1em 0 1em 0;
                       width: 100%;
                     }
 
+                    .margintop2em{
+                      margin-top: 0;
+                    }
+
                     figcaption{
-/*                      font-size: 0.8em;
+                      /*font-size: 0.8em;
                       font-style: italic;
                       line-height: 1em;*/
                     }

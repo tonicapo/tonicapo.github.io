@@ -15,7 +15,7 @@ $('window').ready(function(){
             navul.removeClass("toggleMenuDown");
             navul.addClass("toggleMenuUp");
         }else{
-            // navul.toggleClass("toggleMenuUp");
+            navul.toggleClass("toggleMenuUp");
             if(navul.hasClass("toggleMenuUp")){
                 navul.removeClass("toggleMenuUp");
             }
@@ -33,10 +33,7 @@ $('window').ready(function(){
 
         newoffset = $(this).scrollTop();      
         if(newoffset < (oldoffset) && newoffset > navoffset && !((window.innerHeight + window.scrollY) >= document.body.offsetHeight)   ){
-//            nav.css('top', -50);
-//            console.log("toggleUp");
             ref.addClass('stick');
-            // nav.removeClass('fadeInUp');
             nav.removeClass('fadeInUp');
             nav.addClass('fadeInDown');
 

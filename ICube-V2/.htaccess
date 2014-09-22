@@ -205,6 +205,15 @@ RewriteRule ^(.*)$ $1.php [L]
     FileETag None
   </IfModule>
 </FilesMatch>
+<FilesMatch "\.(css)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "max-age=600"
+    header set vary "Accept-Encoding"
+    header append vary "User-Agent"
+    header append Cache-Control "private"
+    FileETag None
+  </IfModule>
+</FilesMatch>
 # DONT CACHE = NO CACHE FOR PHP
 <FilesMatch "\.(pl|php|cgi|spl)$">
   <IfModule mod_headers.c>

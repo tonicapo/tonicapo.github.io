@@ -7,13 +7,133 @@
         <meta name="viewport" content="initial-scale=1">
 		<title>Antonio Capobianco - Enseignant chercheur</title>
 
-    <script type="text/javascript">
-          var stylesheet = document.createElement('link');
-          stylesheet.href = 'style.min.css';
-          stylesheet.rel = 'stylesheet';
-          stylesheet.type = 'text/css';
-          document.getElementsByTagName('head')[0].appendChild(stylesheet);
-    </script>
+        <style type="">
+header{
+    margin: 2em 0 2em 0;
+/*    color:rgb(43,43,43);*/
+}
+
+header h1{
+    display: inline-block;
+}
+
+header h1 a{
+    font-size: 2em;
+    text-decoration: none;
+    color:rgb(235,60,0);
+    font-weight: 700;
+}
+
+/*header h1 a:hover, header h1 a:active{
+    text-shadow: 0px 1px 1px rgb(117, 117, 119);
+}*/
+
+header h2{
+    margin-left: 2em;
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 0.8em;
+    color:rgb(117, 117, 119);
+}
+
+/*header li{
+
+}
+*/
+
+
+header img{
+    max-width: 4em;
+    margin: 0 0.5em 0 0.5em;
+}
+
+.logosmall{
+    max-width: 2em;   
+}
+
+.icon-Home{
+    font-size:1.5em;
+}
+
+.icon-menu{
+    text-align: center;
+}
+
+.active{
+    color:rgb(235,60,0);
+}
+
+/*NAV*/
+nav{
+    background-color: rgb(43,43,43);
+    height: 72px;
+    position:relative;
+}
+
+nav h1{
+    color:rgb(235,60,0);
+    font-size: 1.2em;
+}
+
+nav ul{
+    font-family: "Oswald";
+    font-size: 1.8em;
+    height: 100%;
+}
+
+nav ul li{
+/*Indispensable pour que l'élément table-celle puisse hériter de la taille du conteneur en utilisant les %    */
+    display:table;
+/*    */
+    float:left;
+    height : 72px;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+nav ul li a{
+    display:table-cell;
+    vertical-align: middle;
+    padding:0 0.5em 0 0.5em;
+    height:100%;
+    width:100%;
+    color:lightgray;
+}
+
+nav ul li a:hover, nav ul li a:active{
+    color:white;
+}
+
+nav ul li a:hover span, nav ul li a:active span{
+    color:white;
+}
+
+nav ul li:hover{
+    background-color:rgb(235,60,0);
+}
+
+.current a{
+    color:rgb(235,60,0);
+}
+
+.current:hover a{
+    color:white;
+}
+
+#mobilemenu{
+    display:none;   
+}
+
+        </style>
+
+
+        <script type="text/javascript">
+              var stylesheet = document.createElement('link');
+              stylesheet.href = 'style.min.css';
+              stylesheet.rel = 'stylesheet';
+              stylesheet.type = 'text/css';
+              document.getElementsByTagName('head')[0].appendChild(stylesheet);
+        </script>
 
 	</head>
 	<body>

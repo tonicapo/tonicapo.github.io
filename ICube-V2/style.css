@@ -314,7 +314,7 @@ footer{
 
 
 /*MEDIA QUERIES*/
-	@media (height > 1055px){
+	@media (min-height : 1055px){
 		footer{
 			position: fixed;
 			bottom:0;

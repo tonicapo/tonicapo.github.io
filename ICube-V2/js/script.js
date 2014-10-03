@@ -8,8 +8,8 @@ $(window).ready(function(){
 	var shortt  = [], mediumt = [], longt = [];
 
 
-	$('#polygon1').attr('points', '154 125,'+wpwidth/2+' 0,'+wpwidth/2+' 250');
-	$('#polygon2').attr('points', '200 125,'+wpwidth/2+' 20,'+wpwidth/2+' 230');
+	$('#polygon1').attr('points', '0 125,'+wpwidth/2+' -20,'+wpwidth/2+' 270');
+	$('#polygon2').attr('points', '50 125,'+wpwidth/2+' 20,'+wpwidth/2+' 230');
  
  	if(wpheight > 1055){
  		backgroundtext.height(320 + (wpheight-1055));
@@ -41,6 +41,12 @@ $(window).ready(function(){
 	changesvgcolor(btngenerate, iconleft);
 	changesvgcolor(btncopy, iconcopy);
 
+	$('nav li').mouseover(function(){
+    	$(this).addClass('active');
+    }).mouseout(function(){
+    	$(this).removeClass('active');
+    });
+
 	// JSON
     $.ajax({
                     url: "./json/citations.json",
@@ -61,19 +67,40 @@ $(window).ready(function(){
 
     function fire(jsobj){
     	// console.log(jsobj);
+    	var textlength ="S";
+    	var smaller = $('.smaller');
+    	var section = $('section');
+
     	parse(jsobj);
     	console.log('click');
-    	$('.menu .smaller').click(function(){
+ 	
+    	smaller.click(function(){
     		console.log('click');
-    		$('.active p').removeClass('activetext').addClass('border');
-    		$('.active').removeClass('active');
-    		$(this).addClass('active');
-    		$('.active p').addClass('activetext').removeClass('border');
+    		smaller.removeClass('selected');
+    		$(this).addClass('selected');
+    		textlength = $(this).children('p').html().toString();
+    		console.log(textlength);
     	});
 
     	btngenerate.click(function(){
-    		console.log(mediumt.length);
-    		$('section').html(longt[Math.round(Math.random()*longt.length)]);
+    		console.log(textlength);
+    		switch(textlength) {
+		    case "S":
+		        section.html(longt[Math.round(Math.random()*longt.length)]);
+		        console.log("short");
+		        break;
+		    case "M":
+		        section.html(longt[Math.round(Math.random()*longt.length)]);
+		        console.log("medium");
+		        break;
+		    case "L":
+		   		section.html(longt[Math.round(Math.random()*longt.length)]); 
+		   		console.log("long");
+		   		break;	
+		    default:
+		        section.html("Vous devez choisir une longueur de texte");
+}
+    		
     	});
     }
 
@@ -88,20 +115,4 @@ $(window).ready(function(){
         });
 
 	}
-
-
-
-// Gestion des états boutons
-// <ul>
-//     <li><a href="#">item 1</a></li>
-//     <li><a href="#">item 2</a></li>
-//     <li><a href="#">item 3</a></li>
-// </ul>
-
-// $("li a").click( function() {
-//   $(".active").removeClass("active");
-//   $(this).parent("li").addClass("active");
-// });
-
-
 });

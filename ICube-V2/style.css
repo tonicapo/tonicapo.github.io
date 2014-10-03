@@ -29,8 +29,7 @@ h1:after, h2:after, h3:after, h4:after, div:after, header:after, footer:after, s
 
 /*FONTS*/
 /* 
-	Generateur de fonts web : http://www.fontsquirrel.com/tools/webfont-generator
-	
+	Generateur de fonts web : http://www.fontsquirrel.com/tools/webfont-generator	
 */
 
 @font-face {
@@ -50,18 +49,21 @@ h1:after, h2:after, h3:after, h4:after, div:after, header:after, footer:after, s
 
 @font-face {
   font-family: 'Cardor';
-  src: url('fonts/Cardob.eot?') format('embedded-opentype'), url('fonts/Cardor.woff') format('woff'), url('fonts/Cardor.ttf') format('truetype');
+  src: url('fonts/Cardor.eot?') format('embedded-opentype'), url('fonts/Cardor.woff') format('woff'), url('fonts/Cardor.ttf') format('truetype');
 }
 
-/*Déclaration @font-face avec svg*/
-/*@font-face {
-	  font-family: 'Kaushanregular';  		
-	  src: url('Kaushanregular.eot?') format('embedded-opentype');
-	  src: local('☺︎'),
-	  	url("kaushanregular.woff") format("woff"),
-	  	url("kaushanregular.otf") format("opentype"),
-      	url("kaushanregular.svg#kaushan") format("svg");
-}*/
+/*Déclaration @font-face bulletproof avec svg*/
+/*http://typographisme.net/post/Bonnes-pratiques-pour-les-d%C3%A9clarations-@font-face*/
+/*@font-face{
+    font-family : "maFonte";
+
+    src : url('maFonte.eot'); /* Pour IE9 Compat mode */
+/*    src : url('maFonte.eot?') format('eot),
+          url('maFonte.woff') format('woff'),
+          url('maFonte.svg#abcd') format('svg'),
+          url('maFonte.ttf') format('truetype');
+}
+*/
 
 
 /*TAG STYLES*/
@@ -73,15 +75,13 @@ body{
 	width:100%;
 }
 
-
-
 /*HEADER*/
 header{
-	min-width: 72em;
 }
 
 img{
-	max-width: 20em;
+
+	
 /*	display: block;
 	
 	margin:0 auto;*/
@@ -89,7 +89,6 @@ img{
 }
 
 .maintitle{
-	width: 50%;
 	color:rgba(224,150,255,1);
 	background-image: -webkit-gradient(linear, left top,  left bottom, from(rgba(224,150,255,1)), to(rgba(150, 204, 255, 1)));
 	-webkit-background-clip:text;
@@ -97,7 +96,9 @@ img{
 }
 
 .headerimage{
-	width: 50%;
+	display: block;
+	margin:0 auto;
+	max-width: 20em;
 }
 
 .triangleref{
@@ -115,27 +116,7 @@ img{
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(to bottom, rgba(224,150,255,0.8) 0%, rgba(150, 204, 255, 0.8) 60%);
-	-webkit-clip-path: polygon(154px 125px,100% 0px,100% 250px);
-
-	/*-webkit-clip-path: circle(30px at 35px 35px);*/
-	/*overflow: hidden;*/
-/*	border-top: 6em solid rgba(0,0,0,0);
-
-	-webkit-border-image: 
-    	-webkit-gradient(linear, 0 0, 0 100%, from(rgba(224,150,255,0.5)), to(rgba(150, 204, 255, 0.5))) 1 100%;
-    -webkit-border-image: 
-    	-webkit-linear-gradient(rgba(224,150,255,0.5), rgba(150, 204, 255, 0.5)) 1 100%;
-    -moz-border-image:
-    	-moz-linear-gradient(rgba(224,150,255,0.5), rgba(150, 204, 255, 0.5)) 1 100%;    
-    -o-border-image:
-    	-o-linear-gradient(rgba(224,150,255,0.5), rgba(150, 204, 255, 0.5)) 1 100%;
-    border-image:
-    	linear-gradient(to bottom, rgba(224,150,255,0.5), rgba(150, 204, 255, 0.5)) 1 100%;
-	border-right: 50em solid ;
-	
-	border-bottom: 6em solid rgba(0,0,0,0);
-
-	box-shadow: 10px 10px 5px #888888;*/
+	-webkit-clip-path: polygon(0px 125px,100% -20px,100% 270px);
 }
 
 .triangle2 {
@@ -144,26 +125,12 @@ img{
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(to bottom, rgba(224,150,255,0.9) 0%, rgba(150, 204, 255, 0.9) 60%);
-	-webkit-clip-path: polygon(200px 125px,100% 20px,100% 230px);
+	-webkit-clip-path: polygon(50px 125px,100% 20px,100% 230px);
 }
-
-/*.triangle1:after {
-    position: absolute;
-    left: 20em; top: 50%;
-    width: 82em;
-    height: 40em;
-    border-left: solid 1px #ccc;
-    border-top: solid 1px #ccc;
-    transform: rotate(22.5deg) skewX(-10deg);
-    transform: rotate(22.5deg) skewX(-55deg);
-    background: linear-gradient(to top, rgba(224,150,255,1), rgba(150, 204, 255, 1));
-    content: '';
-}*/
 
 hr{
 	border: 0 solid rgb(218,218,218);
 	border-top-width: 1px;
-
 	/*Peut-être une solution à trouver avec box-shadow?*/
 	/*box-shadow: 0 0 0 1px rgb(218,218,218);*/
 }
@@ -179,71 +146,75 @@ h2{
 	text-align: center;
 }
 
-li{
-	display:inline-block;
-}
 
-/*ARTICLE*/
-article{
-	margin-bottom: 10em;
-	border: 1px solid rgb(255,0,78);
-}
+
 
 /*MENU*/
 .menu{
-	/*width: 100%;*/
 	height: 5em;
 	background-color: rgb(254, 241, 245);
 	display: flex;
-
-	/*align-content: stretch;*/
 }
 
 .menu li{
+	display:flex;
+		/*Aligner verticalement*/
+		align-items: center;
+		/*Aligner horizontalement*/
+		justify-content: center;
+
 	font: 1em Cardob;
 	color: rgb(255,0,78);
 	height: 100%;
 	border:1px solid rgb(255,231,238);
-
-	display:flex;
-	/*Aligner verticalement*/
-	align-items: center;
-	/*Aligner horizontalement*/
-	justify-content: center;
-
-	-webkit-touch-callout: none;
+	cursor: pointer;
+	/*Complément pour mobile*/
+	/*	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none;
+	user-select: none;*/
 }
 
-.menu li:hover{
+.menu span:first-child{
+	margin-right:1em;
+}
+
+/*.menu li:hover{
 	color: rgb(254, 241, 245);
 	background-color: rgb(255,0,78);
-}
+}*/
 
-.menu p{
-	cursor: default;
-}
-
-.active{
+.active, .active p{
 	/*color: rgb(254, 241, 245);*/
+	color:rgb(254, 241, 245);
 	background-color: rgb(255,0,78);
+}
+
+.active .box{
+	color:rgb(254, 241, 245);
+	border-color: rgb(254, 241, 245);
+}
+
+.selected{
+	color:rgb(254, 241, 245);
+	background-color: rgb(255,0,78);
+}
+
+.selected .box{
+	color: rgb(254, 241, 245);
+	border-color: rgb(254, 241, 245);
+}
+
+.iconsvg{
+	padding-top: 5px;
+	width: 1em;
 }
 
 .activetext{
 	border: 1px solid rgb(254, 241, 245);
 	color:rgb(254, 241, 245);
-}
-
-.menu li:hover .border{
-	border: 1px solid rgb(254, 241, 245);
-}
-
-.menu li:hover .iconsvg{
-	fill:rgb(254, 241, 245);
 }
 
 .bigger{
@@ -254,26 +225,23 @@ article{
 	flex-grow: 1.5;
 }
 
-.border{
-	border: 1px solid rgb(255,0,78);	
-}
-
-.boxed{
-
+.box{
+	border: 1px solid rgb(255,0,78);
 	width: 1.625em;
 	height: 1.625em;
 	text-align: center;
-	vertical-align: bottom;
+	vertical-align: middle;
 }
 
-li > span:first-child{
-	margin-right:1em;
+
+
+/*ARTICLE*/
+article{
+	margin-bottom: 10em;
+	border: 1px solid rgb(255,0,78);
 }
 
-.iconsvg{
-	width: 1em;
-	line-height: 1.65em;
-}
+
 
 /*SECTION*/
 section{

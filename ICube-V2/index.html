@@ -26,23 +26,31 @@
   <div id="fb-root"></div>
 
     <!-- INCLUDE FACEBOOK SDK -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '733615943341006',
-          xfbml      : false,
-          version    : 'v2.1'
-        });
-      };
+    
+<!--     //   window.fbAsyncInit = function() {
+    //     FB.init({
+    //       appId      : '733615943341006',
+    //       xfbml      : false,
+    //       version    : 'v2.1'
+    //     });
+    //   };
 
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "https://connect.facebook.net/en_US/debug.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
+    //   (function(d, s, id){
+    //      var js, fjs = d.getElementsByTagName(s)[0];
+    //      if (d.getElementById(id)) {return;}
+    //      js = d.createElement(s); js.id = id;
+    //      js.src = "https://connect.facebook.net/en_US/debug.js";
+    //      fjs.parentNode.insertBefore(js, fjs);
+    //    }(document, 'script', 'facebook-jssdk')); -->
+    
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=733615943341006&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
       <header class="relative">
           <div class="wrapper ">
@@ -114,7 +122,7 @@
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </li>
         <li>
-          <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+          <div class="fb-like" data-href="http://tonicapo.github.io" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
         </li>
       </ul>
       <p class="copyrights">© tonicapo x justinbasile</p>

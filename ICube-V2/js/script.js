@@ -2,18 +2,37 @@ $(window).ready(function(){
 
 	// RESIZING TRIANGLE FOR FIREFOX
 	var wp = $(window);
+
 	var	wpwidth = wp.width();
 	var wpheight = wp.height();
+		console.log('wpwidth'+wpwidth);
+		console.log('wpheight'+wpheight);
+
 	var backgroundtext = $('#backgroundtext');
+	var footer = $('footer');
 	var shortt  = [], mediumt = [], longt = [];
 
+	if((wpwidth>360)&&(wpwidth<1153)){
+		$('#polygon1').attr('points', '0 125, 576 -20, 576 270');
+		$('#polygon2').attr('points', '50 125, 576 20, 576 230');
+	}else{
+		$('#polygon1').attr('points', '0 125,'+wpwidth/2+' -20,'+wpwidth/2+' 270');
+		$('#polygon2').attr('points', '50 125,'+wpwidth/2+' 20,'+wpwidth/2+' 230');
+	}
 
-	$('#polygon1').attr('points', '0 125,'+wpwidth/2+' -20,'+wpwidth/2+' 270');
-	$('#polygon2').attr('points', '50 125,'+wpwidth/2+' 20,'+wpwidth/2+' 230');
- 
- 	if(wpheight > 1055){
- 		backgroundtext.height(320 + (wpheight-1055));
- 		backgroundtext.attr('top', 320 + (wpheight-1055));
+ 	
+ 	if(wpheight > (footer.offset().top+footer.height())){
+ 		console.log('footer offset'+footer.offset().top);
+ 		// backgroundtext.height(320 + (wpheight-1055));
+ 		// backgroundtext.attr('top', 320 + (wpheight-1055));
+ 		footer.offset({top: (wpheight-footer.height()-9)});
+ 		console.log('footer offset'+footer.offset().top);
+ 		var bgtheight = footer.offset().top-($('section').offset().top + $('section').height()/2);
+ 		console.log(bgtheight);
+ 		
+ 		backgroundtext.height(bgtheight);
+ 		console.log(backgroundtext.height());
+ 		backgroundtext.offset({top: $('section').offset().top + $('section').height()/2});
  	}
 
 	// SVG Icon Colors
@@ -86,11 +105,11 @@ $(window).ready(function(){
     		console.log(textlength);
     		switch(textlength) {
 		    case "S":
-		        section.html(longt[Math.round(Math.random()*longt.length)]);
+		        section.html(shortt[Math.round(Math.random()*shortt.length)]);
 		        console.log("short");
 		        break;
 		    case "M":
-		        section.html(longt[Math.round(Math.random()*longt.length)]);
+		        section.html(mediumt[Math.round(Math.random()*mediumt.length)]);
 		        console.log("medium");
 		        break;
 		    case "L":

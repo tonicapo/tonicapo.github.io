@@ -52,10 +52,10 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-      <header class="relative">
-          <div class="wrapper ">
-              <img class="headerimage" src="images/face.tiny.png">
-                <div class=" triangleref" >
+
+
+      <header class="relative"> 
+          <div class=" triangleref" >
                   <div class="triangle1">
                     <svg width="0" height="0">
                     <clipPath id="clipPolygon1">
@@ -70,7 +70,10 @@
                         </polygon>
                       </clipPath>
                   </div>             
-                </div>
+          </div>
+          <div class="wrapper">
+              <img class="headerimage" src="images/face.tiny.png">
+
             <div>              
               <h1 class="maintitle">Nietzschsum</h1>
               <hr>
@@ -97,21 +100,27 @@
                   </defs>
             </svg>
 
-        <article>
-            <nav>
-              <ul class="menu">
-                <li id="btngenerate" class="bigger"><span class="box"><svg class="iconsvg" viewBox="0 0 12 12"><use id="iconleft" xlink:href="#icon-left"></use></svg></span><p>Generate</p></li>
-                <li id="btnoptions" class="bigger"><span class="box">+</span><p>Options</p></li>
-                <li id="btnS" class="smaller selected"><p class="box">S</p></li>
-                <li id="btnM" class="smaller"><p class="box">M</p></li>  
-                <li id="btnL" class="smaller"><p class="box">L</p></li>
-                <li id="btncopy" class="bigger"><span class="box"><svg class="iconsvg" viewBox="0 0 12 12"><use id="iconcopy" xlink:href="#icon-copy"></use></svg></span><p>Copy to clipboard</p></li>
-              </ul>
-            </nav>
-            <section>
-              
-            </section>
-        </article>
+            <article>
+                <nav>
+                  <ul class="menu">
+                    <li id="btngenerate" class="bigger"><span class="box"><svg class="iconsvg" viewBox="0 0 12 12"><use id="iconleft" xlink:href="#icon-left"></use></svg></span><p>Generate</p></li>
+                    <li id="btnoptions" class="bigger desktop"><span class="box">+</span><p>Options</p></li>
+                      <ul id="submenu">
+                        <li> No tags </li>
+                        <li> Add p </li>
+                        <li> Add h1 </li>
+                        <li> </li>
+                      </ul>
+                    <li id="btnS" class="smaller selected desktop"><p class="box">S</p></li>
+                    <li id="btnM" class="smaller desktop"><p class="box">M</p></li>  
+                    <li id="btnL" class="smaller desktop"><p class="box">L</p></li>
+                    <li id="btncopy" class="bigger desktop"><span class="box"><svg class="iconsvg" viewBox="0 0 12 12"><use id="iconcopy" xlink:href="#icon-copy"></use></svg></span><p>Copy to clipboard</p></li>
+                  </ul>
+                </nav>
+                <section>
+                  
+                </section>
+            </article>
         </div>
     <footer>
       <div id="backgroundtext">
@@ -122,7 +131,7 @@
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </li>
         <li>
-          <div class="fb-like" data-href="http://tonicapo.github.io" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+          <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="96" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
         </li>
       </ul>
       <p class="copyrights">© tonicapo x justinbasile</p>

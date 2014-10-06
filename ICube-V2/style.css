@@ -72,20 +72,12 @@ html{
 }
 
 body{
-	width:100%;
+	/*width:100%;*/
 }
 
 /*HEADER*/
 header{
-}
-
-img{
-
-	
-/*	display: block;
-	
-	margin:0 auto;*/
-	/*padding-right:20em;*/
+	min-width: 72em;
 }
 
 .maintitle{
@@ -103,17 +95,18 @@ img{
 
 .triangleref{
 	position: absolute;
-	width:50%;
+	width:100%;
 	min-width: 36em;
-	height: 100%;
+	height: 20em;
 	top: 0;
-	right: 0;
+	z-index:1;
 }
 
 .triangle1 {
 	position: absolute;
 	top:0;
-	width: 100%;
+	left: 50%;
+	width: 50%;
 	height: 100%;
 	background: linear-gradient(to bottom, rgba(224,150,255,0.8) 0%, rgba(150, 204, 255, 0.8) 60%);
 	-webkit-clip-path: polygon(0px 125px,100% -20px,100% 270px);
@@ -122,7 +115,8 @@ img{
 .triangle2 {
  	position: absolute;
 	top:0;
-	width: 100%;
+	left: 50%;
+	width: 50%;
 	height: 100%;
 	background: linear-gradient(to bottom, rgba(224,150,255,0.9) 0%, rgba(150, 204, 255, 0.9) 60%);
 	-webkit-clip-path: polygon(50px 125px,100% 20px,100% 230px);
@@ -158,8 +152,7 @@ h2{
 
 li{
 	list-style-type: none;
-	padding-right: 0;
-	
+	padding-right: 0;	
 	display:flex;
 		/*Aligner verticalement*/
 		align-items: center;
@@ -169,7 +162,6 @@ li{
 }
 
 .menu li{
-
 	font: 1em Cardob;
 	color: rgb(255,0,78);
 	height: 100%;
@@ -215,7 +207,7 @@ li{
 }
 
 .iconsvg{
-	padding-top: 5px;
+	padding-top: 0.3125em;
 	width: 1em;
 }
 
@@ -241,6 +233,11 @@ li{
 }
 
 
+		/*SOUS MENU*/
+		#submenu{
+			display:none;
+		}
+
 
 /*ARTICLE*/
 article{
@@ -263,8 +260,8 @@ section{
 footer{
 	position: relative;
 	background-color: rgb(229,229, 229);
-	/*bottom:0;*/
 	width: 100%;
+	min-width: 72em;
 }
 
 footer li{
@@ -286,7 +283,7 @@ footer li{
 	background-color: rgba(250,249,249, 0.8);
 	position: absolute;
 	top:-20em;
-	height: 20em;
+	min-height: 20em;
 	width: 100%;
 	z-index: -1;
 	background-image: url(./images/backtext.svg#svgtext);
@@ -325,10 +322,59 @@ footer li{
 
 
 /*MEDIA QUERIES*/
+	/*Gestion du pieds de page*/
 	@media (min-height : 1055px){
 		footer{
 			position: fixed;
 			bottom:0;
 			z-index:-1;
 		}
+	}
+
+	/* responsive mobile*/
+	@media (min-device-width : 320px) and (max-device-width : 1024px){
+		body{
+			font-size: 0.6em;
+		}
+
+		header, footer{
+			min-width: 0;
+		}
+
+		.wrapper{
+			width:96%;
+			margin: 0 2% 0 2%;
+		}
+
+
+
+		.triangleref, .triangle1, .triangle2{
+			display:none;
+		}
+
+		.desktop{
+			display: none;
+		}
+
+		article{
+			margin-bottom: 2em;
+		}
+
+		#backgroundtext{
+			min-height: 2em;
+			top:-2em;
+		}
+
+		.desktop{
+			display: none;
+		}
+	}
+
+	@media (min-device-width: 361px) and (max-device-width:1152px){
+/*		.triangleref{
+			/*width: 36em;*/
+		}
+
+
+
 	}

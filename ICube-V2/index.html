@@ -23,6 +23,27 @@
 	</head>
 
   <body>
+  <div id="fb-root"></div>
+
+    <!-- INCLUDE FACEBOOK SDK -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '733615943341006',
+          xfbml      : false,
+          version    : 'v2.1'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/debug.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
       <header class="relative">
           <div class="wrapper ">
               <img class="headerimage" src="images/face.tiny.png">
@@ -51,7 +72,7 @@
       </header>
 
       <div class="wrapper">  
-          <svg id="svgicon" display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" viewBox="10 10 12 12" stroke-dashoffset="10px">
+          <svg id="svgicon" display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" viewBox="10 10 12 12">
                   <defs>
                   <g id="icon-copy">
                     <path class="path1" fill="rgb(255,0,78)"  d="M7.5 3v-3h-5.25l-2.25 2.25v6.75h4.5v3h7.5v-9h-4.5zM2.25 1.061v1.189h-1.189l1.189-1.189zM0.75 8.25v-5.25h2.25v-2.25h3.75v2.25l-2.25 2.25v3h-3.75zM6.75 4.061v1.189h-1.189l1.189-1.189zM11.25 11.25h-6v-5.25h2.25v-2.25h3.75v7.5z"></path>
@@ -93,7 +114,7 @@
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </li>
         <li>
-          Facebook
+          <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
         </li>
       </ul>
       <p class="copyrights">© tonicapo x justinbasile</p>

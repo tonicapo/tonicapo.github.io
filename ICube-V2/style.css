@@ -156,12 +156,19 @@ h2{
 	display: flex;
 }
 
-.menu li{
+li{
+	list-style-type: none;
+	padding-right: 0;
+	
 	display:flex;
 		/*Aligner verticalement*/
 		align-items: center;
 		/*Aligner horizontalement*/
 		justify-content: center;
+
+}
+
+.menu li{
 
 	font: 1em Cardob;
 	color: rgb(255,0,78);
@@ -258,6 +265,10 @@ footer{
 	background-color: rgb(229,229, 229);
 	/*bottom:0;*/
 	width: 100%;
+}
+
+footer li{
+	display: inline-block;
 }
 
 

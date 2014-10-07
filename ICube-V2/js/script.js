@@ -1,5 +1,6 @@
 $(window).ready(function(){
 
+<<<<<<< HEAD
 
 	// Création du clipboard
 	// Attention : ne semble pas fonctionner en local
@@ -24,6 +25,30 @@ $(window).ready(function(){
         // console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
         ZeroClipboard.destroy();
     } );
+=======
+	        var clientTarget = new ZeroClipboard( $('#btncopy'), {
+              moviePath: "ZeroClipboard.swf",
+              debug: false
+            } );
+
+            // ZeroClipboard.config( { swfPath: "http://YOURSERVER/path/ZeroClipboard.swf" } );
+
+            clientTarget.on( "ready", function(event)
+            {
+                console.log("loaded");
+                
+                clientTarget.on( 'copy', function(event) {
+          		event.clipboardData.setData('text/plain', $('section').html());
+          		console.log($('section').html());
+        		} );
+
+
+                // clientTarget.on( "complete", function(clientTarget, args) {
+                //     clientTarget.setText( args.text );
+                //     // $('#target-to-copy-text').fadeIn();
+                // } );
+            } );
+>>>>>>> FETCH_HEAD
 
 	// RESIZING TRIANGLE FOR FIREFOX
 	var wp = $(window);

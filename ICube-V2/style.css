@@ -168,12 +168,12 @@ li{
 	border:1px solid rgb(255,231,238);
 	cursor: pointer;
 	/*Complément pour mobile*/
-	/*	-webkit-touch-callout: none;
+		-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none;*/
+	user-select: none;
 }
 
 .menu span:first-child{
@@ -272,7 +272,7 @@ footer li{
 .social{
 	background-color: rgb(229,229, 229);
 	padding: 1em 0;
-	width: 16.5em;
+	width: 35em;
 	margin:0 auto;
 	text-align: center;
 	position: relative;

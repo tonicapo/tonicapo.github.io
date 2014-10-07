@@ -118,9 +118,46 @@ $(window).ready(function(){
 		   		break;	
 		    default:
 		        section.html("Vous devez choisir une longueur de texte");
-}
-    		
+			}
     	});
+
+
+$('.zclip').zclip({
+	path:'./js/ZeroClipboard.swf',
+	copy:function(){alert($('section').html());},
+	afterCopy:function(){
+	// $('#callback-paragraph').css('background','green');
+	// $(this).css('color','purple');
+	// $(this).next('.check').show();
+		alert('after copy');
+	}
+});
+// The link with ID "copy-description" will copy
+// the text of the paragraph with ID "description"
+// $('a#copy-dynamic').zclip({
+// path:'js/ZeroClipboard.swf',
+// copy:function(){return $('input#dynamic').val();}
+// });
+
+	  //   	ZeroClipboard.config( { moviePath: 'javascripts/ZeroClipboard.swf' } );
+	 
+			// var client = new ZeroClipboard( $("#btncopy") );
+
+            //    var clientTarget = new ZeroClipboard( btncopy, {
+            //   moviePath: "http://www.paulund.co.uk/playground/demo/zeroclipboard-demo/zeroclipboard/ZeroClipboard.swf",
+            //   debug: false
+            // } );
+
+            // clientTarget.on( "load", function(clientTarget)
+            // {
+            //     alert("loaded");
+
+            //     clientTarget.on( "complete", function(clientTarget, args) {
+            //         clientTarget.setText( args.text );
+            //         $('#target-to-copy-text').fadeIn();
+            //     } );
+            // } );
+
     }
 
     function parse(lejson) {
@@ -134,4 +171,6 @@ $(window).ready(function(){
         });
 
 	}
+
+
 });

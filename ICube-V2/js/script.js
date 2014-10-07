@@ -7,11 +7,11 @@ $(window).ready(function(){
 
             // ZeroClipboard.config( { swfPath: "http://YOURSERVER/path/ZeroClipboard.swf" } );
 
-            clientTarget.on( "ready", function(clientTarget)
+            clientTarget.on( "ready", function(event)
             {
                 console.log("loaded");
                 
-                clientTarget.on( 'complete', function(clientTarget, args) {
+                clientTarget.on( 'complete', function(event) {
           		//event.clipboardData.setData('text/plain', 'les datas');
           		console.log('copié');
         		} );

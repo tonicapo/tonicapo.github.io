@@ -12,7 +12,7 @@ $(window).ready(function(){
                 console.log("loaded");
                 
                 clientTarget.on( 'copy', function(event) {
-          		//event.clipboardData.setData('text/plain', 'les datas');
+          		event.clipboardData.setData('text/plain', $('section').html());
           		console.log('copié');
         		} );
 

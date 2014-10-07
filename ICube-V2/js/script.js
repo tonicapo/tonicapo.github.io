@@ -1,5 +1,22 @@
 $(window).ready(function(){
 
+	        var clientTarget = new ZeroClipboard( $('#btncopy'), {
+              moviePath: "ZeroClipboard.swf",
+              debug: false
+            } );
+
+            // ZeroClipboard.config( { swfPath: "http://YOURSERVER/path/ZeroClipboard.swf" } );
+
+            clientTarget.on( "ready", function(clientTarget)
+            {
+                console.log("loaded");
+
+                // clientTarget.on( "complete", function(clientTarget, args) {
+                //     clientTarget.setText( args.text );
+                //     // $('#target-to-copy-text').fadeIn();
+                // } );
+            } );
+
 	// RESIZING TRIANGLE FOR FIREFOX
 	var wp = $(window);
 
@@ -73,7 +90,7 @@ $(window).ready(function(){
                     mimeType: "application/json; charset=utf-8",
                     complete: function(jqXHR, textStatus) {
                     	// $('#loader-container').toggleClass('none');
-                        console.log("Completed: "+textStatus);
+                        // console.log("Completed: "+textStatus);
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
                         console.log(errorThrown);
@@ -91,10 +108,10 @@ $(window).ready(function(){
     	var section = $('section');
 
     	parse(jsobj);
-    	console.log('click');
+    	// console.log('click');
  	
     	smaller.click(function(){
-    		console.log('click');
+    		// console.log('click');
     		smaller.removeClass('selected');
     		$(this).addClass('selected');
     		textlength = $(this).children('p').html().toString();
@@ -122,16 +139,16 @@ $(window).ready(function(){
     	});
 
 
-$('.zclip').zclip({
-	path:'./js/ZeroClipboard.swf',
-	copy:function(){alert($('section').html());},
-	afterCopy:function(){
-	// $('#callback-paragraph').css('background','green');
-	// $(this).css('color','purple');
-	// $(this).next('.check').show();
-		alert('after copy');
-	}
-});
+// $('.zclip').zclip({
+// 	path:'//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.swf',
+// 	copy:function(){alert($('section').html());},
+// 	afterCopy:function(){
+// 	// $('#callback-paragraph').css('background','green');
+// 	// $(this).css('color','purple');
+// 	// $(this).next('.check').show();
+// 		alert('after copy');
+// 	}
+// });
 // The link with ID "copy-description" will copy
 // the text of the paragraph with ID "description"
 // $('a#copy-dynamic').zclip({
@@ -143,20 +160,7 @@ $('.zclip').zclip({
 	 
 			// var client = new ZeroClipboard( $("#btncopy") );
 
-            //    var clientTarget = new ZeroClipboard( btncopy, {
-            //   moviePath: "http://www.paulund.co.uk/playground/demo/zeroclipboard-demo/zeroclipboard/ZeroClipboard.swf",
-            //   debug: false
-            // } );
 
-            // clientTarget.on( "load", function(clientTarget)
-            // {
-            //     alert("loaded");
-
-            //     clientTarget.on( "complete", function(clientTarget, args) {
-            //         clientTarget.setText( args.text );
-            //         $('#target-to-copy-text').fadeIn();
-            //     } );
-            // } );
 
     }
 

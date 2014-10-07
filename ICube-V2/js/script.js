@@ -11,7 +11,7 @@ $(window).ready(function(){
             {
                 console.log("loaded");
                 
-                clientTarget.on( 'copy', function(event) {
+                clientTarget.on( 'copy', function(clientTarget) {
           		event.clipboardData.setData('text/plain', 'les datas');
           		console.log('copié');
         		} );

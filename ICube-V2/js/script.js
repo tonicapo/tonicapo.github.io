@@ -13,7 +13,7 @@ $(window).ready(function(){
                 
                 clientTarget.on( 'copy', function(event) {
           		event.clipboardData.setData('text/plain', $('section').html());
-          		console.log('copié');
+          		console.log($('section').html());
         		} );
 
 

@@ -1,6 +1,6 @@
 $(window).ready(function(){
 
-
+	// Zeroclipboard : http://zeroclipboard.org/
 	// Création du clipboard
 	// Attention : ne semble pas fonctionner en local
 	var client = new ZeroClipboard( $('.clip_button'), {
@@ -114,10 +114,13 @@ $(window).ready(function(){
     	var textlength ="S";
     	var smaller = $('.smaller');
     	var section = $('section');
+    	var tags = "";
+    	var lasection = $('section');
+    	var letexte = '';
+    	var subbuttons = $('#submenu li');
 
     	parse(jsobj);
-    	// console.log('click');
- 	
+
     	smaller.click(function(){
     		// console.log('click');
     		smaller.removeClass('selected');
@@ -125,6 +128,65 @@ $(window).ready(function(){
     		textlength = $(this).children('p').html().toString();
     		console.log(textlength);
     	});
+
+    	
+    	subbuttons.click(function(){
+    		subbuttons.removeClass('selected');
+    		$(this).addClass('selected');
+
+    		letexte = lasection.text();
+    		var tag = $(this).attr('id');
+	    	console.log($(this).html());
+	   		switch(istagged(letexte)) {
+		    case 'p':
+		    console.log('case p');
+			        if(tag=='h1'){
+						textreplace(lasection, letexte, 'p', 'h1');
+			        }else if(tag=="h2"){
+			        	textreplace(lasection, letexte, 'p', 'h2');
+			        }else{
+			        	textreplace(lasection, letexte, 'p', '');
+			        }
+			        break;
+		    case "h1":
+		    		console.log('case h1');
+			        if(tag=='p'){
+						textreplace(lasection, letexte, 'h1', 'p');
+			        }else if(tag=="h2"){
+			        	textreplace(lasection, letexte, 'h1', 'h2');
+			        }else{
+			        	textreplace(lasection, letexte, 'h1', '');
+			        }
+			        break;
+		    case "h2":
+		    		    console.log('case h2');
+			        if(tag=='p'){
+						textreplace(lasection, letexte, 'h2', 'p');
+			        }else if(tag=="h1"){
+			        	textreplace(lasection, letexte, 'h2', 'h1');
+			        }else{
+			        	textreplace(lasection, letexte, 'h2', '');
+			        }
+			        break;
+		   	case null:
+		   			console.log('case null');
+			   		if(tag=='p'){
+			   			textreplace(lasection, letexte, null, 'p');
+			   		}else if(tag=='h1'){
+						textreplace(lasection, letexte, null, 'h1');
+			   		}else if(tag=='h2'){
+						textreplace(lasection, letexte, null, 'h2');
+			   		}else{
+			   			break;
+			   		}
+			   		break;	
+		    default:
+		    		break;
+			    
+				}
+    	});
+
+
 
     	btngenerate.click(function(){
     		console.log(textlength);
@@ -145,31 +207,6 @@ $(window).ready(function(){
 		        section.html("Vous devez choisir une longueur de texte");
 			}
     	});
-
-
-// $('.zclip').zclip({
-// 	path:'//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.swf',
-// 	copy:function(){alert($('section').html());},
-// 	afterCopy:function(){
-// 	// $('#callback-paragraph').css('background','green');
-// 	// $(this).css('color','purple');
-// 	// $(this).next('.check').show();
-// 		alert('after copy');
-// 	}
-// });
-// The link with ID "copy-description" will copy
-// the text of the paragraph with ID "description"
-// $('a#copy-dynamic').zclip({
-// path:'js/ZeroClipboard.swf',
-// copy:function(){return $('input#dynamic').val();}
-// });
-
-	  //   	ZeroClipboard.config( { moviePath: 'javascripts/ZeroClipboard.swf' } );
-	 
-			// var client = new ZeroClipboard( $("#btncopy") );
-
-
-
     }
 
     function parse(lejson) {
@@ -182,6 +219,35 @@ $(window).ready(function(){
         		if(item.cite.type == "long"){longt.push(item.cite.text);}
         });
 
+	}
+
+	function istagged(mytext){
+		if(mytext.indexOf('<p>')>=0){return 'p';}
+		else if(mytext.indexOf('<h1>')>=0){return 'h1';}
+		else if(mytext.indexOf('<h2>')>=0){return 'h2';}
+		else {return null;}
+	}
+
+	function textreplace(dest, texte, tag1, tag2){
+		if(dest.text()!==''){
+			if(tag1===null){
+				texte = '<'+tag2+'>'+texte+'<\/'+tag2+'>';
+			}else if(tag1!==null && tag2===''){
+				texte = texte.replace('<'+tag1+'>','');
+				texte = texte.replace('<\/'+tag1+'>','');
+			}
+			else{
+				// console.log('replacing : '+'<'+tag1+'>'+' with : '+'<'+tag2+'>');
+
+				// texte = texte.replace("<p>","<h1>");
+				// texte = texte.replace("<\/p>","<\/h1>");
+
+				texte = texte.replace('<'+tag1+'>','<'+tag2+'>');
+				texte = texte.replace('<\/'+tag1+'>','<\/'+tag2+'>');
+				console.log(texte);
+			}
+		dest.text(texte);
+		}
 	}
 
 

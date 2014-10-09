@@ -167,8 +167,9 @@ li{
 	height: 100%;
 	border:1px solid rgb(255,231,238);
 	cursor: pointer;
+
 	/*Complément pour mobile*/
-		-webkit-touch-callout: none;
+	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
@@ -185,9 +186,9 @@ li{
 	background-color: rgb(255,0,78);
 }*/
 
-.active, .active p{
+.active, .active p, #submenu li .active{
 	/*color: rgb(254, 241, 245);*/
-	color:rgb(254, 241, 245);
+	color:rgb(254, 241, 245)!important;
 	background-color: rgb(255,0,78);
 }
 
@@ -196,8 +197,8 @@ li{
 	border-color: rgb(254, 241, 245);
 }
 
-.selected{
-	color:rgb(254, 241, 245);
+.selected, #submenu li .selected{
+	color:rgb(254, 241, 245)!important;
 	background-color: rgb(255,0,78);
 }
 
@@ -234,8 +235,35 @@ li{
 
 
 		/*SOUS MENU*/
+		#btnoptions{
+			position: relative;
+			/*overflow: hidden;*/
+		}
+
 		#submenu{
-			display:none;
+			display: flex;
+			overflow: hidden;
+			/*height:0;*/
+			width:1148px;
+			height:0;
+			position:absolute;
+			bottom:0;
+			right: -610px;
+			background-color: rgb(254, 241, 245);
+			transition: all 300ms linear; 
+			/*justify-content:space-around;*/
+		}
+
+		#submenu li{
+			width:5em;
+			display:flex;
+			align-items:center;
+			flex-grow:1;
+		}
+		#btnoptions:hover #submenu{
+			bottom:-5em;
+			height:5em;
+			transition: all 300ms linear; 
 		}
 
 
@@ -270,14 +298,18 @@ footer li{
 
 
 .social{
+	display: flex;
+	justify-content:space-around;
 	background-color: rgb(229,229, 229);
 	padding: 1em 0;
-	width: 35em;
+	width: 20em;
 	margin:0 auto;
 	text-align: center;
 	position: relative;
 	top:-1.5em;
 }
+
+.twitter-share-button[style] { vertical-align: text-bottom !important; }
 
 #backgroundtext{
 	background-color: rgba(250,249,249, 0.8);

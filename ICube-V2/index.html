@@ -7,9 +7,7 @@
         <meta name="viewport" content="initial-scale=1">
 		    <title>Nietzschsum</title>
 
-        <!-- build:css style.min.css -->
-            <link rel="stylesheet" href="style.css" >
-        <!-- /build -->
+        <link rel="stylesheet" href="style.min.css">
 
             <style type="text/css">
               .triangle1 {
@@ -26,31 +24,15 @@
   <div id="fb-root"></div>
 
     <!-- INCLUDE FACEBOOK SDK -->
-    
-<!--     //   window.fbAsyncInit = function() {
-    //     FB.init({
-    //       appId      : '733615943341006',
-    //       xfbml      : false,
-    //       version    : 'v2.1'
-    //     });
-    //   };
-
-    //   (function(d, s, id){
-    //      var js, fjs = d.getElementsByTagName(s)[0];
-    //      if (d.getElementById(id)) {return;}
-    //      js = d.createElement(s); js.id = id;
-    //      js.src = "https://connect.facebook.net/en_US/debug.js";
-    //      fjs.parentNode.insertBefore(js, fjs);
-    //    }(document, 'script', 'facebook-jssdk')); -->
-    
     <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=733615943341006&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=733615943341006&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+      </script>
 
 
 
@@ -104,24 +86,26 @@
                 <nav>
                   <ul class="menu">
                     <li id="btngenerate" class="bigger"><span class="box"><svg class="iconsvg" viewBox="0 0 12 12"><use id="iconleft" xlink:href="#icon-left"></use></svg></span><p>Generate</p></li>
-                    <li id="btnoptions" class="bigger desktop"><span class="box">+</span><p>Options</p></li>
-                      <ul id="submenu">
-                        <li> No tags </li>
-                        <li> Add p </li>
-                        <li> Add h1 </li>
-                        <li> </li>
-                      </ul>
+                    <li id="btnoptions" class="bigger desktop">
+                        <span class="box">+</span>
+                        <p>Options</p>
+                        <ul id="submenu">
+                          <li id="no" class="subitem selected"> No &#139;tags&#155; </li>
+                          <li id="p" class="subitem"> Add &#139;p&#155; </li>
+                          <li id="h1" class="subitem"> Add &#139;h1&#155; </li>
+                          <li id="h2" class="subitem"> Add &#139;h2&#155; </li>
+                        </ul>
+                    </li>
                     <li id="btnS" class="smaller selected desktop"><p class="box">S</p></li>
                     <li id="btnM" class="smaller desktop"><p class="box">M</p></li>  
                     <li id="btnL" class="smaller desktop"><p class="box">L</p></li>
                     <li id="btncopy" class="clip_button bigger desktop zclip"><span class="box "><svg class="iconsvg" viewBox="0 0 12 12"><use id="iconcopy" xlink:href="#icon-copy"></use></svg></span><p>Copy to clipboard</p></li>
                   </ul>
                 </nav>
-                <section>
-                  
-                </section>
+                <section></section>
             </article>
         </div>
+
     <footer>
       <div id="backgroundtext">
       </div>
@@ -139,9 +123,7 @@
 
     <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="./js/ZeroClipboard.js"></script>
-    <!-- build:js ./js/script.min.js -->
-    <script type="text/javascript" src="./js/script.js"></script>
-    <!-- /build -->
+    <script src="./js/script.min.js"></script>
 
   </body>
   </html>

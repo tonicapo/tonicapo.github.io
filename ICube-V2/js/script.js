@@ -12,12 +12,11 @@ $(window).ready(function(){
     	moviePath: "ZeroClipboard.swf",
     	debug: false
     } );
-
     client.on( 'ready', function(event) {
         // console.log( 'movie is loaded' );
 
         client.on( 'copy', function(event) {
-          event.clipboardData.setData('text/plain',lasection.html());
+          event.clipboardData.setData('text/plain',lasection.html().replace('&lt;','<').replace('&gt;','>'));
           console.log(lasection);
         } );
 

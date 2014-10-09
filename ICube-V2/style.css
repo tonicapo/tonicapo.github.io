@@ -293,7 +293,7 @@ footer{
 }
 
 footer li{
-	display: inline-block;
+	/*display: inline-block;*/
 }
 
 
@@ -307,6 +307,7 @@ footer li{
 	text-align: center;
 	position: relative;
 	top:-1.5em;
+	display:flex;
 }
 
 .twitter-share-button[style] { vertical-align: text-bottom !important; }

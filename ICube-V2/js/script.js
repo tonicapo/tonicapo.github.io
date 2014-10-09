@@ -1,5 +1,10 @@
 $(window).ready(function(){
-
+    	var textlength ="S";
+    	var smaller = $('.smaller');
+    	var tags = "";
+    	var lasection = $('section');
+    	var letexte = '';
+    	var subbuttons = $('#submenu li');
 	// Zeroclipboard : http://zeroclipboard.org/
 	// Création du clipboard
 	// Attention : ne semble pas fonctionner en local
@@ -12,7 +17,8 @@ $(window).ready(function(){
         // console.log( 'movie is loaded' );
 
         client.on( 'copy', function(event) {
-          event.clipboardData.setData('text/plain', event.target.innerHTML);
+          event.clipboardData.setData('text/plain',lasection.html());
+          console.log(lasection);
         } );
 
         client.on( 'aftercopy', function(event) {
@@ -52,12 +58,12 @@ $(window).ready(function(){
  		// backgroundtext.attr('top', 320 + (wpheight-1055));
  		footer.offset({top: (wpheight-footer.height()-9)});
  		console.log('footer offset'+footer.offset().top);
- 		var bgtheight = footer.offset().top-($('section').offset().top + $('section').height()/2);
+ 		var bgtheight = footer.offset().top-(lasection.offset().top + lasection.height()/2);
  		console.log(bgtheight);
  		
  		backgroundtext.height(bgtheight);
  		console.log(backgroundtext.height());
- 		backgroundtext.offset({top: $('section').offset().top + $('section').height()/2});
+ 		backgroundtext.offset({top: lasection.offset().top + lasection.height()/2});
  	}
 
 	// SVG Icon Colors
@@ -111,13 +117,7 @@ $(window).ready(function(){
 
     function fire(jsobj){
     	// console.log(jsobj);
-    	var textlength ="S";
-    	var smaller = $('.smaller');
-    	var section = $('section');
-    	var tags = "";
-    	var lasection = $('section');
-    	var letexte = '';
-    	var subbuttons = $('#submenu li');
+
 
     	parse(jsobj);
 
@@ -192,19 +192,19 @@ $(window).ready(function(){
     		console.log(textlength);
     		switch(textlength) {
 		    case "S":
-		        section.html(shortt[Math.round(Math.random()*shortt.length)]);
+		        lasection.html(shortt[Math.round(Math.random()*shortt.length)]);
 		        console.log("short");
 		        break;
 		    case "M":
-		        section.html(mediumt[Math.round(Math.random()*mediumt.length)]);
+		        lasection.html(mediumt[Math.round(Math.random()*mediumt.length)]);
 		        console.log("medium");
 		        break;
 		    case "L":
-		   		section.html(longt[Math.round(Math.random()*longt.length)]); 
+		   		lasection.html(longt[Math.round(Math.random()*longt.length)]); 
 		   		console.log("long");
 		   		break;	
 		    default:
-		        section.html("Vous devez choisir une longueur de texte");
+		        lasection.html("Vous devez choisir une longueur de texte");
 			}
     	});
     }

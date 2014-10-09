@@ -1,10 +1,10 @@
 $(window).ready(function(){
     	var textlength ="S";
     	var smaller = $('.smaller');
-    	var tags = "";
     	var lasection = $('section');
     	var letexte = '';
     	var subbuttons = $('#submenu li');
+    	var tagselected = "no";
 	// Zeroclipboard : http://zeroclipboard.org/
 	// Création du clipboard
 	// Attention : ne semble pas fonctionner en local
@@ -134,76 +134,93 @@ $(window).ready(function(){
     		$(this).addClass('selected');
 
     		letexte = lasection.text();
-    		var tag = $(this).attr('id');
-	    	console.log($(this).html());
-	   		switch(istagged(letexte)) {
-		    case 'p':
-		    console.log('case p');
-			        if(tag=='h1'){
-						textreplace(lasection, letexte, 'p', 'h1');
-			        }else if(tag=="h2"){
-			        	textreplace(lasection, letexte, 'p', 'h2');
-			        }else{
-			        	textreplace(lasection, letexte, 'p', '');
-			        }
-			        break;
-		    case "h1":
-		    		console.log('case h1');
-			        if(tag=='p'){
-						textreplace(lasection, letexte, 'h1', 'p');
-			        }else if(tag=="h2"){
-			        	textreplace(lasection, letexte, 'h1', 'h2');
-			        }else{
-			        	textreplace(lasection, letexte, 'h1', '');
-			        }
-			        break;
-		    case "h2":
-		    		    console.log('case h2');
-			        if(tag=='p'){
-						textreplace(lasection, letexte, 'h2', 'p');
-			        }else if(tag=="h1"){
-			        	textreplace(lasection, letexte, 'h2', 'h1');
-			        }else{
-			        	textreplace(lasection, letexte, 'h2', '');
-			        }
-			        break;
-		   	case null:
-		   			console.log('case null');
-			   		if(tag=='p'){
-			   			textreplace(lasection, letexte, null, 'p');
-			   		}else if(tag=='h1'){
-						textreplace(lasection, letexte, null, 'h1');
-			   		}else if(tag=='h2'){
-						textreplace(lasection, letexte, null, 'h2');
-			   		}else{
-			   			break;
-			   		}
-			   		break;	
-		    default:
-		    		break;
-			    
-				}
+    		tagselected = $(this).attr('id');
+
+    		if(lasection.html()!==''){
+    				console.log("replacing");
+			   		switch(istagged(letexte)) {
+				    case 'p':
+				    console.log('case p');
+					        if(tagselected=='h1'){
+								textreplace(lasection, letexte, 'p', 'h1');
+					        }else if(tagselected=="h2"){
+					        	textreplace(lasection, letexte, 'p', 'h2');
+					        }else{
+					        	textreplace(lasection, letexte, 'p', '');
+					        }
+					        break;
+				    case "h1":
+				    		console.log('case h1');
+					        if(tagselected=='p'){
+								textreplace(lasection, letexte, 'h1', 'p');
+					        }else if(tagselected=="h2"){
+					        	textreplace(lasection, letexte, 'h1', 'h2');
+					        }else{
+					        	textreplace(lasection, letexte, 'h1', '');
+					        }
+					        break;
+				    case "h2":
+				    		console.log('case h2');
+					        if(tagselected=='p'){
+								textreplace(lasection, letexte, 'h2', 'p');
+					        }else if(tagselected=="h1"){
+					        	textreplace(lasection, letexte, 'h2', 'h1');
+					        }else{
+					        	textreplace(lasection, letexte, 'h2', '');
+					        }
+					        break;
+				   	case null:
+					   		if(tagselected=='p'){
+					   			textreplace(lasection, letexte, null, 'p');
+					   		}else if(tagselected=='h1'){
+								textreplace(lasection, letexte, null, 'h1');
+					   		}else if(tagselected=='h2'){
+								textreplace(lasection, letexte, null, 'h2');
+					   		}else{
+					   			break;
+					   		}
+					   		break;	
+				    default:
+				    		break;
+						}
+			}
     	});
 
 
 
     	btngenerate.click(function(){
+    		var gentext = '';
     		console.log(textlength);
     		switch(textlength) {
-		    case "S":
-		        lasection.html(shortt[Math.round(Math.random()*shortt.length)]);
-		        console.log("short");
-		        break;
-		    case "M":
-		        lasection.html(mediumt[Math.round(Math.random()*mediumt.length)]);
-		        console.log("medium");
-		        break;
-		    case "L":
-		   		lasection.html(longt[Math.round(Math.random()*longt.length)]); 
-		   		console.log("long");
-		   		break;	
-		    default:
-		        lasection.html("Vous devez choisir une longueur de texte");
+			    case "S":
+			        gentext = shortt[Math.round(Math.random()*shortt.length)];
+			        console.log("short");
+			        break;
+			    case "M":
+			        gentext = mediumt[Math.round(Math.random()*mediumt.length)];
+			        console.log("medium");
+			        break;
+			    case "L":
+			   		gentext = longt[Math.round(Math.random()*longt.length)]; 
+			   		console.log("long");
+			   		break;	
+			    default:
+			        gentext = "Vous devez choisir une longueur de texte";
+			}
+
+			switch(tagselected) {
+				case "no":
+					lasection.html(gentext);
+					break;
+				case "p":
+					lasection.html('&lt;p&gt;'+gentext+'&lt;\/p&gt;');
+					break;
+				case "h1":
+					lasection.html('&lt;h1&gt;'+gentext+'&lt;\/h1&gt;');
+					break;
+				case "h2":
+					lasection.html('&lt;h2&gt;'+gentext+'&lt;\/h2&gt;');
+					break;
 			}
     	});
     }

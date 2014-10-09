@@ -16,7 +16,7 @@ $(window).ready(function(){
         // console.log( 'movie is loaded' );
 
         client.on( 'copy', function(event) {
-          event.clipboardData.setData('text/plain',lasection.html().replace('&lt;','<', g).replace('&gt;','>', g));
+          event.clipboardData.setData('text/plain',lasection.html().replace('&lt;','<', 'g').replace('&gt;','>', 'g'));
           console.log(lasection);
         } );
 
